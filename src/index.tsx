@@ -15,20 +15,14 @@ import { css } from "tss-react";
 import tos_en_url from "./tos_en.md";
 import tos_fr_url from "./tos_fr.md";
 
-const kcContext = realKcContext ?? (
-  false /* Set to true to test the login pages outside of Keycloak */
-    ? kcContextMocks.kcLoginContext /* Change to .kcRegisterContext for example */
-    :
-    undefined
-);
+// replace kcLoginContext by kcRegisterContext and the register page will be loaded instead
+const kcContext = realKcContext ?? kcContextMocks.kcLoginContext;
 
 if (kcContext !== undefined) {
   console.log(kcContext);
 }
 
 ReactDOM.render(
-  kcContext === undefined ?
-    <App /> :
     <Login />,
   document.getElementById("root")
 );

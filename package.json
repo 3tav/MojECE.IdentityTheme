@@ -1,11 +1,10 @@
 {
-    "homepage": "https://garronej.github.io/keycloakify-demo-app/",
-    "name": "keycloakify-demo-app",
+    "name": "moj-ece-identity-theme",
     "version": "0.2.14",
-    "description": "A demo project for keycloakify",
+    "description": "MojECE Keycloak Theme",
     "repository": {
         "type": "git",
-        "url": "git://github.com/garronej/keycloakify-demo-app.git"
+        "url": "git://github.com/3tav/MojECE.IdentityTheme.git"
     },
     "scripts": {
         "build": "react-scripts build",

@@ -497,11 +497,7 @@ const { Page } = (() => {
             )}
 
           {/* infoNode */}
-          {displayInfo && (
-            <Flex justifyContent="flex-end" mt="2">
-              {infoNode}
-            </Flex>
-          )}
+          {displayInfo && { infoNode }}
         </Box>
       )
     })

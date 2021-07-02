@@ -25,6 +25,11 @@ import EceIcons from "theme/parts/Icons"
 // TODO: messages
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
 
+const VERTICAL_LINE =
+  "linear-gradient(90deg, transparent 48%, #E0E0E0 49%, #E0E0E0 51%, transparent 52%, transparent 100%)"
+const HORIZONTAL_LINE =
+  "linear-gradient(0deg, transparent 48%, #E0E0E0 49%, #E0E0E0 51%, transparent 52%, transparent 100%)"
+
 export const Login = memo(
   ({ kcContext, ...props }: { kcContext: KcContext.Login } & KcProps) => {
     const { msg, msgStr } = useKcMessage()
@@ -54,7 +59,11 @@ export const Login = memo(
         displayWide={realm.password && social.providers !== undefined}
         headerNode={msg("doLogIn")}
         formNode={
-          <Flex mt="4" id="kc-form" flexDir={["column", "column", "column", "row"]}>
+          <Flex
+            mt="4"
+            id="kc-form"
+            flexDir={["column", "column", "column", "row"]}
+          >
             {/* Credentials */}
             <Box flex="1">
               {realm.password && (
@@ -137,7 +146,7 @@ export const Login = memo(
 
                   {/* Remember me */}
                   {realm.rememberMe && !usernameEditDisabled && (
-                    <HStack my="8" spacing={4}>
+                    <HStack mt="8" spacing={4}>
                       <Box flex="1"></Box>
                       <Box flex="1">
                         <Checkbox
@@ -167,14 +176,19 @@ export const Login = memo(
 
             {/* Separator */}
             <Flex
-              flexDir="column"
+              flexDir={["row", "row", "row", "column"]}
               justifyContent="center"
               alignItems="center"
-              display={["none", "flex"]}
-              w="32px"
+              w={["auto", "auto", "auto", "32px"]}
               mx="8"
-              bgImage="linear-gradient(90deg, transparent 48%, #E0E0E0 49%, #E0E0E0 51%, transparent 52%, transparent 100%)"
-              bgSize="32px"
+              my={[10, 10, 10, 0]}
+              bgImage={[
+                HORIZONTAL_LINE,
+                HORIZONTAL_LINE,
+                HORIZONTAL_LINE,
+                VERTICAL_LINE,
+              ]}
+              bgSize={["200px", "500px", "340px", "32px"]}
             >
               <Text bg="white" w="32px" textAlign="center" fontSize="xs" py="2">
                 ali
@@ -193,9 +207,15 @@ export const Login = memo(
                       variant="outline"
                       color="gray.500"
                     >
-                      {p.providerId === "google" && <EceIcons name="zocialGoogle" boxSize="3" />}
-                      {p.providerId === "facebook" && <EceIcons name="zocialFacebook" boxSize="3" />}
-                      <Box as="span" ml="4" textTransform="none">{p.displayName}</Box>
+                      {p.providerId === "google" && (
+                        <EceIcons name="zocialGoogle" boxSize="3" />
+                      )}
+                      {p.providerId === "facebook" && (
+                        <EceIcons name="zocialFacebook" boxSize="3" />
+                      )}
+                      <Box as="span" ml="4" textTransform="none">
+                        {p.displayName}
+                      </Box>
                     </Button>
                   ))}
                 </VStack>
@@ -207,12 +227,31 @@ export const Login = memo(
           realm.password &&
           realm.registrationAllowed &&
           !registrationDisabled && (
-            <Box>
-              <Text>{msg("noAccount")}</Text>
-              <Link color="blue.500" tabIndex={6} href={url.registrationUrl}>
-                {msg("doRegister")}
-              </Link>
-            </Box>
+            <Flex
+              justifyContent={[
+                "flex-start",
+                "flex-start",
+                "flex-start",
+                "flex-end",
+              ]}
+              my={[10, 10, 10, 2]}
+              borderTopWidth={["1px", "1px", "1px", "none"]}
+              borderTopColor="gray.50"
+              pt={[10, 10, 10, 0]}
+              flex="1"
+            >
+              <Flex flexDir={["row", "row", "row", "column"]}>
+                <Text>{msg("noAccount")}</Text>
+                <Link
+                  ml="4"
+                  color="blue.500"
+                  tabIndex={6}
+                  href={url.registrationUrl}
+                >
+                  {msg("doRegister")}
+                </Link>
+              </Flex>
+            </Flex>
           )
         }
       />

@@ -1,8 +1,6 @@
 import { memo } from "react"
 import { defaultKcProps } from "keycloakify"
 // import { createUseClassNames } from "app/theme"
-// import onyxiaNeumorphismDarkModeUrl from "app/assets/svg/OnyxiaNeumorphismDarkMode.svg"
-// import onyxiaNeumorphismLightModeUrl from "app/assets/svg/OnyxiaNeumorphismLightMode.svg"
 import { Info } from "keycloakify/lib/components/Info"
 import { Error } from "keycloakify/lib/components/Error"
 import { LoginResetPassword } from "keycloakify/lib/components/LoginResetPassword"
@@ -12,7 +10,6 @@ import { LoginIdpLinkConfirm } from "keycloakify/lib/components/LoginIdpLinkConf
 
 // import { LoginUpdateProfile } from "./LoginUpdateProfile"
 import { LoginUpdateProfile } from "keycloakify/lib/components/LoginUpdateProfile"
-// import { Login } from "./Login"
 // import { Login } from "keycloakify/lib/components/Login"
 import { Login } from "./components/Login"
 // import { Register } from "./Register"

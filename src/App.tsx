@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { ChakraProvider } from "@chakra-ui/react"
 import {
   defaultKcProps,
-  // kcContext as realKcContext,
+  kcContext as realKcContext,
   kcContextMocks,
   kcMessages,
   useKcLanguageTag,
@@ -17,25 +17,7 @@ import tos_en_url from "./tos/tos_en.md"
 import tos_fr_url from "./tos/tos_fr.md"
 
 // replace kcLoginContext by kcRegisterContext and the register page will be loaded instead
-
-// TODO: unmock
-// const kcContext = realKcContext ?? kcContextMocks.kcLoginContext
-const kcContext = kcContextMocks.kcLoginContext
-
-kcContext.social["providers"] = [
-  {
-    providerId: "facebook",
-    loginUrl: "#",
-    alias: "facebook",
-    displayName: "Facebook",
-  },
-  {
-    providerId: "google",
-    loginUrl: "#",
-    alias: "google",
-    displayName: "Google",
-  },
-]
+const kcContext = realKcContext ?? kcContextMocks.kcLoginContext
 
 if (kcContext !== undefined) {
   console.log(kcContext)
@@ -51,10 +33,10 @@ export default function App() {
   //Lazily download the therms and conditions in the appropriate language
   //if we are on the terms.ftl page.
   useEffect(() => {
-    // TODO: Terms
-    // if (kcContext!.pageId !== "terms.ftl") {
-    //   return
-    // }
+
+    if (kcContext!.pageId !== "terms.ftl") {
+      return
+    }
 
     kcMessages[kcLanguageTag].termsTitle = ""
 

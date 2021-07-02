@@ -14,10 +14,7 @@ import type { KcTemplateProps } from "keycloakify"
 // import { createUseClassNames, IconButton } from "app/theme"
 // import { useDomRect } from "onyxia-ui"
 // import { useWindowInnerSize } from "powerhooks"
-// import onyxiaNeumorphismDarkModeUrl from "app/assets/svg/OnyxiaNeumorphismDarkMode.svg"
-// import onyxiaNeumorphismLightModeUrl from "app/assets/svg/OnyxiaNeumorphismLightMode.svg"
 
-// import { Paper } from "onyxia-ui"
 import Paper from "shared/Paper"
 import { getStatus } from "lib/constants/status"
 

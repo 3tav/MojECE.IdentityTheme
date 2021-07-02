@@ -29,7 +29,7 @@ In short:
 
 **Support for Terms and conditions**: [included](https://github.com/InseeFrLab/keycloakify#support-for-terms-and-conditions)
 
-**Preklaplanje templatov**: Development flow consists of setting up context-mock variable in the `App.tsx` file to whatever page you are currently working on.
+**Moc-Context**: Development flow consists of setting up context-mock variable in the `App.tsx` file to whatever page you are currently working on.
 
 ```js
 const kcContext = kcContextMocks.kcLoginContext

@@ -51,8 +51,6 @@ export const Login = memo(
       return true
     })
 
-    console.log("Login Template")
-
     return (
       <Template
         {...{ kcContext, ...props }}
@@ -177,25 +175,33 @@ export const Login = memo(
             </Box>
 
             {/* Separator */}
-            <Flex
-              flexDir={["row", "row", "row", "column"]}
-              justifyContent="center"
-              alignItems="center"
-              w={["auto", "auto", "auto", "32px"]}
-              mx="8"
-              my={[10, 10, 10, 0]}
-              bgImage={[
-                HORIZONTAL_LINE,
-                HORIZONTAL_LINE,
-                HORIZONTAL_LINE,
-                VERTICAL_LINE,
-              ]}
-              bgSize={["200px", "500px", "340px", "32px"]}
-            >
-              <Text bg="white" w="32px" textAlign="center" fontSize="xs" py="2">
-                ali
-              </Text>
-            </Flex>
+            {realm.password && social.providers !== undefined && (
+              <Flex
+                flexDir={["row", "row", "row", "column"]}
+                justifyContent="center"
+                alignItems="center"
+                w={["auto", "auto", "auto", "32px"]}
+                mx="8"
+                my={[10, 10, 10, 0]}
+                bgImage={[
+                  HORIZONTAL_LINE,
+                  HORIZONTAL_LINE,
+                  HORIZONTAL_LINE,
+                  VERTICAL_LINE,
+                ]}
+                bgSize={["200px", "500px", "340px", "32px"]}
+              >
+                <Text
+                  bg="white"
+                  w="32px"
+                  textAlign="center"
+                  fontSize="xs"
+                  py="2"
+                >
+                  ali
+                </Text>
+              </Flex>
+            )}
 
             {realm.password && social.providers !== undefined && (
               <Box flex="1" id="kc-social-providers">
@@ -237,7 +243,7 @@ export const Login = memo(
                 "flex-end",
               ]}
               my={[10, 10, 10, 2]}
-              borderTopWidth={["1px", "1px", "1px", "none"]}
+              borderTopWidth={["1px", "1px", "1px", "0"]}
               borderTopColor="gray.50"
               pt={[10, 10, 10, 0]}
               flex="1"

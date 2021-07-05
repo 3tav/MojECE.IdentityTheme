@@ -494,7 +494,7 @@ const { Page } = (() => {
             )}
 
           {/* infoNode */}
-          {displayInfo && { infoNode }}
+          {displayInfo && <>{ infoNode }</>}
         </Box>
       )
     })

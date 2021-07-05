@@ -20,6 +20,7 @@ import tos_fr_url from "./tos/tos_fr.md"
 const kcContext = realKcContext ?? kcContextMocks.kcLoginContext
 
 if (kcContext !== undefined) {
+  console.log(realKcContext ? "> realKcContext" : "> kcContextMocks")
   console.log(kcContext)
 }
 

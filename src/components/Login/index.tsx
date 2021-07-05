@@ -51,6 +51,8 @@ export const Login = memo(
       return true
     })
 
+    console.log("Login Template")
+
     return (
       <Template
         {...{ kcContext, ...props }}

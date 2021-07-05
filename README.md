@@ -2,7 +2,7 @@
 
 Custom theme for [Keycloak](https://www.keycloak.org/) Open Source Identity and Access Management.
 
-- based on the CI/CD and Template [keycloakify-demo-app](https://github.com/garronej/keycloakify-demo-app).
+- based on the CI/CD and Template [keycloakify-demo-app](https://github.com/garronej/keycloakify-demo-app) and [look_and_feel](https://github.com/garronej/keycloakify-demo-app/tree/look_and_feel) branch.
 - which uses [keycloakify](https://github.com/InseeFrLab/keycloakify)
 - project setup inspiration [onyxia-web](https://github.com/InseeFrLab/onyxia-web)
 

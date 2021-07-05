@@ -93,6 +93,9 @@ export const KcApp = memo((props: Props) => {
     kcInputClass: [...defaultKcProps.kcInputClass], // classNames.kcInputClass
   }
 
+  console.log("KcApp kcContext.pageId", kcContext.pageId);
+  
+
   switch (kcContext.pageId) {
     case "login.ftl":
       return <Login {...{ kcContext, ...kcProps }} />

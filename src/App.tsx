@@ -19,8 +19,10 @@ import tos_fr_url from "./tos/tos_fr.md"
 // replace kcLoginContext by kcRegisterContext and the register page will be loaded instead
 const kcContext = realKcContext ?? kcContextMocks.kcLoginContext
 
-if (kcContext !== undefined) {
-  if (!realKcContext) console.log(kcContext)
+export const RESOURCES_PATH = realKcContext ? kcContext.url?.resourcesPath + "/" : ""
+
+if (realKcContext && kcContext !== undefined) {
+  console.debug(kcContext)
 }
 
 export default function App() {

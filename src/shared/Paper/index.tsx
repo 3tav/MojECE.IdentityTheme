@@ -6,6 +6,7 @@
 import { Container, Grid, Box, Flex, GridItem, Text } from "@chakra-ui/react"
 import { CompositionComponent } from "../types"
 
+import { RESOURCES_PATH } from 'App'
 import Logo from "shared/Logo"
 import EceIcons, { IconName } from "theme/parts/Icons"
 
@@ -38,7 +39,7 @@ export default function Paper({ children }: CompositionComponent) {
 
   return (
     <Flex minHeight="100vh" flexDir={["column", "column", "row", "row"]}>
-      <Flex flex="4" bgImage="login90.webp" bgSize="cover" bgPosition="center">
+      <Flex flex="4" bgImage={RESOURCES_PATH + "login90.webp"} bgSize="cover" bgPosition="center">
         <Flex
           flex="1"
           justifyContent="flex-start"

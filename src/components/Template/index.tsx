@@ -48,51 +48,9 @@ export type TemplateProps = {
   onClickCross?(): void
 } & { kcContext: KcContext } & KcTemplateProps
 
-// const { useClassNames } = createUseClassNames<{
-//   windowInnerWidth: number
-//   aspectRatio: number
-//   windowInnerHeight: number
-// }>()((theme) => ({
-//   root: {
-//     height: "100%",
-//     display: "flex",
-//     flexDirection: "column",
-//     backgroundColor: theme.colors.useCases.surfaces.background,
-//   },
-
-//   header: {
-//     width: "100%",
-//     paddingRight: "2%",
-//     height: 64,
-//   },
-//   betweenHeaderAndFooter: {
-//     flex: 1,
-//     overflow: "hidden",
-//     backgroundImage: `url( ${
-//       theme.isDarkModeEnabled
-//         ? onyxiaNeumorphismDarkModeUrl
-//         : onyxiaNeumorphismLightModeUrl
-//     })`,
-//     backgroundSize: "auto 90%",
-//     backgroundPosition: "center",
-//     backgroundRepeat: "no-repeat",
-//   },
-//   page: {
-//     height: "100%",
-//     overflow: "auto",
-//   },
-//   footer: {
-//     height: 34,
-//   },
-// }))
-
 export const Template = memo((props: TemplateProps) => {
   // className,
-  const { kcContext, doFetchDefaultThemeResources, onClickCross } = props
-
-  useEffect(() => {
-    console.debug("Rendering this page with react using keycloakify")
-  }, [])
+  const { kcContext, doFetchDefaultThemeResources, onClickCross } = props  
 
   /**
    * Language
@@ -274,7 +232,7 @@ const { Page } = (() => {
       className,
       displayInfo = true,
       displayMessage = false,
-      displayRequiredFields = true,
+      displayRequiredFields = false,
       displayWide = true,
       showAnotherWayIfPresent = true,
       headerNode,

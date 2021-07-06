@@ -1,3 +1,8 @@
+### **0.2.3** (2021-07-06)  
+  
+- Release v0.2.3  
+- CSS images with kcContext.url?.resourcesPath    
+  
 ### **0.2.2** (2021-07-05)  
   
 - bugfix: invalid template syntax    

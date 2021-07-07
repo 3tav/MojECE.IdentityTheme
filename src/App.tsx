@@ -9,20 +9,19 @@ import {
 } from "keycloakify"
 import Fonts from "./theme/parts/Fonts"
 import theme from "./theme/theme"
-// import { css } from "tss-react"
 
 import { KcApp } from "./KcApp"
 
 import tos_en_url from "./tos/tos_en.md"
 import tos_fr_url from "./tos/tos_fr.md"
 
-// replace kcLoginContext by kcRegisterContext and the register page will be loaded instead
-const kcContext = realKcContext ?? kcContextMocks.kcLoginContext
+// kcLoginContext kcRegisterContext
+const kcContext = realKcContext ?? kcContextMocks.kcRegisterContext
 
 export const RESOURCES_PATH = realKcContext ? kcContext.url?.resourcesPath + "/build/" : ""
 
-if (realKcContext && kcContext !== undefined) {
-  console.debug(kcContext)
+if (kcContext !== undefined) {
+  console.log(kcContext)
 }
 
 export default function App() {

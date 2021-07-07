@@ -8,10 +8,10 @@ import { LoginOtp } from "keycloakify/lib/components/LoginOtp"
 import { LoginIdpLinkConfirm } from "keycloakify/lib/components/LoginIdpLinkConfirm"
 
 import { LoginUpdateProfile } from "keycloakify/lib/components/LoginUpdateProfile"
-import { Register } from "keycloakify/lib/components/Register"
 import { Terms } from "keycloakify/lib/components/Terms"
 import type { KcContext } from "keycloakify"
 
+import { Register } from "./components/Register"
 import { Login } from "./components/Login"
 
 export type Props = {

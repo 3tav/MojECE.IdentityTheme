@@ -1,3 +1,8 @@
+### **0.2.5** (2021-07-07)  
+  
+- Release v0.2.5  
+- bugfix: social login button action    
+  
 ### **0.2.4** (2021-07-06)  
   
 - bugfix: resourcesPath build location    

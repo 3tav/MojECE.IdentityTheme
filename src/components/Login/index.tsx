@@ -210,7 +210,7 @@ export const Login = memo(
                   {social.providers.map((p) => (
                     <Button
                       key={p.providerId}
-                      onClick={() => window && window.open(p.loginUrl)}
+                      onClick={() => window && window.open(p.loginUrl, "_self")}
                       id={`zocial-${p.alias}`}
                       variant="outline"
                       color="gray.500"

@@ -1,3 +1,7 @@
+### **0.2.4** (2021-07-06)  
+  
+- bugfix: resourcesPath build location    
+  
 ### **0.2.3** (2021-07-06)  
   
 - Release v0.2.3  

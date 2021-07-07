@@ -1,3 +1,10 @@
+### **0.2.6** (2021-07-07)  
+  
+- Release v0.2.6
+
+- bugfix window.open  
+- social link fix    
+  
 ### **0.2.5** (2021-07-07)  
   
 - Release v0.2.5  

@@ -15,10 +15,10 @@ import { KcApp } from "./KcApp"
 import tos_en_url from "./tos/tos_en.md"
 import tos_fr_url from "./tos/tos_fr.md"
 
-// kcLoginContext kcRegisterContext
-const kcContext = realKcContext ?? kcContextMocks.kcRegisterContext
+// kcLoginContext kcRegisterContext kcLoginResetPasswordContext
+const kcContext = realKcContext ?? kcContextMocks.kcLoginResetPasswordContext
 
-export const RESOURCES_PATH = realKcContext ? kcContext.url?.resourcesPath + "/build/" : ""
+export const RESOURCES_PATH = realKcContext ? kcContext.url?.resourcesPath + "/build/" : "/"
 
 if (kcContext !== undefined) {
   console.log(kcContext)

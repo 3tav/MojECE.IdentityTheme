@@ -10,10 +10,8 @@ import {
   Box,
   Link,
   Text,
-  Checkbox,
   Input,
   VStack,
-  HStack,
 } from "@chakra-ui/react"
 import Label from "shared/Label"
 import EceIcons from "theme/parts/Icons"
@@ -28,7 +26,7 @@ export const Register = memo(
 
     const {
       url,
-      messagesPerField,
+      // messagesPerField,
       register,
       realm,
       passwordRequired,

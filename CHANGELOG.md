@@ -1,3 +1,8 @@
+## **0.4.0** (2021-07-08)  
+  
+- Release v0.4.0  
+- #24 LoginResetPassword template    
+  
 ## **0.3.0** (2021-07-07)  
   
 - Register theme    

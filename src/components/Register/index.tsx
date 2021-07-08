@@ -1,4 +1,4 @@
-import { memo } from "react"
+import React, { memo, useState } from "react"
 import { Template } from "../Template"
 import type { KcProps, KcContext } from "keycloakify"
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
@@ -14,10 +14,11 @@ import {
   Input,
   VStack,
   HStack,
+  Tooltip,
 } from "@chakra-ui/react"
 import Label from "shared/Label"
 import EceIcons from "theme/parts/Icons"
-
+import PassLabel from "./TooltipLabel"
 type KcContext_Register = Extract<KcContext, { pageId: "register.ftl" }>
 
 // TODO: isInvalid w/ messagesPerField
@@ -25,6 +26,21 @@ type KcContext_Register = Extract<KcContext, { pageId: "register.ftl" }>
 export const Register = memo(
   ({ kcContext, ...props }: { kcContext: KcContext_Register } & KcProps) => {
     const { msg, msgStr } = useKcMessage()
+
+    const [pass, setpass] = useState("")
+    const [open, setopen] = useState(false)
+
+    const handlePassChange = (event: any) => {
+      setpass(event.target.value)
+    }
+
+    const handleFocus = () => {
+      setopen(true)
+    }
+
+    const handleBlur = () => {
+      setopen(false)
+    }
 
     const {
       url,
@@ -119,12 +135,29 @@ export const Register = memo(
                       <>
                         <Box>
                           <Label>{msg("password")}</Label>
-                          <Input
-                            id="password"
-                            name="password"
-                            type="password"
-                            autoComplete="new-password"
-                          />
+                          <Tooltip
+                            backgroundColor="blue.500"
+                            paddingTop="2"
+                            paddingBottom="2"
+                            paddingLeft="2"
+                            paddingRight="2"
+                            isOpen={open}
+                            label={PassLabel(pass)}
+                            placement="top"
+                            closeOnClick={false}
+                            offset={[0, 24]}
+                            borderRadius="md"
+                          >
+                            <Input
+                              id="password"
+                              name="password"
+                              type="password"
+                              autoComplete="new-password"
+                              onFocus={handleFocus}
+                              onChange={handlePassChange}
+                              onBlur={handleBlur}
+                            />
+                          </Tooltip>
                         </Box>
 
                         <Box>
@@ -155,9 +188,7 @@ export const Register = memo(
 
                 {/* Register */}
                 <Flex mt="16" flexDir={["column", "column", "column", "row"]}>
-                  <Box flex="1">
-                    
-                  </Box>
+                  <Box flex="1"></Box>
 
                   {/* doRegister */}
                   <Flex flex="1" justifyContent="flex-end">

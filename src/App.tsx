@@ -35,7 +35,7 @@ export default function App() {
   //if we are on the terms.ftl page.
   useEffect(() => {
 
-    if (kcContext!.pageId !== "terms.ftl") {
+     if (kcContext!.pageId !== "terms.ftl") {
       return
     }
 

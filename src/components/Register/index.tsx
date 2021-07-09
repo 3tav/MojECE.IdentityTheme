@@ -12,9 +12,10 @@ import {
   Text,
   Input,
   VStack,
+  Alert,
 } from "@chakra-ui/react"
 import Label from "shared/Label"
-import EceIcons from "theme/parts/Icons"
+import EceIcons, { Alert as AlertIcon } from "theme/parts/Icons"
 
 type KcContext_Register = Extract<KcContext, { pageId: "register.ftl" }>
 
@@ -26,7 +27,7 @@ export const Register = memo(
 
     const {
       url,
-      // messagesPerField,
+      messagesPerField,
       register,
       realm,
       passwordRequired,
@@ -65,6 +66,17 @@ export const Register = memo(
                   >
                     {/* firstName */}
                     <Box>
+                      {messagesPerField.printIfExists(
+                        "firstName",
+                        "Napaka pri vnosu imena"
+                      ) ? (
+                        <Alert status="error" marginBottom="2" marginTop="2">
+                          <AlertIcon />
+                          <Text fontSize="xs" marginLeft="2" fontWeight="bold">
+                            "Napaka pri vnosu imena"
+                          </Text>
+                        </Alert>
+                      ) : null}
                       <Label>{msg("firstName")}</Label>
 
                       <Input
@@ -78,6 +90,17 @@ export const Register = memo(
 
                     {/* lastName */}
                     <Box>
+                      {messagesPerField.printIfExists(
+                        "lastName",
+                        "Napaka pri vnosu priimka"
+                      ) ? (
+                        <Alert status="error" marginBottom="2" marginTop="2">
+                          <AlertIcon />
+                          <Text fontSize="xs" marginLeft="2" fontWeight="bold">
+                            "Napaka pri vnosu imena"
+                          </Text>
+                        </Alert>
+                      ) : null}
                       <Label>{msg("lastName")}</Label>
                       <Input
                         id="lastName"
@@ -88,6 +111,17 @@ export const Register = memo(
                     </Box>
                     {/* email */}
                     <Box>
+                      {messagesPerField.printIfExists(
+                        "email",
+                        "Napaka pri vnosu emaila"
+                      ) ? (
+                        <Alert status="error" marginBottom="2" marginTop="2">
+                          <AlertIcon />
+                          <Text fontSize="xs" marginLeft="2" fontWeight="bold">
+                            "Napaka pri vnosu imena"
+                          </Text>
+                        </Alert>
+                      ) : null}
                       <Label>{msg("email")}</Label>
                       <Input
                         id="email"
@@ -100,6 +134,21 @@ export const Register = memo(
                     {/* username */}
                     {!realm.registrationEmailAsUsername && (
                       <Box>
+                        {messagesPerField.printIfExists(
+                          "username",
+                          "Napaka pri vnosu emaila"
+                        ) ? (
+                          <Alert status="error" marginBottom="2" marginTop="2">
+                            <AlertIcon />
+                            <Text
+                              fontSize="xs"
+                              marginLeft="2"
+                              fontWeight="bold"
+                            >
+                              "Napaka pri vnosu imena"
+                            </Text>
+                          </Alert>
+                        ) : null}
                         <Label>{msg("username")}</Label>
                         <Input
                           id="username"
@@ -116,6 +165,25 @@ export const Register = memo(
                     {passwordRequired && (
                       <>
                         <Box>
+                          {messagesPerField.printIfExists(
+                            "password",
+                            "Napaka pri vnosu gesla"
+                          ) ? (
+                            <Alert
+                              status="error"
+                              marginBottom="2"
+                              marginTop="2"
+                            >
+                              <AlertIcon />
+                              <Text
+                                fontSize="xs"
+                                marginLeft="2"
+                                fontWeight="bold"
+                              >
+                                "Napaka pri vnosu imena"
+                              </Text>
+                            </Alert>
+                          ) : null}
                           <Label>{msg("password")}</Label>
                           <Input
                             id="password"
@@ -126,6 +194,25 @@ export const Register = memo(
                         </Box>
 
                         <Box>
+                          {messagesPerField.printIfExists(
+                            "password-confirm",
+                            "Napaka pri ponovnem vnosu gesla"
+                          ) ? (
+                            <Alert
+                              status="error"
+                              marginBottom="2"
+                              marginTop="2"
+                            >
+                              <AlertIcon />
+                              <Text
+                                fontSize="xs"
+                                marginLeft="2"
+                                fontWeight="bold"
+                              >
+                                "Napaka pri vnosu imena"
+                              </Text>
+                            </Alert>
+                          ) : null}
                           <Label>{msg("passwordConfirm")}</Label>
                           <Input
                             id="password-confirm"
@@ -153,9 +240,7 @@ export const Register = memo(
 
                 {/* Register */}
                 <Flex mt="16" flexDir={["column", "column", "column", "row"]}>
-                  <Box flex="1">
-                    
-                  </Box>
+                  <Box flex="1"></Box>
 
                   {/* doRegister */}
                   <Flex flex="1" justifyContent="flex-end">

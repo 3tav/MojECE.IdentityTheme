@@ -75,12 +75,14 @@ export const Login = memo(
                   action={url.loginAction}
                   method="post"
                 >
-                  <Text h="8">Prijava z elektronsko pošto</Text>
+                  <Text h={message?.type === "error" ? "0" : "12"}>
+                    Prijava z elektronsko pošto
+                  </Text>
                   {message?.type === "error" ? (
-                    <Alert status="error" marginBottom="4">
+                    <Alert status="error" marginBottom="6" marginTop="6">
                       <AlertIcon />
-                      <Text fontSize="xs" fontWeight="bold" marginLeft="2">
-                        Napačen email ali geslo
+                      <Text fontSize="xs" marginLeft="2" fontWeight="bold">
+                        {message.summary}
                       </Text>
                     </Alert>
                   ) : null}

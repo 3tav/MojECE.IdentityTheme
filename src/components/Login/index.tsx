@@ -32,10 +32,7 @@ const HORIZONTAL_LINE =
   "linear-gradient(0deg, transparent 48%, #E0E0E0 49%, #E0E0E0 51%, transparent 52%, transparent 100%)"
 
 export const Login = memo(
-  ({
-    kcContext,
-    ...props
-  }: { kcContext: KcContext.Login & ExtraLogin } & KcProps) => {
+  ({ kcContext, ...props }: { kcContext: ExtraLogin } & KcProps) => {
     const { msg, msgStr } = useKcMessage()
 
     const {

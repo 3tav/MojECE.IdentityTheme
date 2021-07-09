@@ -1,6 +1,6 @@
 {
     "name": "moj-ece-identity-theme",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "prerelease": "true",
     "description": "MojECE Keycloak Theme",
     "repository": {

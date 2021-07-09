@@ -40,6 +40,7 @@ export const Login = memo(
       url,
       usernameEditDisabled,
       login,
+      message,
       auth,
       registrationDisabled,
     } = kcContext
@@ -74,6 +75,7 @@ export const Login = memo(
                   method="post"
                 >
                   <Text h="12">Prijava z elektronsko pošto</Text>
+                  <Text>{message?.summary}</Text>
 
                   {/* Username */}
                   <VStack spacing={8} alignItems="stretch">

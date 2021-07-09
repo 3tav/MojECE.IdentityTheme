@@ -31,7 +31,19 @@ const HORIZONTAL_LINE =
   "linear-gradient(0deg, transparent 48%, #E0E0E0 49%, #E0E0E0 51%, transparent 52%, transparent 100%)"
 
 export const Login = memo(
-  ({ kcContext, ...props }: { kcContext: KcContext.Login } & KcProps) => {
+  ({
+    kcContext,
+    ...props
+  }: {
+    kcContext: KcContext.Login & {
+      messagesPerField: {
+        printIfExists<T>(
+          key: "username" | "email" | "password",
+          x: T
+        ): T | undefined
+      }
+    }
+  } & KcProps) => {
     const { msg, msgStr } = useKcMessage()
 
     const {
@@ -41,6 +53,7 @@ export const Login = memo(
       usernameEditDisabled,
       login,
       message,
+      messagesPerField,
       auth,
       registrationDisabled,
     } = kcContext
@@ -76,6 +89,9 @@ export const Login = memo(
                 >
                   <Text h="12">Prijava z elektronsko pošto</Text>
                   <Text>{message?.summary}</Text>
+                  <Text>
+                    {messagesPerField.printIfExists("username", "fina stvar")}
+                  </Text>
 
                   {/* Username */}
                   <VStack spacing={8} alignItems="stretch">

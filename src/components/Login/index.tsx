@@ -16,12 +16,12 @@ import {
   Input,
   VStack,
   HStack,
+  Alert,
 } from "@chakra-ui/react"
 
 import { Template } from "components/Template"
 import Label from "shared/Label"
-import EceIcons from "theme/parts/Icons"
-import { ExtraLogin } from "./types"
+import EceIcons, { Alert as AlertIcon } from "theme/parts/Icons"
 
 // TODO: messages
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
@@ -32,7 +32,7 @@ const HORIZONTAL_LINE =
   "linear-gradient(0deg, transparent 48%, #E0E0E0 49%, #E0E0E0 51%, transparent 52%, transparent 100%)"
 
 export const Login = memo(
-  ({ kcContext, ...props }: { kcContext: ExtraLogin } & KcProps) => {
+  ({ kcContext, ...props }: { kcContext: KcContext.Login } & KcProps) => {
     const { msg, msgStr } = useKcMessage()
 
     const {
@@ -42,7 +42,6 @@ export const Login = memo(
       usernameEditDisabled,
       login,
       message,
-      messagesPerField,
       auth,
       registrationDisabled,
     } = kcContext
@@ -77,13 +76,10 @@ export const Login = memo(
                   method="post"
                 >
                   <Text h="12">Prijava z elektronsko pošto</Text>
-                  <Text>{message?.summary}</Text>
-                  <Text>
-                    {messagesPerField.printIfExists(
-                      "username",
-                      "pol ta funkcija kr dela"
-                    )}
-                  </Text>
+                  <Alert status="error">
+                    <AlertIcon></AlertIcon>
+                    <Text fontSize="sm">{message?.summary}</Text>
+                  </Alert>
 
                   {/* Username */}
                   <VStack spacing={8} alignItems="stretch">

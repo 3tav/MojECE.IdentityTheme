@@ -1,3 +1,8 @@
+### **0.4.4** (2021-07-09)  
+  
+- Version v0.4.4  
+- Registration form validation    
+  
 ### **0.4.3** (2021-07-09)  
   
 - Version v0.4.3  

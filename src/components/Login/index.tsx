@@ -21,6 +21,7 @@ import {
 import { Template } from "components/Template"
 import Label from "shared/Label"
 import EceIcons from "theme/parts/Icons"
+import { ExtraLogin } from "./types"
 
 // TODO: messages
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
@@ -34,16 +35,7 @@ export const Login = memo(
   ({
     kcContext,
     ...props
-  }: {
-    kcContext: KcContext.Login & {
-      messagesPerField: {
-        printIfExists<T>(
-          key: "username" | "email" | "password",
-          x: T
-        ): T | undefined
-      }
-    }
-  } & KcProps) => {
+  }: { kcContext: KcContext.Login & ExtraLogin } & KcProps) => {
     const { msg, msgStr } = useKcMessage()
 
     const {
@@ -90,7 +82,10 @@ export const Login = memo(
                   <Text h="12">Prijava z elektronsko pošto</Text>
                   <Text>{message?.summary}</Text>
                   <Text>
-                    {messagesPerField.printIfExists("username", "fina stvar")}
+                    {messagesPerField.printIfExists(
+                      "username",
+                      "pol ta funkcija kr dela"
+                    )}
                   </Text>
 
                   {/* Username */}

@@ -41,6 +41,8 @@ export const Register = memo(
     console.log(errors)
     const handleError = () => {
       const error = errors[count]
+      console.log(count)
+      console.log(error)
       setcount(count + 1)
       return error
     }

@@ -79,7 +79,7 @@ export const Login = memo(
                     Prijava z elektronsko pošto
                   </Text>
                   {message?.type === "error" ? (
-                    <Alert status="error" marginBottom="6" marginTop="6">
+                    <Alert status="error" marginBottom="3" marginTop="3">
                       <AlertIcon />
                       <Text fontSize="xs" marginLeft="2" fontWeight="bold">
                         {message.summary}

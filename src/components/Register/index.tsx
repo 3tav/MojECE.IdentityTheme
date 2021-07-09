@@ -1,4 +1,4 @@
-import { memo } from "react"
+import { memo, useState } from "react"
 import { Template } from "../Template"
 import type { KcProps, KcContext } from "keycloakify"
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
@@ -27,6 +27,7 @@ export const Register = memo(
 
     const {
       url,
+      message,
       messagesPerField,
       register,
       realm,
@@ -34,6 +35,14 @@ export const Register = memo(
       recaptchaRequired,
       recaptchaSiteKey,
     } = kcContext
+
+    const [count, setcount] = useState(0)
+    const errors = message?.summary ? message?.summary.split("<br>") : []
+    const handleError = () => {
+      const error = errors[count]
+      setcount(count + 1)
+      return error
+    }
 
     return (
       <Template
@@ -73,7 +82,7 @@ export const Register = memo(
                         <Alert status="error" marginBottom="2" marginTop="2">
                           <AlertIcon />
                           <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                            "Napaka pri vnosu imena"
+                            {handleError}
                           </Text>
                         </Alert>
                       ) : null}
@@ -97,7 +106,7 @@ export const Register = memo(
                         <Alert status="error" marginBottom="2" marginTop="2">
                           <AlertIcon />
                           <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                            "Napaka pri vnosu imena"
+                            {handleError}
                           </Text>
                         </Alert>
                       ) : null}
@@ -118,7 +127,7 @@ export const Register = memo(
                         <Alert status="error" marginBottom="2" marginTop="2">
                           <AlertIcon />
                           <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                            "Napaka pri vnosu imena"
+                            {handleError}
                           </Text>
                         </Alert>
                       ) : null}
@@ -145,7 +154,7 @@ export const Register = memo(
                               marginLeft="2"
                               fontWeight="bold"
                             >
-                              "Napaka pri vnosu imena"
+                              {handleError}
                             </Text>
                           </Alert>
                         ) : null}
@@ -180,7 +189,7 @@ export const Register = memo(
                                 marginLeft="2"
                                 fontWeight="bold"
                               >
-                                "Napaka pri vnosu imena"
+                                {handleError}
                               </Text>
                             </Alert>
                           ) : null}
@@ -209,7 +218,7 @@ export const Register = memo(
                                 marginLeft="2"
                                 fontWeight="bold"
                               >
-                                "Napaka pri vnosu imena"
+                                {handleError}
                               </Text>
                             </Alert>
                           ) : null}

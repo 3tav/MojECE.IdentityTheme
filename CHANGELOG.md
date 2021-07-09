@@ -1,3 +1,11 @@
+### **0.4.2** (2021-07-09)  
+  
+- Bug Fixes  
+- Bug fixes  
+- Bug fixes  
+- Version v0.4.2  
+- Bug fixes    
+  
 ### **0.4.1** (2021-07-09)  
   
 - Release v0.4.1  

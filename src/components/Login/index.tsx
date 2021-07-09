@@ -75,9 +75,7 @@ export const Login = memo(
                   action={url.loginAction}
                   method="post"
                 >
-                  <Text h={message?.type === "error" ? "0" : "12"}>
-                    Prijava z elektronsko pošto
-                  </Text>
+                  <Text h="12">Prijava z elektronsko pošto</Text>
                   {message?.type === "error" ? (
                     <Alert status="error" marginBottom="3" marginTop="3">
                       <AlertIcon />

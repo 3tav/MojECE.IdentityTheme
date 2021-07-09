@@ -38,6 +38,7 @@ export const Register = memo(
 
     const [count, setcount] = useState(0)
     const errors = message?.summary ? message?.summary.split("<br>") : []
+    console.log(errors)
     const handleError = () => {
       const error = errors[count]
       setcount(count + 1)

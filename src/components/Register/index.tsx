@@ -36,24 +36,24 @@ export const Register = memo(
       recaptchaSiteKey,
     } = kcContext
 
-    let count = 0
-    const errors = message?.summary ? message?.summary.split("<br>") : []
-    console.log(errors)
+    // let count = 0
+    // const errors = message?.summary ? message?.summary.split("<br>") : []
+    // console.log(errors)
 
-    const MessageAlert = () => {
-      const messageError = count < errors.length ? errors[count] : "Error"
-      console.log(count)
-      console.log(messageError)
-      count++
-      return (
-        <Alert status="error" marginBottom="2" marginTop="1">
-          <AlertIcon />
-          <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-            {messageError}
-          </Text>
-        </Alert>
-      )
-    }
+    // const MessageAlert = () => {
+    //   const messageError = count < errors.length ? errors[count] : "Error"
+    //   console.log(count)
+    //   console.log(messageError)
+    //   count++
+    //   return (
+    //     <Alert status="error" marginBottom="2" marginTop="1">
+    //       <AlertIcon />
+    //       <Text fontSize="xs" marginLeft="2" fontWeight="bold">
+    //         {messageError}
+    //       </Text>
+    //     </Alert>
+    //   )
+    // }
 
     return (
       <Template
@@ -66,6 +66,7 @@ export const Register = memo(
             id="kc-form"
             flexDir={["column", "column", "column", "row"]}
           >
+            <Text>Test</Text>
             <Box flex="1">
               <form
                 id="kc-register-form"
@@ -86,15 +87,17 @@ export const Register = memo(
                   >
                     {/* firstName */}
                     <Box>
-                      {messagesPerField.printIfExists(
-                        "firstName",
-                        "Napaka pri vnosu imena"
-                      ) ? (
-                        <MessageAlert />
-                      ) : null}
                       <Label>{msg("firstName")}</Label>
 
                       <Input
+                        isInvalid={
+                          messagesPerField.printIfExists(
+                            "firstName",
+                            "Napaka pri vnosu priimka"
+                          )
+                            ? true
+                            : false
+                        }
                         id="firstName"
                         name="firstName"
                         // isInvalid={false}
@@ -105,14 +108,16 @@ export const Register = memo(
 
                     {/* lastName */}
                     <Box>
-                      {messagesPerField.printIfExists(
-                        "lastName",
-                        "Napaka pri vnosu priimka"
-                      ) ? (
-                        <MessageAlert />
-                      ) : null}
                       <Label>{msg("lastName")}</Label>
                       <Input
+                        isInvalid={
+                          messagesPerField.printIfExists(
+                            "lastName",
+                            "Napaka pri vnosu priimka"
+                          )
+                            ? true
+                            : false
+                        }
                         id="lastName"
                         name="lastName"
                         autoComplete="lastName"
@@ -121,14 +126,16 @@ export const Register = memo(
                     </Box>
                     {/* email */}
                     <Box>
-                      {messagesPerField.printIfExists(
-                        "email",
-                        "Napaka pri vnosu emaila"
-                      ) ? (
-                        <MessageAlert />
-                      ) : null}
                       <Label>{msg("email")}</Label>
                       <Input
+                        isInvalid={
+                          messagesPerField.printIfExists(
+                            "email",
+                            "Napaka pri vnosu priimka"
+                          )
+                            ? true
+                            : false
+                        }
                         id="email"
                         name="email"
                         autoComplete="email"
@@ -139,14 +146,16 @@ export const Register = memo(
                     {/* username */}
                     {!realm.registrationEmailAsUsername && (
                       <Box>
-                        {messagesPerField.printIfExists(
-                          "username",
-                          "Napaka pri vnosu emaila"
-                        ) ? (
-                          <MessageAlert />
-                        ) : null}
                         <Label>{msg("username")}</Label>
                         <Input
+                          isInvalid={
+                            messagesPerField.printIfExists(
+                              "username",
+                              "Napaka pri vnosu priimka"
+                            )
+                              ? true
+                              : false
+                          }
                           id="username"
                           name="username"
                           autoComplete="username"
@@ -161,14 +170,16 @@ export const Register = memo(
                     {passwordRequired && (
                       <>
                         <Box>
-                          {messagesPerField.printIfExists(
-                            "password",
-                            "Napaka pri vnosu gesla"
-                          ) ? (
-                            <MessageAlert />
-                          ) : null}
                           <Label>{msg("password")}</Label>
                           <Input
+                            isInvalid={
+                              messagesPerField.printIfExists(
+                                "password",
+                                "Napaka pri vnosu priimka"
+                              )
+                                ? true
+                                : false
+                            }
                             id="password"
                             name="password"
                             type="password"
@@ -177,14 +188,16 @@ export const Register = memo(
                         </Box>
 
                         <Box>
-                          {messagesPerField.printIfExists(
-                            "password-confirm",
-                            "Napaka pri ponovnem vnosu gesla"
-                          ) ? (
-                            <MessageAlert />
-                          ) : null}
                           <Label>{msg("passwordConfirm")}</Label>
                           <Input
+                            isInvalid={
+                              messagesPerField.printIfExists(
+                                "password-confirm",
+                                "Napaka pri vnosu priimka"
+                              )
+                                ? true
+                                : false
+                            }
                             id="password-confirm"
                             name="password-confirm"
                             type="password"

@@ -36,14 +36,15 @@ export const Register = memo(
       recaptchaSiteKey,
     } = kcContext
 
-    const [count, setcount] = useState(0)
+    let count = 0
     const errors = message?.summary ? message?.summary.split("<br>") : []
     console.log(errors)
 
     const MessageAlert = () => {
       const messageError = count < errors.length ? errors[count] : "Error"
       console.log(count)
-      setcount(count + 1)
+      console.log(messageError)
+      count++
       return (
         <Alert status="error" marginBottom="2" marginTop="1">
           <AlertIcon />
@@ -89,9 +90,7 @@ export const Register = memo(
                         "firstName",
                         "Napaka pri vnosu imena"
                       ) ? (
-                        <Alert status="error" marginBottom="2" marginTop="2">
-                          <AlertIcon />
-                        </Alert>
+                        <MessageAlert />
                       ) : null}
                       <Label>{msg("firstName")}</Label>
 

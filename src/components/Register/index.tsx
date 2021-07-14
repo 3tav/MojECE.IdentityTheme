@@ -39,12 +39,19 @@ export const Register = memo(
     const [count, setcount] = useState(0)
     const errors = message?.summary ? message?.summary.split("<br>") : []
     console.log(errors)
-    const handleError = () => {
-      const error = errors[count]
+
+    const MessageAlert = () => {
+      const messageError = count < errors.length ? errors[count] : "Error"
       console.log(count)
-      console.log(error)
       setcount(count + 1)
-      return error
+      return (
+        <Alert status="error" marginBottom="2" marginTop="1">
+          <AlertIcon />
+          <Text fontSize="xs" marginLeft="2" fontWeight="bold">
+            {messageError}
+          </Text>
+        </Alert>
+      )
     }
 
     return (
@@ -84,9 +91,6 @@ export const Register = memo(
                       ) ? (
                         <Alert status="error" marginBottom="2" marginTop="2">
                           <AlertIcon />
-                          <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                            {handleError}
-                          </Text>
                         </Alert>
                       ) : null}
                       <Label>{msg("firstName")}</Label>
@@ -106,12 +110,7 @@ export const Register = memo(
                         "lastName",
                         "Napaka pri vnosu priimka"
                       ) ? (
-                        <Alert status="error" marginBottom="2" marginTop="2">
-                          <AlertIcon />
-                          <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                            {handleError}
-                          </Text>
-                        </Alert>
+                        <MessageAlert />
                       ) : null}
                       <Label>{msg("lastName")}</Label>
                       <Input
@@ -127,12 +126,7 @@ export const Register = memo(
                         "email",
                         "Napaka pri vnosu emaila"
                       ) ? (
-                        <Alert status="error" marginBottom="2" marginTop="2">
-                          <AlertIcon />
-                          <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                            {handleError}
-                          </Text>
-                        </Alert>
+                        <MessageAlert />
                       ) : null}
                       <Label>{msg("email")}</Label>
                       <Input
@@ -150,16 +144,7 @@ export const Register = memo(
                           "username",
                           "Napaka pri vnosu emaila"
                         ) ? (
-                          <Alert status="error" marginBottom="2" marginTop="2">
-                            <AlertIcon />
-                            <Text
-                              fontSize="xs"
-                              marginLeft="2"
-                              fontWeight="bold"
-                            >
-                              {handleError}
-                            </Text>
-                          </Alert>
+                          <MessageAlert />
                         ) : null}
                         <Label>{msg("username")}</Label>
                         <Input
@@ -181,20 +166,7 @@ export const Register = memo(
                             "password",
                             "Napaka pri vnosu gesla"
                           ) ? (
-                            <Alert
-                              status="error"
-                              marginBottom="2"
-                              marginTop="2"
-                            >
-                              <AlertIcon />
-                              <Text
-                                fontSize="xs"
-                                marginLeft="2"
-                                fontWeight="bold"
-                              >
-                                {handleError}
-                              </Text>
-                            </Alert>
+                            <MessageAlert />
                           ) : null}
                           <Label>{msg("password")}</Label>
                           <Input
@@ -210,20 +182,7 @@ export const Register = memo(
                             "password-confirm",
                             "Napaka pri ponovnem vnosu gesla"
                           ) ? (
-                            <Alert
-                              status="error"
-                              marginBottom="2"
-                              marginTop="2"
-                            >
-                              <AlertIcon />
-                              <Text
-                                fontSize="xs"
-                                marginLeft="2"
-                                fontWeight="bold"
-                              >
-                                {handleError}
-                              </Text>
-                            </Alert>
+                            <MessageAlert />
                           ) : null}
                           <Label>{msg("passwordConfirm")}</Label>
                           <Input

@@ -24,8 +24,6 @@ export const RESOURCES_PATH = realKcContext
 
 if (kcContext !== undefined) {
   console.log(kcContext)
-} else {
-  console.log(undefined)
 }
 
 export default function App() {

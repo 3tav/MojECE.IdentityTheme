@@ -203,9 +203,10 @@ export const Register = memo(
 
                 {/* error alert */}
                 {message?.type === "error" ? (
-                  <Alert status="error" marginTop="12">
+                  <Alert status="error" marginTop="8">
                     <Flex>
                       <AlertIcon />
+                      <Box width="2" />
                       <Text fontSize="xs" fontWeight="bold" margin-left="2">
                         {message.summary.split("<br>").join(" ")}
                       </Text>

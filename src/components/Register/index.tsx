@@ -1,4 +1,4 @@
-import { memo, useState } from "react"
+import { memo } from "react"
 import { Template } from "../Template"
 import type { KcProps, KcContext } from "keycloakify"
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
@@ -66,7 +66,6 @@ export const Register = memo(
             id="kc-form"
             flexDir={["column", "column", "column", "row"]}
           >
-            <Text>Test</Text>
             <Box flex="1">
               <form
                 id="kc-register-form"
@@ -74,6 +73,15 @@ export const Register = memo(
                 action={url.registrationAction}
                 method="post"
               >
+                {message?.type === "error" ? (
+                  <Alert status="error" marginBottom="3" marginTop="3">
+                    <AlertIcon />
+                    <Text fontSize="xs" marginLeft="2" fontWeight="bold">
+                      {message.summary}
+                    </Text>
+                  </Alert>
+                ) : null}
+
                 <Flex
                   mt="4"
                   id="kc-form"

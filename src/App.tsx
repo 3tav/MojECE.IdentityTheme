@@ -18,10 +18,14 @@ import tos_fr_url from "./tos/tos_fr.md"
 // kcLoginContext kcRegisterContext kcLoginResetPasswordContext
 const kcContext = realKcContext ?? kcContextMocks.kcLoginResetPasswordContext
 
-export const RESOURCES_PATH = realKcContext ? kcContext.url?.resourcesPath + "/build/" : "/"
+export const RESOURCES_PATH = realKcContext
+  ? kcContext.url?.resourcesPath + "/build/"
+  : "/"
 
 if (kcContext !== undefined) {
   console.log(kcContext)
+} else {
+  console.log(undefined)
 }
 
 export default function App() {
@@ -34,7 +38,6 @@ export default function App() {
   //Lazily download the therms and conditions in the appropriate language
   //if we are on the terms.ftl page.
   useEffect(() => {
-
     if (kcContext!.pageId !== "terms.ftl") {
       return
     }

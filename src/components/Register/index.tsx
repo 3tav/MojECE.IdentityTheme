@@ -54,22 +54,6 @@ export const Register = memo(
                 action={url.registrationAction}
                 method="post"
               >
-                {message?.type === "error" ? (
-                  <Alert
-                    status="error"
-                    marginBottom="3"
-                    marginTop="3"
-                    maxWidth="32"
-                  >
-                    <Flex>
-                      <AlertIcon />
-                      <Text fontSize="xs" fontWeight="bold">
-                        {message.summary.split("<br>").join(" ")}
-                      </Text>
-                    </Flex>
-                  </Alert>
-                ) : null}
-
                 <Flex
                   mt="4"
                   id="kc-form"
@@ -217,6 +201,17 @@ export const Register = memo(
                   </VStack>
                 </Flex>
 
+                {/* error alert */}
+                {message?.type === "error" ? (
+                  <Alert status="error" marginBottom="3" marginTop="3">
+                    <Flex>
+                      <AlertIcon />
+                      <Text fontSize="xs" fontWeight="bold">
+                        {message.summary.split("<br>").join(" ")}
+                      </Text>
+                    </Flex>
+                  </Alert>
+                ) : null}
                 {/* Register */}
                 <Flex mt="16" flexDir={["column", "column", "column", "row"]}>
                   <Box flex="1"></Box>

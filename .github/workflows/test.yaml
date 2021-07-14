@@ -1,0 +1,13 @@
+name: ci
+on:
+  workflow_dispatch:
+
+jobs:
+  trigger_upstream:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Trigger Identity redeploy
+      run: |
+        curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/3Tav/MojECE.Identity/actions/workflows/main.yml/dispatches --data '{"ref": "master"}'
+
+

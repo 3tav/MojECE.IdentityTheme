@@ -3,6 +3,7 @@ import { Template } from "../Template"
 import type { KcProps, KcContext } from "keycloakify"
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
 import { cx } from "tss-react"
+import _ from "lodash"
 
 import {
   Button,
@@ -36,24 +37,8 @@ export const Register = memo(
       recaptchaSiteKey,
     } = kcContext
 
-    // let count = 0
-    // const errors = message?.summary ? message?.summary.split("<br>") : []
-    // console.log(errors)
-
-    // const MessageAlert = () => {
-    //   const messageError = count < errors.length ? errors[count] : "Error"
-    //   console.log(count)
-    //   console.log(messageError)
-    //   count++
-    //   return (
-    //     <Alert status="error" marginBottom="2" marginTop="1">
-    //       <AlertIcon />
-    //       <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-    //         {messageError}
-    //       </Text>
-    //     </Alert>
-    //   )
-    // }
+    const messages =
+      message?.type === "error" ? message.summary.split("<br>") : []
 
     return (
       <Template
@@ -75,10 +60,16 @@ export const Register = memo(
               >
                 {message?.type === "error" ? (
                   <Alert status="error" marginBottom="3" marginTop="3">
-                    <AlertIcon />
-                    <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                      {message.summary}
-                    </Text>
+                    <Flex>
+                      <AlertIcon />
+                      <Box marginLeft="2">
+                        {_.map(messages, (item) => (
+                          <Text fontSize="xs" fontWeight="bold">
+                            {item}
+                          </Text>
+                        ))}
+                      </Box>
+                    </Flex>
                   </Alert>
                 ) : null}
 

@@ -203,17 +203,20 @@ export const Register = memo(
 
                 {/* error alert */}
                 {message?.type === "error" ? (
-                  <Alert status="error" marginBottom="3" marginTop="3">
+                  <Alert status="error" marginTop="12">
                     <Flex>
                       <AlertIcon />
-                      <Text fontSize="xs" fontWeight="bold">
+                      <Text fontSize="xs" fontWeight="bold" margin-left="2">
                         {message.summary.split("<br>").join(" ")}
                       </Text>
                     </Flex>
                   </Alert>
                 ) : null}
                 {/* Register */}
-                <Flex mt="16" flexDir={["column", "column", "column", "row"]}>
+                <Flex
+                  mt={message?.type === "error" ? "4" : "16"}
+                  flexDir={["column", "column", "column", "row"]}
+                >
                   <Box flex="1"></Box>
 
                   {/* doRegister */}

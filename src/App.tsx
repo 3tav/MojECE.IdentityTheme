@@ -12,11 +12,12 @@ import theme from "./theme/theme"
 
 import { KcApp } from "./KcApp"
 
-import tos_en_url from "./tos/tos_en.md"
-import tos_fr_url from "./tos/tos_fr.md"
+//import tos_en_url from "./tos/tos_en.md"
+//import tos_fr_url from "./tos/tos_fr.md"
+import tos_slo_url from "./tos/tos_slo.md"
 
-// kcLoginContext kcRegisterContext kcLoginResetPasswordContext
-const kcContext = realKcContext ?? kcContextMocks.kcLoginResetPasswordContext
+// kcLoginContext kcRegisterContext kcLoginResetPasswordContext kcTermsContext
+const kcContext = realKcContext ?? kcContextMocks.kcTermsContext
 
 export const RESOURCES_PATH = realKcContext
   ? kcContext.url?.resourcesPath + "/build/"
@@ -46,9 +47,9 @@ export default function App() {
       (() => {
         switch (kcLanguageTag) {
           case "fr":
-            return tos_fr_url
+            return tos_slo_url
           default:
-            return tos_en_url
+            return tos_slo_url
         }
       })()
     )

@@ -7,11 +7,12 @@ import { LoginOtp } from "keycloakify/lib/components/LoginOtp"
 import { LoginIdpLinkConfirm } from "keycloakify/lib/components/LoginIdpLinkConfirm"
 
 import { LoginUpdateProfile } from "keycloakify/lib/components/LoginUpdateProfile"
-import { Terms } from "keycloakify/lib/components/Terms"
+//import { Terms } from "keycloakify/lib/components/Terms"
 import type { KcContext } from "keycloakify"
 
 import { Register } from "./components/Register"
 import { Login } from "./components/Login"
+import { Terms } from "components/Terms"
 import { LoginResetPassword } from "./components/LoginResetPassword"
 
 export type Props = {

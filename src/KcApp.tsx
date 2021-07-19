@@ -1,7 +1,6 @@
 import { memo } from "react"
 import { defaultKcProps } from "keycloakify"
 import { Info } from "keycloakify/lib/components/Info"
-import { Error } from "keycloakify/lib/components/Error"
 import { LoginVerifyEmail } from "keycloakify/lib/components/LoginVerifyEmail"
 import { LoginOtp } from "keycloakify/lib/components/LoginOtp"
 import { LoginIdpLinkConfirm } from "keycloakify/lib/components/LoginIdpLinkConfirm"
@@ -12,6 +11,7 @@ import type { KcContext } from "keycloakify"
 
 import { Register } from "./components/Register"
 import { Login } from "./components/Login"
+import { Error } from "components/Error"
 import { LoginResetPassword } from "./components/LoginResetPassword"
 
 export type Props = {

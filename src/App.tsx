@@ -16,7 +16,7 @@ import tos_en_url from "./tos/tos_en.md"
 import tos_fr_url from "./tos/tos_fr.md"
 
 // kcLoginContext kcRegisterContext kcLoginResetPasswordContext
-const kcContext = realKcContext ?? kcContextMocks.kcLoginResetPasswordContext
+const kcContext = realKcContext ?? kcContextMocks.kcErrorContext
 
 export const RESOURCES_PATH = realKcContext
   ? kcContext.url?.resourcesPath + "/build/"

@@ -10600,10 +10600,10 @@ react-markdown@^5.0.3:
     unist-util-visit "^2.0.0"
     xtend "^4.0.1"
 
-react-password-strength-bar@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/react-password-strength-bar/-/react-password-strength-bar-0.3.3.tgz#c6b7278f4ff550f2cd03174526ac5f7a0bc92365"
-  integrity sha512-VYi1LpVORBUgP/8ymnDhMKpRwcymyg0MAzoeGFyyrUo3m8rxzAYDfQyzfflWGKDw5o3XT6WlxWtt+0m8uncJEw==
+react-password-strength-bar@^0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/react-password-strength-bar/-/react-password-strength-bar-0.3.5.tgz#6b83b0323901847c40e794e1738a9e2245c05cce"
+  integrity sha512-e48tYTKZ5gy1tUYYT3aJ+BWggg0RE/ZUN8ep6sHgGuI9SqJTgd4WL4TFgT37kX09NyQwSOcZKHpcKQEtCEECuA==
   dependencies:
     zxcvbn "4.4.2"
 

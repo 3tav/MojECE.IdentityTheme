@@ -25,6 +25,7 @@
         "keycloakify": "^1.2.0",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
+        "react-password-strength-bar": "^0.3.5",
         "tss-react": "^0.0.12",
         "web-vitals": "^1.0.1"
     },

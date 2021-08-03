@@ -1,3 +1,10 @@
+## **0.5.0** (2021-08-03)  
+  
+- Release v0.5.0  
+- Terms, Error Page and Password Strength  
+- #5 Error page template  
+- #6 Terms and conditions    
+  
 ### **0.4.17** (2021-07-14)  
   
 - Release v0.4.17  

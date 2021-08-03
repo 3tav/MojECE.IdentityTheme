@@ -51,7 +51,7 @@ export const Terms = memo(
                   <Box w="8" />
                   <Button size="lg" name="accept" id="kc-accept" type="submit">
                     <EceIcons name="check" boxSize="4" />
-                    <Text ml="2">{msgStr("doRegister")}</Text>
+                    <Text ml="2">{msgStr("doAccept")}</Text>
                   </Button>
                 </Flex>
               </form>

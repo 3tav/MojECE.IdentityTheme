@@ -16,6 +16,17 @@ const styles: Styles = {
       borderColor: mode("gray.200", "wwhite")(props),
       wordWrap: "break-word",
     },
+    ul: {
+      paddingLeft: "40px",
+    },
+    ol: {
+      paddingLeft: "40px",
+    },
+    h2: {
+      textAlign: "center",
+      fontSize: "1.50rem",
+      color: "grey",
+    },
   }),
 }
 

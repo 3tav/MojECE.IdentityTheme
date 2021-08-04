@@ -42,7 +42,7 @@ export const Terms = memo(
                     name="cancel"
                     id="kc-decline"
                     type="submit"
-                    backgroundColor="red.600"
+                    colorScheme="red"
                     size="lg"
                   >
                     <EceIcons name="close" boxSize="4" />

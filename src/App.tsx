@@ -33,6 +33,7 @@ export default function App() {
   }
 
   const { kcLanguageTag } = useKcLanguageTag()
+  //const kcLanguageTag: string = "si"
 
   //Lazily download the therms and conditions in the appropriate language
   //if we are on the terms.ftl page.
@@ -41,7 +42,7 @@ export default function App() {
       return
     }
 
-    kcMessages[kcLanguageTag].termsTitle = ""
+    ;(kcMessages as any)[kcLanguageTag].termsTitle = ""
 
     fetch(
       (() => {
@@ -55,9 +56,11 @@ export default function App() {
     )
       .then((response) => response.text())
       .then(
-        (rawMarkdown) => (kcMessages[kcLanguageTag].termsText = rawMarkdown)
+        (rawMarkdown) =>
+          ((kcMessages as any)[kcLanguageTag].termsText = rawMarkdown)
       )
   }, [kcLanguageTag])
+  console.log((kcMessages as any)["si"])
   return (
     <ChakraProvider theme={theme}>
       <Fonts />

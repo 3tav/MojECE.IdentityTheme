@@ -59,5 +59,8 @@
             "last 1 safari version"
         ]
     },
-    "typings": "./src/index.d.ts"
+    "typings": "./src/index.d.ts",
+    "keycloakify": {
+        "extraThemeProperties": ["locales=en,si"]
+    }
 }

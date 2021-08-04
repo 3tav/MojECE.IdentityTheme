@@ -6,6 +6,7 @@ import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
 
 import { Button, Flex, Box, Text } from "@chakra-ui/react"
 import EceIcons from "theme/parts/Icons"
+import "./style.css"
 
 export const Terms = memo(
   ({ kcContext, ...props }: { kcContext: KcContext.Terms } & KcProps) => {
@@ -28,7 +29,7 @@ export const Terms = memo(
               pl="0"
               pr="2"
             >
-              {msg("termsText")}
+              <Box className="terms">{msg("termsText")}</Box>
             </Box>
             <Box h="8" />
             <Box>

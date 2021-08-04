@@ -1,0 +1,32 @@
+.terms p {
+  margin-block-end: 1em;
+}
+
+.terms ul {
+  padding-left: 40px;
+  margin-block-end: 1em;
+}
+
+.terms ol {
+  padding-left: 40px;
+  margin-block-end: 1em;
+}
+
+.terms h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: grey;
+  font-weight: bold;
+  margin-block-end: 1em;
+}
+
+.terms h2 {
+  padding-left: 25px;
+  font-weight: bold;
+  margin-block-end: 1em;
+  margin-block-start: 3em;
+}
+
+.terms a {
+  font-weight: bold;
+}

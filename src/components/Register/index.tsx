@@ -25,12 +25,17 @@ type KcContext_Register = Extract<KcContext, { pageId: "register.ftl" }>
 export const Register = memo(
   ({ kcContext, ...props }: { kcContext: KcContext_Register } & KcProps) => {
     const { msg, msgStr } = useKcMessage()
+    const regex = new RegExp(
+      "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*-_+?.,])(?=.{8,})"
+    )
 
     const [pass, setpass] = useState("")
     const [open, setopen] = useState(false)
+    const [accaptable, setaccaptable] = useState(false)
 
     const handlePassChange = (event: any) => {
       setpass(event.target.value)
+      setaccaptable(regex.test(event.target.value))
     }
 
     const handleFocus = () => {
@@ -175,7 +180,7 @@ export const Register = memo(
                             paddingLeft="2"
                             paddingRight="2"
                             isOpen={open}
-                            label={PassLabel(pass)}
+                            label={PassLabel(pass, accaptable)}
                             placement="top"
                             closeOnClick={false}
                             offset={[0, 24]}

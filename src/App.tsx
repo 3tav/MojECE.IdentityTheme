@@ -58,7 +58,6 @@ export default function App() {
         (rawMarkdown) => (kcMessages[kcLanguageTag].termsText = rawMarkdown)
       )
   }, [kcLanguageTag])
-  console.log(kcContext!.pageId)
   return (
     <ChakraProvider theme={theme}>
       <Fonts />

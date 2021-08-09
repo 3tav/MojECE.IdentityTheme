@@ -1,3 +1,8 @@
+### **0.5.9** (2021-08-09)  
+  
+- Release v0.5.9  
+- Password strength fix    
+  
 ### **0.5.8** (2021-08-09)  
   
 - Release v0.5.8  

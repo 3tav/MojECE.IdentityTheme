@@ -16,11 +16,12 @@ import { KcApp } from "./KcApp"
 import tos_slo_url from "./tos/tos_slo.md"
 
 // kcLoginContext kcRegisterContext kcLoginResetPasswordContext kcTermsContext
-// const { kcContext } = getKcContext({
-//   mockPageId: "terms.ftl",
-// })
 
-const { kcContext } = getKcContext()
+const { kcContext } = getKcContext().kcContext
+  ? getKcContext()
+  : getKcContext({
+      mockPageId: "terms.ftl",
+    })
 
 export const RESOURCES_PATH = kcContext
   ? kcContext.url?.resourcesPath + "/build/"
@@ -36,7 +37,6 @@ export default function App() {
   }
 
   const { kcLanguageTag } = useKcLanguageTag()
-  //const kcLanguageTag: string = "si"
 
   //Lazily download the therms and conditions in the appropriate language
   //if we are on the terms.ftl page.
@@ -45,7 +45,7 @@ export default function App() {
       return
     }
 
-    ;(kcMessages as any)[kcLanguageTag].termsTitle = ""
+    kcMessages[kcLanguageTag].termsTitle = ""
 
     fetch(
       (() => {
@@ -59,8 +59,7 @@ export default function App() {
     )
       .then((response) => response.text())
       .then(
-        (rawMarkdown) =>
-          ((kcMessages as any)[kcLanguageTag].termsText = rawMarkdown)
+        (rawMarkdown) => (kcMessages[kcLanguageTag].termsText = rawMarkdown)
       )
   }, [kcLanguageTag])
   console.log((kcMessages as any)["si"])

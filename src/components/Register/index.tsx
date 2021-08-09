@@ -26,7 +26,7 @@ export const Register = memo(
   ({ kcContext, ...props }: { kcContext: KcContext_Register } & KcProps) => {
     const { msg, msgStr } = useKcMessage()
     const regex = new RegExp(
-      "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*-_+?.,])(?=.{8,})"
+      "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_+?.,-])(?=.{8,})"
     )
 
     const [pass, setpass] = useState("")

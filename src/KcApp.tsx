@@ -7,7 +7,7 @@ import { LoginIdpLinkConfirm } from "keycloakify/lib/components/LoginIdpLinkConf
 
 import { LoginUpdateProfile } from "keycloakify/lib/components/LoginUpdateProfile"
 //import { Terms } from "keycloakify/lib/components/Terms"
-import type { KcContext } from "keycloakify"
+import type { KcContextBase } from "keycloakify"
 
 import { Register } from "./components/Register"
 import { Login } from "./components/Login"
@@ -16,7 +16,7 @@ import { Error } from "components/Error"
 import { LoginResetPassword } from "./components/LoginResetPassword"
 
 export type Props = {
-  kcContext: KcContext
+  kcContext: KcContextBase
 }
 
 export const KcApp = memo((props: Props) => {

@@ -1,13 +1,13 @@
 import { memo } from "react"
 import { Template } from "../Template"
-import type { KcProps, KcContext } from "keycloakify"
+import type { KcProps, KcContextBase } from "keycloakify"
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
 
 import { Button, Flex, Box, Link, Text, Input, VStack } from "@chakra-ui/react"
 import EceIcons from "theme/parts/Icons"
 
 type KcContext_LoginResetPassword = Extract<
-  KcContext,
+  KcContextBase,
   { pageId: "login-reset-password.ftl" }
 >
 

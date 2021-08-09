@@ -2,8 +2,7 @@ import { useEffect } from "react"
 import { ChakraProvider } from "@chakra-ui/react"
 import {
   defaultKcProps,
-  kcContext as realKcContext,
-  kcContextMocks,
+  getKcContext,
   kcMessages,
   useKcLanguageTag,
 } from "keycloakify"
@@ -17,9 +16,11 @@ import { KcApp } from "./KcApp"
 import tos_slo_url from "./tos/tos_slo.md"
 
 // kcLoginContext kcRegisterContext kcLoginResetPasswordContext kcTermsContext
-const kcContext = realKcContext ?? kcContextMocks.kcTermsContext
+const { kcContext } = getKcContext({
+  mockPageId: "terms.ftl",
+})
 
-export const RESOURCES_PATH = realKcContext
+export const RESOURCES_PATH = kcContext
   ? kcContext.url?.resourcesPath + "/build/"
   : "/"
 

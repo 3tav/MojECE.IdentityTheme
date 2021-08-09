@@ -1,6 +1,6 @@
 import { useState, memo } from "react"
 // import { Template } from "keycloakify"
-import type { KcProps, KcContext } from "keycloakify"
+import type { KcProps, KcContextBase } from "keycloakify"
 // import type { KcProps } from "./KcProps"
 // import type { KcContextBase } from 'keycloakify'
 // import { cx } from "tss-react"
@@ -32,7 +32,7 @@ const HORIZONTAL_LINE =
   "linear-gradient(0deg, transparent 48%, #E0E0E0 49%, #E0E0E0 51%, transparent 52%, transparent 100%)"
 
 export const Login = memo(
-  ({ kcContext, ...props }: { kcContext: KcContext.Login } & KcProps) => {
+  ({ kcContext, ...props }: { kcContext: KcContextBase.Login } & KcProps) => {
     const { msg, msgStr } = useKcMessage()
 
     const {

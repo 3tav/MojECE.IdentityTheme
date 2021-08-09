@@ -1,6 +1,6 @@
 import { memo } from "react"
-import { Template } from "../Template"
-import type { KcProps, KcContext } from "keycloakify"
+import { Template } from "keycloakify"
+import type { KcProps, KcContextBase } from "keycloakify"
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
 //import { cx } from "tss-react"
 
@@ -9,7 +9,7 @@ import EceIcons from "theme/parts/Icons"
 import "./style.css"
 
 export const Terms = memo(
-  ({ kcContext, ...props }: { kcContext: KcContext.Terms } & KcProps) => {
+  ({ kcContext, ...props }: { kcContext: KcContextBase.Terms } & KcProps) => {
     const { msg, msgStr } = useKcMessage()
 
     const { url } = kcContext

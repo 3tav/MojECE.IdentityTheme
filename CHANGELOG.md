@@ -1,3 +1,9 @@
+### **0.5.6** (2021-08-09)  
+  
+- Release v0.5.6  
+- Keycloakify new version and terms default template  
+- #8 Translation for si language    
+  
 ### **0.5.5** (2021-08-04)  
   
 - Release v0.5.5  

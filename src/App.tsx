@@ -16,9 +16,11 @@ import { KcApp } from "./KcApp"
 import tos_slo_url from "./tos/tos_slo.md"
 
 // kcLoginContext kcRegisterContext kcLoginResetPasswordContext kcTermsContext
-const { kcContext } = getKcContext({
-  mockPageId: "terms.ftl",
-})
+// const { kcContext } = getKcContext({
+//   mockPageId: "terms.ftl",
+// })
+
+const { kcContext } = getKcContext()
 
 export const RESOURCES_PATH = kcContext
   ? kcContext.url?.resourcesPath + "/build/"

@@ -1,6 +1,6 @@
 import React, { memo, useState } from "react"
 import { Template } from "../Template"
-import type { KcProps, KcContext } from "keycloakify"
+import type { KcProps, KcContextBase } from "keycloakify"
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
 import { cx } from "tss-react"
 
@@ -18,7 +18,7 @@ import {
 import Label from "shared/Label"
 import PassLabel from "./TooltipLabel"
 import EceIcons, { Alert as AlertIcon } from "theme/parts/Icons"
-type KcContext_Register = Extract<KcContext, { pageId: "register.ftl" }>
+type KcContext_Register = Extract<KcContextBase, { pageId: "register.ftl" }>
 
 // TODO: isInvalid w/ messagesPerField
 

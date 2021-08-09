@@ -22,7 +22,7 @@
         "@emotion/react": "^11",
         "@emotion/styled": "^11",
         "framer-motion": "^4",
-        "keycloakify": "^1.2.0",
+        "keycloakify": "^2.0.12",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-password-strength-bar": "^0.3.5",
@@ -59,5 +59,8 @@
             "last 1 safari version"
         ]
     },
-    "typings": "./src/index.d.ts"
+    "typings": "./src/index.d.ts",
+    "keycloakify": {
+        "extraThemeProperties": ["locales=en,si"]
+    }
 }

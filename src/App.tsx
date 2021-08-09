@@ -2,8 +2,7 @@ import { useEffect } from "react"
 import { ChakraProvider } from "@chakra-ui/react"
 import {
   defaultKcProps,
-  kcContext as realKcContext,
-  kcContextMocks,
+  getKcContext,
   kcMessages,
   useKcLanguageTag,
 } from "keycloakify"
@@ -17,9 +16,11 @@ import { KcApp } from "./KcApp"
 import tos_slo_url from "./tos/tos_slo.md"
 
 // kcLoginContext kcRegisterContext kcLoginResetPasswordContext kcTermsContext
-const kcContext = realKcContext ?? kcContextMocks.kcTermsContext
+const { kcContext } = getKcContext({
+  mockPageId: "terms.ftl",
+})
 
-export const RESOURCES_PATH = realKcContext
+export const RESOURCES_PATH = kcContext
   ? kcContext.url?.resourcesPath + "/build/"
   : "/"
 
@@ -33,6 +34,7 @@ export default function App() {
   }
 
   const { kcLanguageTag } = useKcLanguageTag()
+  //const kcLanguageTag: string = "si"
 
   //Lazily download the therms and conditions in the appropriate language
   //if we are on the terms.ftl page.
@@ -41,7 +43,7 @@ export default function App() {
       return
     }
 
-    kcMessages[kcLanguageTag].termsTitle = ""
+    ;(kcMessages as any)[kcLanguageTag].termsTitle = ""
 
     fetch(
       (() => {
@@ -55,9 +57,11 @@ export default function App() {
     )
       .then((response) => response.text())
       .then(
-        (rawMarkdown) => (kcMessages[kcLanguageTag].termsText = rawMarkdown)
+        (rawMarkdown) =>
+          ((kcMessages as any)[kcLanguageTag].termsText = rawMarkdown)
       )
   }, [kcLanguageTag])
+  console.log((kcMessages as any)["si"])
   return (
     <ChakraProvider theme={theme}>
       <Fonts />

@@ -20,7 +20,7 @@ import { getStatus } from "lib/constants/status"
 
 import { appendHead } from "keycloakify/lib/tools/appendHead"
 import { join as pathJoin } from "path"
-import type { KcContext } from "keycloakify"
+import type { KcContextBase } from "keycloakify"
 
 import {
   Flex,
@@ -46,11 +46,11 @@ export type TemplateProps = {
   formNode: ReactNode
   infoNode?: ReactNode
   onClickCross?(): void
-} & { kcContext: KcContext } & KcTemplateProps
+} & { kcContext: KcContextBase } & KcTemplateProps
 
 export const Template = memo((props: TemplateProps) => {
   // className,
-  const { kcContext, doFetchDefaultThemeResources, onClickCross } = props  
+  const { kcContext, doFetchDefaultThemeResources, onClickCross } = props
 
   /**
    * Language
@@ -202,7 +202,7 @@ const { Page } = (() => {
     formNode: ReactNode
     infoNode?: ReactNode
     onClickCross: (() => void) | undefined
-  } & { kcContext: KcContext } & KcTemplateProps
+  } & { kcContext: KcContextBase } & KcTemplateProps
 
   // const { useClassNames } = createUseClassNames<{
   //   isPaperBiggerThanContainer: boolean
@@ -295,7 +295,7 @@ const { Page } = (() => {
       displayRequiredFields: boolean
       headerNode: ReactNode
       showUsernameNode?: ReactNode
-    } & { kcContext: KcContext } & KcTemplateProps
+    } & { kcContext: KcContextBase } & KcTemplateProps
 
     // const { useClassNames } = createUseClassNames()((theme) => ({
     //   root: {
@@ -387,7 +387,7 @@ const { Page } = (() => {
       displayWide?: boolean
       displayInfo?: boolean
       infoNode?: ReactNode
-    } & { kcContext: KcContext } & KcTemplateProps
+    } & { kcContext: KcContextBase } & KcTemplateProps
 
     // const { useClassNames } = createUseClassNames()(() => ({
     //   alert: {
@@ -452,7 +452,7 @@ const { Page } = (() => {
             )}
 
           {/* infoNode */}
-          {displayInfo && <>{ infoNode }</>}
+          {displayInfo && <>{infoNode}</>}
         </Box>
       )
     })

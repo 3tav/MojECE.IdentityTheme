@@ -2,7 +2,7 @@ import { Box, Link, Text } from "@chakra-ui/react"
 import { KcContextBase, KcProps } from "keycloakify"
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
 import { memo } from "react"
-import { Template } from "../Template"
+import { Template } from "components/Template"
 
 export const LoginVerifyEmail = memo(
   ({
@@ -16,15 +16,13 @@ export const LoginVerifyEmail = memo(
     return (
       <Template
         {...{ kcContext, ...props }}
-        doFetchDefaultThemeResources={true}
+        doFetchDefaultThemeResources={false}
         displayMessage={false}
         headerNode={msg("emailVerifyTitle")}
         formNode={
           <Box mt="12">
-            <Text className="instruction" textAlign="center">
-              {msg("emailVerifyInstruction1")}
-            </Text>
-            <Text className="instruction" textAlign="center">
+            <Text textAlign="center">{msg("emailVerifyInstruction1")}</Text>
+            <Text textAlign="center">
               {msg("emailVerifyInstruction2")}{" "}
               <Link color="blue.500" href={url.loginAction}>
                 {msg("doClickHere")}

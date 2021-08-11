@@ -1,3 +1,8 @@
+### **0.5.10** (2021-08-11)  
+  
+- Release v0.5.10  
+- Added login-update-password template    
+  
 ### **0.5.9** (2021-08-09)  
   
 - Release v0.5.9  

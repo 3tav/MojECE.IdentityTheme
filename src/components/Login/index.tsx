@@ -21,7 +21,7 @@ import {
 
 import { Template } from "components/Template"
 import Label from "shared/Label"
-import EceIcons, { Alert as AlertIcon } from "theme/parts/Icons"
+import EceIcons, { Alert as AlertIcon, Info } from "theme/parts/Icons"
 
 // TODO: messages
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
@@ -75,12 +75,32 @@ export const Login = memo(
                   action={url.loginAction}
                   method="post"
                 >
-                  <Text h={message?.type === "error" ? "6" : "12"}>
+                  <Text
+                    h={
+                      message?.type === "error" || message?.type === "success"
+                        ? "6"
+                        : "12"
+                    }
+                  >
                     Prijava z elektronsko pošto
                   </Text>
                   {message?.type === "error" ? (
                     <Alert status="error" marginBottom="3" marginTop="3">
                       <AlertIcon />
+                      <Text fontSize="xs" marginLeft="2" fontWeight="bold">
+                        {message.summary}
+                      </Text>
+                    </Alert>
+                  ) : null}
+
+                  {message?.type === "success" ? (
+                    <Alert
+                      status="info"
+                      marginBottom="3"
+                      marginTop="3"
+                      bgColor="blue.100"
+                    >
+                      <Info />
                       <Text fontSize="xs" marginLeft="2" fontWeight="bold">
                         {message.summary}
                       </Text>

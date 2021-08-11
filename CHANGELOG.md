@@ -1,3 +1,8 @@
+### **0.5.11** (2021-08-11)  
+  
+- Release v0.5.11  
+- Bugfix: password strength to updatePassword    
+  
 ### **0.5.10** (2021-08-11)  
   
 - Release v0.5.10  

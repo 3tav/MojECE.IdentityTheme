@@ -20,7 +20,7 @@ import { getStatus } from "lib/constants/status"
 
 import { appendHead } from "keycloakify/lib/tools/appendHead"
 import { join as pathJoin } from "path"
-import type { KcContextBase } from "keycloakify"
+//import type { KcContextBase } from "keycloakify"
 
 import {
   Flex,
@@ -32,6 +32,7 @@ import {
   Link,
 } from "@chakra-ui/react"
 import EceIcons from "theme/parts/Icons"
+import { KcContext } from "kcContext"
 
 export type TemplateProps = {
   doFetchDefaultThemeResources: boolean
@@ -46,7 +47,7 @@ export type TemplateProps = {
   formNode: ReactNode
   infoNode?: ReactNode
   onClickCross?(): void
-} & { kcContext: KcContextBase } & KcTemplateProps
+} & { kcContext: KcContext } & KcTemplateProps
 
 export const Template = memo((props: TemplateProps) => {
   // className,
@@ -202,7 +203,7 @@ const { Page } = (() => {
     formNode: ReactNode
     infoNode?: ReactNode
     onClickCross: (() => void) | undefined
-  } & { kcContext: KcContextBase } & KcTemplateProps
+  } & { kcContext: KcContext } & KcTemplateProps
 
   // const { useClassNames } = createUseClassNames<{
   //   isPaperBiggerThanContainer: boolean
@@ -295,7 +296,7 @@ const { Page } = (() => {
       displayRequiredFields: boolean
       headerNode: ReactNode
       showUsernameNode?: ReactNode
-    } & { kcContext: KcContextBase } & KcTemplateProps
+    } & { kcContext: KcContext } & KcTemplateProps
 
     // const { useClassNames } = createUseClassNames()((theme) => ({
     //   root: {
@@ -387,7 +388,7 @@ const { Page } = (() => {
       displayWide?: boolean
       displayInfo?: boolean
       infoNode?: ReactNode
-    } & { kcContext: KcContextBase } & KcTemplateProps
+    } & { kcContext: KcContext } & KcTemplateProps
 
     // const { useClassNames } = createUseClassNames()(() => ({
     //   alert: {

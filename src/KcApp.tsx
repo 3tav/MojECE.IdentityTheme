@@ -1,27 +1,24 @@
 import { memo } from "react"
 import { defaultKcProps } from "keycloakify"
 import { Info } from "keycloakify/lib/components/Info"
-import { LoginVerifyEmail } from "keycloakify/lib/components/LoginVerifyEmail"
+//import { LoginVerifyEmail } from "keycloakify/lib/components/LoginVerifyEmail"
 import { LoginOtp } from "keycloakify/lib/components/LoginOtp"
 import { LoginIdpLinkConfirm } from "keycloakify/lib/components/LoginIdpLinkConfirm"
 
 import { LoginUpdateProfile } from "keycloakify/lib/components/LoginUpdateProfile"
 //import { Terms } from "keycloakify/lib/components/Terms"
-import type { KcContextBase } from "keycloakify"
+//import type { KcContextBase } from "keycloakify"
 
 import { Register } from "./components/Register"
 import { Login } from "./components/Login"
 import { Terms } from "components/Terms"
 import { Error } from "components/Error"
 import { LoginResetPassword } from "./components/LoginResetPassword"
+import { LoginVerifyEmail } from "./components/LoginVerifyEmail"
+import type { KcContext } from "./kcContext"
+import { LoginUpdatePassword } from "components/LoginUpdatePassword"
 
-export type Props = {
-  kcContext: KcContextBase
-}
-
-export const KcApp = memo((props: Props) => {
-  const { kcContext } = props
-
+export const KcApp = memo(({ kcContext }: { kcContext: KcContext }) => {
   const kcProps = defaultKcProps
 
   // console.log("KcApp kcContext.pageId", kcContext.pageId);
@@ -47,5 +44,7 @@ export const KcApp = memo((props: Props) => {
       return <LoginUpdateProfile {...{ kcContext, ...kcProps }} />
     case "login-idp-link-confirm.ftl":
       return <LoginIdpLinkConfirm {...{ kcContext, ...kcProps }} />
+    case "login-update-password.ftl":
+      return <LoginUpdatePassword {...{ kcContext, ...kcProps }} />
   }
 })

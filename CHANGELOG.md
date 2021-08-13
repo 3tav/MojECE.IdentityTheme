@@ -1,3 +1,9 @@
+## **0.6.0** (2021-08-13)  
+  
+- Release v0.6.0  
+- Alert translations  
+- Prevodi header message    
+  
 ### **0.5.14** (2021-08-13)  
   
 - Release v0.5.14  

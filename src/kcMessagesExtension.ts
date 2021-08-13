@@ -5,7 +5,7 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
 }
 Object.assign(kcMessages["en"], {
   doLogIn: "Prijava",
-  doRegister: "Registracija",
+  doRegister: "Registrirajte se",
   doCancel: "Prekliči",
   doSubmit: "Potrdi",
   doBack: "Nazaj",
@@ -16,7 +16,7 @@ Object.assign(kcMessages["en"], {
   doAccept: "Sprejmi",
   doDecline: "Zavrni",
   doForgotPassword: "Ste pozabili geslo?",
-  doClickHere: "Kliknite tukaj",
+  doClickHere: "TUKAJ",
   doImpersonate: "Oponašaj",
   doTryAgain: "Poskusi ponovno",
   doTryAnotherWay: "Poskusi na drug način",
@@ -57,7 +57,7 @@ Object.assign(kcMessages["en"], {
   recaptchaFailed: "Neveljavna varnostna šifra",
   recaptchaNotConfigured: "Zahtevana varnostna šifra ni nastavljena",
   consentDenied: "Privolitev je zavrnjena.",
-  noAccount: "Še nimate svojega uporabniškega računa?",
+  noAccount: "Še nimate svojega uporabniškega računa ECE?",
   username: "Uporabniško ime",
   usernameOrEmail: "Uporabniško ime ali e-pošta",
   firstName: "Ime",
@@ -65,7 +65,7 @@ Object.assign(kcMessages["en"], {
   fullName: "Ime in priimek",
   lastName: "Priimek",
   familyName: "Priimek",
-  email: "E-pošta",
+  email: "Elektronski naslov",
   password: "Geslo",
   passwordConfirm: "Potrditev gesla",
   passwordNew: "Novo geslo",
@@ -123,9 +123,10 @@ Object.assign(kcMessages["en"], {
   oauthGrantRequest: "Dovolite uporabo teh dostopnih pravic?",
   inResource: "v",
   emailVerifyInstruction1:
-    "Poslana vam je bila e-pošta z navodili za potrditev veljavnosti e-naslova.",
-  emailVerifyInstruction2: "Ali morda niste prejeli potrditvenega e-sporočila?",
-  emailVerifyInstruction3: "za ponovno pošiljanje.",
+    "Na vaš eletronski naslov smo vam poslali elektronsko sporočilo z navodili in kodo za potrditev elektronskega naslova.",
+  emailVerifyInstruction2:
+    "Če sporočila niste prejeli, preverite tudi mapo za neželeno pošto, nato pa kliknite",
+  emailVerifyInstruction3: "za ponovno pošiljanje sporočila.",
   emailLinkIdpTitle: "Povezava {0}",
   emailLinkIdp1:
     "Poslana vam je bila e-pošta z navodili za povezavo {0} računa {1} z vašim {2} računom.",
@@ -133,7 +134,7 @@ Object.assign(kcMessages["en"], {
   emailLinkIdp3: "ponovno pošiljanje.",
   emailLinkIdp4: "Če ste potrditev že opravili v drugem brskalniku",
   emailLinkIdp5: "nadaljujte.",
-  backToLogin: "Nazaj na prijavo",
+  backToLogin: "Nazaj na prijavno stran",
   emailInstruction:
     "Vpišite svoje uporabniško ime ali e-naslov in poslali vam bomo navodila za ponastavitev gesla.",
   copyCodeInstruction:
@@ -414,4 +415,60 @@ Object.assign(kcMessages["en"], {
     "Unknown user authenticated by the Security key.",
   "identity-provider-redirector": "Povežite z drugim ponudnikom identitete",
   "identity-provider-login-label": "Ali se vpišite prek",
+  "Invalid username or password.": "Neveljavno uporabniško ime ali geslo.",
+  "Invalid username.": "Neveljavno uporabniško ime.",
+  "Invalid username or email.": "Neveljaven elektronski naslov ali geslo.",
+  "Invalid password.": "Napačno geslo.",
+  "Account is disabled, contact your administrator.":
+    "Račun je onemogočen, kontaktirajte skrbnika.",
+  "Account is temporarily disabled; contact your administrator or retry later.":
+    "Račun je začasno onemogočen, kontaktirajte skrbnika ali poskusite kasneje.",
+  "Login timeout. Please sign in again.":
+    "Vpis se je iztekel. Ponovno se prijavite.",
+  "Action expired. Please continue with login now.":
+    "Postopek se je iztekel, nadaljujte s prijavo.",
+  "Action expired.": "Postopek se je iztekel.",
+  "Action expired. Please start again.":
+    "Postopek se je iztekel. Poskusite ponovno",
+  "Invalid password: minimum length 8.":
+    "Neveljavno geslo: najmanjša dolžina 8.",
+  "Invalid password: must contain at least 1 numerical digits.":
+    "Neveljavno geslo: geslo mora vsebovati vsaj 1 števko.",
+  "Invalid password: must contain at least 1 lower case characters.":
+    "Neveljavno geslo: geslo mora vsebovati vsaj 1 malo črko.",
+  "Invalid password: must contain at least 1 upper case characters.":
+    "Neveljavno geslo: geslo mora vsebovati vsaj 1 veliko črko.",
+  "Invalid password: must contain at least 1 special characters.":
+    "Neveljavno geslo: geslo mora vsebovati vsaj 1 poseben znak.",
+  "Invalid password: must not be equal to the username.":
+    "Neveljavno geslo: geslo mora biti drugačno od uporabniškega imena.",
+  "Invalid password: must not be equal to the email.":
+    "Neveljavno geslo: geslo mora biti drugačno od elektronske pošte.",
+  "Invalid password: new password doesn''t match password policies.":
+    "Neveljavno geslo.",
+  "Please specify first name.": "Izpolnite polje za ime.",
+  "Please specify last name.": "Izpolnite polje za priimek.",
+  "Please specify email.": "Izpolnite polje za elektronsko pošto.",
+  "Please specify username.": "Izpolnite polje za uporabniško ime.",
+  "Please specify password.": "Izpolnite polje za geslo.",
+  "Please specify authenticator code.":
+    "Izpolnite polje za avtentikacijsko kodo.",
+  "Passwords don't match.": "Gesli se ne ujemata.",
+  "Password confirmation doesn't match.": "Potrditev gesla se ne ujema.",
+  "You should receive an email shortly with further instructions.":
+    "V kratkem boste prejeli elektronsko sporočilo z nadaljnimi navodili.",
+  "Failed to send email, please try again later.":
+    "Pošiljanje elektronskega sporočila neuspešno, poskusite ponovno kasneje.",
+  "Your login attempt timed out.  Login will start from the beginning.":
+    "Poskus prijave se je iztekel. Prijava se bo začela ponovno.",
+  "You are already logged in.": "Ste že prijavljeni.",
+  "User with email": "Uporabnik z elektronskim naslovom",
+  "already exists. Please login to account management to link the account.":
+    "že obstaja. Prijavite se na manager računov, da povežete ta račun.",
+  "User with username": "Uporabnik z uporabniškim imenom",
+  "already exists. How do you want to continue?":
+    "že obstaja. Kako želite nadaljevati",
+  "You need to verify your email address to activate your account.":
+    "Potrdite svojo elektronsko pošto, da aktivirate svoj račun.",
+  "This is the error message": "To je sporočilo napake!",
 })

@@ -57,6 +57,14 @@ export const Register = memo(
       recaptchaSiteKey,
     } = kcContext
 
+    const errMessage: String[] = []
+    if (message?.type === "error") {
+      for (const err of message.summary.split("<br>")) {
+        errMessage.push(msgStr(err as any) ? msgStr(err as any) : err)
+      }
+    }
+    const oneLineErr = errMessage.join(" ")
+
     return (
       <Template
         {...{ kcContext, ...props }}
@@ -247,7 +255,7 @@ export const Register = memo(
                       <AlertIcon />
                       <Box width="2" />
                       <Text fontSize="xs" fontWeight="bold" margin-left="2">
-                        {message.summary.split("<br>").join(" ")}
+                        {oneLineErr}
                       </Text>
                     </Flex>
                   </Alert>

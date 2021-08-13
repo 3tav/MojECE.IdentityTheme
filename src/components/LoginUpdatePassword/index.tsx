@@ -105,7 +105,9 @@ export const LoginUpdatePassword = memo(
                   >
                     <AlertIcon />
                     <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                      {message.summary}
+                      {msgStr(message.summary as any)
+                        ? msgStr(message.summary as any)
+                        : message.summary}
                     </Text>
                   </Alert>
                 ) : null}
@@ -118,7 +120,9 @@ export const LoginUpdatePassword = memo(
                   >
                     <Check />
                     <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                      {message.summary}
+                      {msgStr(message.summary as any)
+                        ? msgStr(message.summary as any)
+                        : message.summary}
                     </Text>
                   </Alert>
                 ) : null}
@@ -131,7 +135,9 @@ export const LoginUpdatePassword = memo(
                   >
                     <Info />
                     <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                      {message.summary}
+                      {msgStr(message.summary as any)
+                        ? msgStr(message.summary as any)
+                        : message.summary}
                     </Text>
                   </Alert>
                 ) : null}
@@ -144,7 +150,9 @@ export const LoginUpdatePassword = memo(
                   >
                     <AlertIcon />
                     <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                      {message.summary}
+                      {msgStr(message.summary as any)
+                        ? msgStr(message.summary as any)
+                        : message.summary}
                     </Text>
                   </Alert>
                 ) : null}

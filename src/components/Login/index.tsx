@@ -91,7 +91,9 @@ export const Login = memo(
                     <Alert status="error" marginBottom="3" marginTop="3">
                       <AlertIcon />
                       <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                        {message.summary}
+                        {msgStr(message.summary as any)
+                          ? msgStr(message.summary as any)
+                          : message.summary}
                       </Text>
                     </Alert>
                   ) : null}
@@ -100,7 +102,9 @@ export const Login = memo(
                     <Alert status="success" marginBottom="3" marginTop="3">
                       <Check />
                       <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                        {message.summary}
+                        {msgStr(message.summary as any)
+                          ? msgStr(message.summary as any)
+                          : message.summary}
                       </Text>
                     </Alert>
                   ) : null}
@@ -109,7 +113,9 @@ export const Login = memo(
                     <Alert status="info" marginBottom="3" marginTop="3">
                       <Info />
                       <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                        {message.summary}
+                        {msgStr(message.summary as any)
+                          ? msgStr(message.summary as any)
+                          : message.summary}
                       </Text>
                     </Alert>
                   ) : null}
@@ -118,7 +124,9 @@ export const Login = memo(
                     <Alert status="warning" marginBottom="3" marginTop="3">
                       <AlertIcon />
                       <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                        {message.summary}
+                        {msgStr(message.summary as any)
+                          ? msgStr(message.summary as any)
+                          : message.summary}
                       </Text>
                     </Alert>
                   ) : null}

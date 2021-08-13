@@ -10,7 +10,7 @@ export const LoginIdpLinkConfirm = memo(
     kcContext,
     ...props
   }: { kcContext: KcContextBase.LoginIdpLinkConfirm } & KcProps) => {
-    const { msg } = useKcMessage()
+    const { msg, msgStr } = useKcMessage()
 
     const { url, idpAlias, message } = kcContext
 
@@ -25,7 +25,9 @@ export const LoginIdpLinkConfirm = memo(
               <Alert status="error" marginBottom="3" marginTop="3">
                 <AlertIcon />
                 <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                  {message.summary}
+                  {msgStr(message.summary as any)
+                    ? msgStr(message.summary as any)
+                    : message.summary}
                 </Text>
               </Alert>
             ) : null}
@@ -33,7 +35,9 @@ export const LoginIdpLinkConfirm = memo(
               <Alert status="success" marginBottom="3" marginTop="3">
                 <Check />
                 <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                  {message.summary}
+                  {msgStr(message.summary as any)
+                    ? msgStr(message.summary as any)
+                    : message.summary}
                 </Text>
               </Alert>
             ) : null}
@@ -41,7 +45,9 @@ export const LoginIdpLinkConfirm = memo(
               <Alert status="info" marginBottom="3" marginTop="3">
                 <Info />
                 <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                  {message.summary}
+                  {msgStr(message.summary as any)
+                    ? msgStr(message.summary as any)
+                    : message.summary}
                 </Text>
               </Alert>
             ) : null}
@@ -49,14 +55,17 @@ export const LoginIdpLinkConfirm = memo(
               <Alert status="warning" marginBottom="3" marginTop="3">
                 <AlertIcon />
                 <Text fontSize="xs" marginLeft="2" fontWeight="bold">
-                  {message.summary}
+                  {msgStr(message.summary as any)
+                    ? msgStr(message.summary as any)
+                    : message.summary}
                 </Text>
               </Alert>
             ) : null}
             <form id="kc-register-form" action={url.loginAction} method="post">
-              <Flex justifyContent="space-evenly">
+              <Flex flexDirection="column" alignItems="center">
                 <Button
-                  w="3xs"
+                  mt="8"
+                  w="xs"
                   type="submit"
                   name="submitAction"
                   id="updateProfile"
@@ -65,7 +74,8 @@ export const LoginIdpLinkConfirm = memo(
                   {msg("confirmLinkIdpReviewProfile")}
                 </Button>
                 <Button
-                  w="3xs"
+                  mt="4"
+                  w="xs"
                   type="submit"
                   name="submitAction"
                   id="linkAccount"

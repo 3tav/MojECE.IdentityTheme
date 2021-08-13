@@ -6,7 +6,7 @@ import { Box, Flex, Link, Text } from "@chakra-ui/react"
 
 export const Info = memo(
   ({ kcContext, ...props }: { kcContext: KcContextBase.Info } & KcProps) => {
-    const { msg } = useKcMessage()
+    const { msg, msgStr } = useKcMessage()
 
     assert(kcContext.message !== undefined)
 
@@ -29,13 +29,19 @@ export const Info = memo(
           messageHeader !== undefined ? (
             <>{messageHeader}</>
           ) : (
-            <>{message.summary}</>
+            <>
+              {msgStr(message.summary as any)
+                ? msgStr(message.summary as any)
+                : message.summary}
+            </>
           )
         }
         formNode={
           <Box mt="12">
             <Text textAlign="center">
-              {message.summary}
+              {msgStr(message.summary as any)
+                ? msgStr(message.summary as any)
+                : message.summary}
               {requiredActions !== undefined && (
                 <b>
                   {requiredActions

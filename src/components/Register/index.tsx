@@ -281,6 +281,9 @@ export const Register = memo(
                   <Box flex="1" textAlign="right">
                     <Text>Digitalni profile ECE že imam.</Text>
                     <Link color="blue.500" href={url.loginUrl}>
+                      <Box as="span" mr="2">
+                        <EceIcons name="arrowLeft" boxSize="2" />
+                      </Box>
                       {msg("backToLogin")}
                     </Link>
                   </Box>

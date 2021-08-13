@@ -81,15 +81,15 @@ export const LoginUpdatePassword = memo(
                   id="username"
                   name="username"
                   value={username}
-                  autocomplete="username"
-                  readonly="readonly"
+                  autoComplete="username"
+                  readOnly={true}
                   style={{ display: "none" }}
                 />
                 <Input
                   type="password"
                   id="password"
                   name="password"
-                  autocomplete="current-password"
+                  autoComplete="current-password"
                   style={{ display: "none" }}
                 />
                 {message?.type === "error" ? (
@@ -140,7 +140,7 @@ export const LoginUpdatePassword = memo(
                         type="password"
                         id="password-new"
                         name="password-new"
-                        autocomplete="new-password"
+                        autoComplete="new-password"
                         isInvalid={
                           messagesPerField &&
                           messagesPerField.printIfExists("password", "error")
@@ -159,7 +159,7 @@ export const LoginUpdatePassword = memo(
                       type="password"
                       id="password-confirm"
                       name="password-confirm"
-                      autocomplete="new-password"
+                      autoComplete="new-password"
                       isInvalid={
                         messagesPerField &&
                         messagesPerField.printIfExists(

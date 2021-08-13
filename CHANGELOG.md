@@ -1,3 +1,9 @@
+### **0.5.14** (2021-08-13)  
+  
+- Release v0.5.14  
+- Dodani prevodi v slovenščino  
+- fake EN messages    
+  
 ### **0.5.13** (2021-08-11)  
   
 - Release v0.5.13    

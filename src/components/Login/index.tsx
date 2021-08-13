@@ -21,7 +21,7 @@ import {
 
 import { Template } from "components/Template"
 import Label from "shared/Label"
-import EceIcons, { Alert as AlertIcon, Info } from "theme/parts/Icons"
+import EceIcons, { Alert as AlertIcon, Check, Info } from "theme/parts/Icons"
 
 // TODO: messages
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
@@ -77,7 +77,10 @@ export const Login = memo(
                 >
                   <Text
                     h={
-                      message?.type === "error" || message?.type === "success"
+                      message?.type === "error" ||
+                      message?.type === "success" ||
+                      message?.type === "info" ||
+                      message?.type === "warning"
                         ? "6"
                         : "12"
                     }
@@ -94,13 +97,26 @@ export const Login = memo(
                   ) : null}
 
                   {message?.type === "success" ? (
-                    <Alert
-                      status="info"
-                      marginBottom="3"
-                      marginTop="3"
-                      bgColor="blue.100"
-                    >
+                    <Alert status="success" marginBottom="3" marginTop="3">
+                      <Check />
+                      <Text fontSize="xs" marginLeft="2" fontWeight="bold">
+                        {message.summary}
+                      </Text>
+                    </Alert>
+                  ) : null}
+
+                  {message?.type === "info" ? (
+                    <Alert status="info" marginBottom="3" marginTop="3">
                       <Info />
+                      <Text fontSize="xs" marginLeft="2" fontWeight="bold">
+                        {message.summary}
+                      </Text>
+                    </Alert>
+                  ) : null}
+
+                  {message?.type === "warning" ? (
+                    <Alert status="warning" marginBottom="3" marginTop="3">
+                      <AlertIcon />
                       <Text fontSize="xs" marginLeft="2" fontWeight="bold">
                         {message.summary}
                       </Text>

@@ -459,8 +459,8 @@ Object.assign(kcMessages["en"], {
     "V kratkem boste prejeli elektronsko sporočilo z nadaljnimi navodili.",
   "Failed to send email, please try again later.":
     "Pošiljanje elektronskega sporočila neuspešno, poskusite ponovno kasneje.",
-  "Your login attempt timed out.  Login will start from the beginning.":
-    "Poskus prijave se je iztekel. Prijava se bo začela ponovno.",
+  "Your login attempt timed out. Login will start from the beginning.":
+    "Poskus prijave se je iztekel. Prijava se bo začela od začetka.",
   "You are already logged in.": "Ste že prijavljeni.",
   "User with email": "Uporabnik z elektronskim naslovom",
   "already exists. Please login to account management to link the account.":

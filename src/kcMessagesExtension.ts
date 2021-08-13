@@ -471,4 +471,18 @@ Object.assign(kcMessages["en"], {
   "You need to verify your email address to activate your account.":
     "Potrdite svojo elektronsko pošto, da aktivirate svoj račun.",
   "This is the error message": "To je sporočilo napake!",
+  "You need to change your password to activate your account.":
+    "Spremenite vaše geslo, da akvirate račun.",
+  "You need to change your password.": "Spremeniti morate vaše geslo.",
+  "Your password has been updated.": "Vaše geslo je bilo posodobljeno.",
+  "Your account has been updated.": "Vaš račun je bil posodobljen.",
+  "You may close this browser window and go back to your console application.":
+    "Sedaj lahko zaprete to okno in se vrnete na aplikacijo.",
+  "Login Failed": "Prijava neuspešna",
+  "You may close this browser window and go back to your console application and try logging in again.":
+    "Sedaj lahko zaprete to okno se vrnete na aplikacijo in se puskusite prijaviti ponovno.",
+  "No access": "Ni dostopa",
+  "Login Successful": "Prijava uspešna",
+  "Account already exists": "Račun že obstaja",
+  "Add to existing account": "Dodaj k obstoječemu računu",
 })

@@ -38,20 +38,22 @@ export const Info = memo(
         }
         formNode={
           <Box mt="12">
-            <Text textAlign="center">
-              {msgStr(message.summary as any)
-                ? msgStr(message.summary as any)
-                : message.summary}
-              {requiredActions !== undefined && (
-                <b>
-                  {requiredActions
-                    .map((requiredAction) =>
-                      msg(`requiredAction.${requiredAction}` as const)
-                    )
-                    .join(",")}
-                </b>
-              )}
-            </Text>
+            {messageHeader !== undefined ? (
+              <Text textAlign="center">
+                {msgStr(message.summary as any)
+                  ? msgStr(message.summary as any)
+                  : message.summary}
+                {requiredActions !== undefined && (
+                  <b>
+                    {requiredActions
+                      .map((requiredAction) =>
+                        msg(`requiredAction.${requiredAction}` as const)
+                      )
+                      .join(",")}
+                  </b>
+                )}
+              </Text>
+            ) : null}
             <Flex justifyContent="flex-end" mt="4">
               {!skipLink && pageRedirectUri !== undefined ? (
                 <Text>

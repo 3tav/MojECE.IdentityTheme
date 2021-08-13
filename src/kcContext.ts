@@ -23,7 +23,7 @@ export const { kcContext } = getKcContext<
 >({
   // uncomment for develepment
   //
-  // mockPageId: "login-update-password.ftl",
+  // mockPageId: "info.ftl",
   // mockData: [
   //   {
   //     pageId: "login-update-password.ftl",

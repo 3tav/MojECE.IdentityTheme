@@ -15,7 +15,7 @@ import {
 import { KcContext } from "kcContext"
 import { cx } from "tss-react"
 import Label from "shared/Label"
-import EceIcons, { Alert as AlertIcon, Info } from "theme/parts/Icons"
+import EceIcons, { Alert as AlertIcon, Check, Info } from "theme/parts/Icons"
 import PassLabel from "components/Register/TooltipLabel"
 
 type KcContext_LoginUpdatePassword = Extract<
@@ -62,7 +62,10 @@ export const LoginUpdatePassword = memo(
         formNode={
           <Flex
             mt={
-              message?.type === "error" || message?.type === "success"
+              message?.type === "error" ||
+              message?.type === "success" ||
+              message?.type === "info" ||
+              message?.type === "warning"
                 ? "8"
                 : "16"
             }
@@ -92,6 +95,7 @@ export const LoginUpdatePassword = memo(
                   autocomplete="current-password"
                   style={{ display: "none" }}
                 />
+
                 {message?.type === "error" ? (
                   <Alert
                     status="error"
@@ -105,16 +109,40 @@ export const LoginUpdatePassword = memo(
                     </Text>
                   </Alert>
                 ) : null}
-
                 {message?.type === "success" ? (
+                  <Alert
+                    status="success"
+                    marginBottom="3"
+                    marginTop="3"
+                    opacity={open ? 0.5 : 1}
+                  >
+                    <Check />
+                    <Text fontSize="xs" marginLeft="2" fontWeight="bold">
+                      {message.summary}
+                    </Text>
+                  </Alert>
+                ) : null}
+                {message?.type === "info" ? (
                   <Alert
                     status="info"
                     marginBottom="3"
                     marginTop="3"
-                    bgColor="blue.100"
                     opacity={open ? 0.5 : 1}
                   >
                     <Info />
+                    <Text fontSize="xs" marginLeft="2" fontWeight="bold">
+                      {message.summary}
+                    </Text>
+                  </Alert>
+                ) : null}
+                {message?.type === "warning" ? (
+                  <Alert
+                    status="warning"
+                    marginBottom="3"
+                    marginTop="3"
+                    opacity={open ? 0.5 : 1}
+                  >
+                    <AlertIcon />
                     <Text fontSize="xs" marginLeft="2" fontWeight="bold">
                       {message.summary}
                     </Text>

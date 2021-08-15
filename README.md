@@ -44,6 +44,14 @@ Se details in the [Demo app](https://github.com/garronej/keycloakify-demo-app) i
 > To release don't create a tag manually, the CI do it for you. Just update the `package.json`'s version field and push.
 > The `.jar` files that bundle the Keycloak theme will be attached as an asset with every GitHub release.
 
+To modify contents of a compiled theme unpack downloaded `jar` file and after modifications are done repack it back again. On *nix systems you can use `jar` command line tools, e.g.:
+
+```sh
+jar xvf keycloak-theme.jar
+# modify extracted files
+jar cf ../keycloak-theme.jar *
+```
+
 ## More info
 
 - [Advanced pages configuration](https://github.com/InseeFrLab/keycloakify#advanced-pages-configuration)

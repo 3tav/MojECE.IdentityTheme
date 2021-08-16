@@ -21,7 +21,7 @@ export const Terms = memo(
         doFetchDefaultThemeResources={false}
         headerNode={msg("termsTitle")}
         formNode={
-          <Flex flexDirection="column" paddingBottom="8">
+          <Flex flexDirection="column" paddingBottom="8" mt="8">
             <Box
               maxHeight="md"
               overflow="auto"

@@ -1,12 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import { useReducer, useEffect, memo } from "react"
+import React, { useReducer, useEffect, memo } from "react"
 import type { ReactNode } from "react"
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
 import { useKcLanguageTag } from "keycloakify/lib/i18n/useKcLanguageTag"
 import { assert } from "tsafe/assert"
 import { cx } from "tss-react"
-import { getBestMatchAmongKcLanguageTag } from "keycloakify/lib/i18n/KcLanguageTag"
+import {
+  getBestMatchAmongKcLanguageTag,
+  getKcLanguageTagLabel,
+  KcLanguageTag,
+} from "keycloakify/lib/i18n/KcLanguageTag"
 // import { useConstCallback } from "powerhooks"
 import type { KcTemplateProps } from "keycloakify"
 // import { Header } from "app/components/shared/Header"
@@ -17,6 +21,7 @@ import type { KcTemplateProps } from "keycloakify"
 
 import Paper from "shared/Paper"
 import { getStatus } from "lib/constants/status"
+// import { useCallbackFactory } from "powerhooks/useCallbackFactory"
 
 import { appendHead } from "keycloakify/lib/tools/appendHead"
 import { join as pathJoin } from "path"
@@ -30,6 +35,7 @@ import {
   CloseButton,
   Button,
   Link,
+  Select,
 } from "@chakra-ui/react"
 import EceIcons from "theme/parts/Icons"
 import { KcContext } from "kcContext"
@@ -56,7 +62,12 @@ export const Template = memo((props: TemplateProps) => {
   /**
    * Language
    */
-  const { kcLanguageTag } = useKcLanguageTag()
+  const { kcLanguageTag, setKcLanguageTag } = useKcLanguageTag()
+
+  const handleLanguageChange = (event: React.SyntheticEvent) => {
+    const target = event.target as HTMLInputElement
+    setKcLanguageTag((target.value as any) || kcLanguageTag)
+  }
 
   useEffect(
     () => {
@@ -187,7 +198,14 @@ export const Template = memo((props: TemplateProps) => {
   //   </section>
   // </div>
 
-  return <Page {...props} onClickCross={onClickCross} />
+  return (
+    <Page
+      {...props}
+      onClickCross={onClickCross}
+      handleLanguageChange={handleLanguageChange}
+      kcLanguageTag={kcLanguageTag}
+    />
+  )
 })
 
 const { Page } = (() => {
@@ -202,6 +220,8 @@ const { Page } = (() => {
     showUsernameNode?: ReactNode
     formNode: ReactNode
     infoNode?: ReactNode
+    kcLanguageTag: KcLanguageTag
+    handleLanguageChange: (event: React.SyntheticEvent) => void
     onClickCross: (() => void) | undefined
   } & { kcContext: KcContext } & KcTemplateProps
 
@@ -241,6 +261,8 @@ const { Page } = (() => {
       formNode,
       infoNode = null,
       kcContext,
+      kcLanguageTag,
+      handleLanguageChange,
       onClickCross,
       ...kcProps
     } = props
@@ -276,6 +298,8 @@ const { Page } = (() => {
             displayRequiredFields={displayRequiredFields}
             headerNode={headerNode}
             showUsernameNode={showUsernameNode}
+            handleLanguageChange={handleLanguageChange}
+            kcLanguageTag={kcLanguageTag}
           />
           <Main
             {...{ kcContext, ...kcProps }}
@@ -296,6 +320,8 @@ const { Page } = (() => {
       displayRequiredFields: boolean
       headerNode: ReactNode
       showUsernameNode?: ReactNode
+      kcLanguageTag: KcLanguageTag
+      handleLanguageChange: (event: React.SyntheticEvent) => void
     } & { kcContext: KcContext } & KcTemplateProps
 
     // const { useClassNames } = createUseClassNames()((theme) => ({
@@ -312,6 +338,8 @@ const { Page } = (() => {
         displayRequiredFields,
         headerNode,
         showUsernameNode,
+        kcLanguageTag,
+        handleLanguageChange,
         // ...kcProps
       } = props
 
@@ -326,6 +354,7 @@ const { Page } = (() => {
             mt={[8, 16, 32, 32]}
             justifyContent="space-between"
             color="blue.500"
+            alignItems="center"
           >
             {/* TODO: Back-Button */}
             {/* <Button variant="link" textTransform="uppercase">
@@ -336,9 +365,30 @@ const { Page } = (() => {
             </Button> */}
 
             {/* Title */}
+            {kcContext.realm.internationalizationEnabled &&
+              (assert(kcContext.locale !== undefined), true) &&
+              kcContext.locale.supported.length > 1 && <Box w="32" />}
+
             <Text fontSize="lg" flex="1" fontWeight="bold" textAlign="center">
               {headerNode!}
             </Text>
+
+            {kcContext.realm.internationalizationEnabled &&
+              (assert(kcContext.locale !== undefined), true) &&
+              kcContext.locale.supported.length > 1 && (
+                <Select
+                  w="32"
+                  h="8"
+                  onChange={handleLanguageChange}
+                  placeholder={getKcLanguageTagLabel(kcLanguageTag)}
+                >
+                  {kcContext.locale.supported.map(({ languageTag }) => (
+                    <option value={languageTag} key={languageTag}>
+                      {getKcLanguageTagLabel(languageTag)}
+                    </option>
+                  ))}
+                </Select>
+              )}
 
             {/* <Box /> */}
           </Flex>

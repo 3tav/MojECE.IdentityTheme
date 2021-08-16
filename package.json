@@ -17,6 +17,7 @@
     "author": "3tav",
     "license": "MIT",
     "keywords": [],
+    "homepage": "https://github.com/3tav/MojECE.IdentityTheme",
     "dependencies": {
         "@chakra-ui/react": "^1.6.4",
         "@emotion/react": "^11",

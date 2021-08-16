@@ -1,3 +1,9 @@
+## **0.6.3** (2021-08-16)  
+  
+- Release v0.6.3  
+- Dodani slovenski messages  
+- Theme preferences hack    
+  
 ### **0.6.2** (2021-08-13)  
   
 - Release v0.6.2    

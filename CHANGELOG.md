@@ -1,3 +1,9 @@
+### **0.6.4** (2021-08-17)  
+  
+- Release v0.6.4  
+- Choose Language Dropdown  
+- Package homepage property    
+  
 ## **0.6.3** (2021-08-16)  
   
 - Release v0.6.3  

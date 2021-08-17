@@ -9,8 +9,6 @@ const baseStyle = {
   borderRadius: "sm",
 }
 
-export default {
-  baseStyle,
-  variants,
-  defaultProps,
-}
+const style = { baseStyle, variants, defaultProps }
+
+export default style

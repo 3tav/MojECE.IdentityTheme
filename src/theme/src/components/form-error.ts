@@ -24,7 +24,6 @@ const baseStyle = (props: Dict) => ({
   icon: baseStyleIcon(props),
 })
 
-export default {
-  parts,
-  baseStyle,
-}
+const style = { parts, baseStyle }
+
+export default style

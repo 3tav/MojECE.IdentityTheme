@@ -86,9 +86,6 @@ const defaultProps = {
   size: "xs",
 }
 
-export default {
-  parts,
-  baseStyle,
-  sizes,
-  defaultProps,
-}
+const style = { parts, baseStyle, sizes, defaultProps }
+
+export default style

@@ -39,7 +39,7 @@ import Textarea from "./textarea"
 import Tooltip from "./tooltip"
 import FormError from "./form-error"
 
-export default {
+const style = {
   Accordion,
   Alert,
   // Avatar,
@@ -81,3 +81,5 @@ export default {
   Tooltip,
   FormError,
 }
+
+export default style

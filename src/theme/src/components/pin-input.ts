@@ -43,9 +43,6 @@ const variants = {
 
 const defaultProps = Input.defaultProps
 
-export default {
-  baseStyle,
-  sizes,
-  variants,
-  defaultProps,
-}
+const style = { baseStyle, sizes, variants, defaultProps }
+
+export default style

@@ -13,6 +13,6 @@ const baseStyle = (props: Record<string, any>) => ({
   },
 })
 
-export default {
-  baseStyle,
-}
+const style = { baseStyle }
+
+export default style

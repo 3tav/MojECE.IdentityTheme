@@ -28,9 +28,6 @@ const defaultProps = {
   variant: "outline",
 }
 
-export default {
-  baseStyle,
-  sizes,
-  variants,
-  defaultProps,
-}
+const style = { baseStyle, sizes, variants, defaultProps }
+
+export default style

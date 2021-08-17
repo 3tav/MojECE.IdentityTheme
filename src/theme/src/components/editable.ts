@@ -20,7 +20,6 @@ const baseStyle = {
   input: baseStyleInput,
 }
 
-export default {
-  parts,
-  baseStyle,
-}
+const style = { parts, baseStyle }
+
+export default style

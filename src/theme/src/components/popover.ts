@@ -57,7 +57,6 @@ const baseStyle = (props: Dict) => ({
   arrow: baseStyleArrow(props),
 })
 
-export default {
-  parts,
-  baseStyle,
-}
+const style = { parts, baseStyle }
+
+export default style

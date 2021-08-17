@@ -12,6 +12,6 @@ const baseStyle = {
   },
 }
 
-export default {
-  baseStyle,
-}
+const style = { baseStyle }
+
+export default style

@@ -243,9 +243,6 @@ const defaultProps = {
   colorScheme: "blue",
 }
 
-export default {
-  baseStyle,
-  variants,
-  sizes,
-  defaultProps,
-}
+const style = { baseStyle, variants, sizes, defaultProps }
+
+export default style

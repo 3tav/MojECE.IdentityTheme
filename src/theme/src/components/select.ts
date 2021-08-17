@@ -41,10 +41,12 @@ const sizes = merge({}, Input.sizes, {
   },
 })
 
-export default {
-  parts,
+const style = {
+  parts, 
   baseStyle,
   sizes,
   variants: Input.variants,
-  defaultProps: Input.defaultProps,
+  defaultProps: Input.defaultProps
 }
+
+export default style

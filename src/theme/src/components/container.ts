@@ -5,6 +5,6 @@ const baseStyle = {
   px: "1rem",
 }
 
-export default {
-  baseStyle,
-}
+const style = { baseStyle }
+
+export default style

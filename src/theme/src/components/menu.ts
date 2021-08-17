@@ -63,7 +63,6 @@ const baseStyle = (props: Record<string, any>) => ({
   divider: baseStyleDivider,
 })
 
-export default {
-  parts,
-  baseStyle,
-}
+const style = { parts, baseStyle }
+
+export default style

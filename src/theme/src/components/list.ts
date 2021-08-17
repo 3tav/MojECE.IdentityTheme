@@ -16,7 +16,6 @@ const baseStyle = {
   icon: baseStyleIcon,
 }
 
-export default {
-  parts,
-  baseStyle,
-}
+const style = { parts, baseStyle }
+
+export default style

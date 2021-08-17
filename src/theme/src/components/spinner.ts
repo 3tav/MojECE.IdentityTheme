@@ -25,7 +25,6 @@ const defaultProps = {
   size: "md",
 }
 
-export default {
-  sizes,
-  defaultProps,
-}
+const style = { sizes, defaultProps }
+
+export default style

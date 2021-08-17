@@ -94,10 +94,12 @@ const defaultProps = {
   colorScheme: "gray",
 }
 
-export default {
-  parts,
+const style = {
+  parts, 
   variants,
   baseStyle,
   sizes,
-  defaultProps,
+  defaultProps
 }
+
+export default style

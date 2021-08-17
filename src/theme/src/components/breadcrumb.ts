@@ -18,7 +18,6 @@ const baseStyle = {
   link: baseStyleLink,
 }
 
-export default {
-  parts,
-  baseStyle,
-}
+const style = { parts, baseStyle }
+
+export default style

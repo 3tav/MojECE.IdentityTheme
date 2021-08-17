@@ -20,8 +20,6 @@ const defaultProps = {
   variant: "solid",
 }
 
-export default {
-  baseStyle,
-  variants,
-  defaultProps,
-}
+const style = { baseStyle, variants, defaultProps }
+
+export default style

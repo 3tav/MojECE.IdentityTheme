@@ -25,7 +25,6 @@ const baseStyle = (props: Dict) => ({
   helperText: baseStyleHelperText(props),
 })
 
-export default {
-  parts,
-  baseStyle,
-}
+const style = { parts, baseStyle }
+
+export default style

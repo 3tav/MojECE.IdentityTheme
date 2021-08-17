@@ -380,7 +380,7 @@ const { Page } = (() => {
                   w="32"
                   h="8"
                   onChange={handleLanguageChange}
-                  placeholder={getKcLanguageTagLabel(kcLanguageTag)}
+                  value={kcLanguageTag}
                 >
                   {kcContext.locale.supported.map(({ languageTag }) => (
                     <option value={languageTag} key={languageTag}>

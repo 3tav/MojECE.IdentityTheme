@@ -1,3 +1,8 @@
+### **0.6.5** (2021-08-17)  
+  
+- Release v0.6.5  
+- Bug fixes: kcMessages en and sl in Slovenian    
+  
 ### **0.6.4** (2021-08-17)  
   
 - Release v0.6.4  

@@ -10,7 +10,7 @@ import {
   getBestMatchAmongKcLanguageTag,
   getKcLanguageTagLabel,
   KcLanguageTag,
-} from "keycloakify/lib/i18n/KcLanguageTag"
+} from "../../lib/i18n/KcLanguageTag"
 // import { useConstCallback } from "powerhooks"
 import type { KcTemplateProps } from "keycloakify"
 // import { Header } from "app/components/shared/Header"
@@ -75,18 +75,27 @@ export const Template = memo((props: TemplateProps) => {
         return
       }
 
+      console.log("Template: internationalizationEnabled")
+
       assert(kcContext.locale !== undefined)
 
-      if (
-        kcLanguageTag ===
-        getBestMatchAmongKcLanguageTag(kcContext.locale.current)
-      ) {
+      const bestMatchLanguageTag = getBestMatchAmongKcLanguageTag(
+        kcContext.locale.current
+      )
+
+      console.log("Template: bestMatchLanguageTag", bestMatchLanguageTag)
+
+      if (kcLanguageTag === bestMatchLanguageTag) {
         return
       }
 
-      window.location.href = kcContext.locale.supported.find(
+      const redirectUrl = kcContext.locale.supported.find(
         ({ languageTag }) => languageTag === kcLanguageTag
       )!.url
+
+      console.log("Template: redirect", redirectUrl)
+
+      // window.location.href = redirectUrl
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [kcLanguageTag]

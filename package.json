@@ -19,28 +19,28 @@
     "keywords": [],
     "homepage": "https://github.com/3tav/MojECE.IdentityTheme",
     "dependencies": {
-        "@chakra-ui/react": "^1.6.4",
-        "@emotion/react": "^11",
+        "@chakra-ui/react": "latest",
+        "@emotion/react": "^11.4.1",
         "@emotion/styled": "^11",
         "framer-motion": "^4",
-        "keycloakify": "^2.0.12",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
-        "react-password-strength-bar": "^0.3.5",
+        "keycloakify": "latest",
+        "node-sass": "^6.0.1",
+        "react": "^17",
+        "react-dom": "^17",
+        "react-password-strength-bar": "latest",
         "tss-react": "^0.0.12",
-        "web-vitals": "^1.0.1"
+        "web-vitals": "^2.1.0"
     },
     "devDependencies": {
-        "@testing-library/jest-dom": "^5.11.4",
-        "@testing-library/react": "^11.1.0",
-        "@testing-library/user-event": "^12.1.10",
-        "@types/jest": "^26.0.15",
-        "@types/node": "^12.0.0",
-        "@types/react": "^17.0.0",
-        "@types/react-dom": "^17.0.0",
-        "node-sass": "^5.0.0",
-        "react-scripts": "4.0.2",
-        "typescript": "^4.1.2"
+        "@testing-library/jest-dom": "^5",
+        "@testing-library/react": "^11",
+        "@testing-library/user-event": "^12",
+        "@types/jest": "latest",
+        "@types/node": "latest",
+        "@types/react": "latest",
+        "@types/react-dom": "^17",
+        "react-scripts": "latest",
+        "typescript": "^4"
     },
     "eslintConfig": {
         "extends": [
@@ -65,6 +65,8 @@
         "extraPages": [
             "login-update-password.ftl"
         ],
-        "extraThemeProperties": ["locales=en,si"]
+        "extraThemeProperties": [
+            "locales=en,si"
+        ]
     }
 }

@@ -2,9 +2,11 @@ import { useState, memo } from "react"
 // import { Template } from "keycloakify"
 import type { KcProps, KcContextBase } from "keycloakify"
 // import type { KcProps } from "./KcProps"
-// import type { KcContextBase } from 'keycloakify'
 // import { cx } from "tss-react"
 import { useConstCallback } from "powerhooks"
+
+// TODO: messages
+import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
 
 import {
   Button,
@@ -23,8 +25,6 @@ import { Template } from "components/Template"
 import Label from "shared/Label"
 import EceIcons, { Alert as AlertIcon, Check, Info } from "theme/parts/Icons"
 
-// TODO: messages
-import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
 
 const VERTICAL_LINE =
   "linear-gradient(90deg, transparent 48%, #E0E0E0 49%, #E0E0E0 51%, transparent 52%, transparent 100%)"

@@ -613,10 +613,10 @@ Object.assign(kcMessages["en"], {
   emailLinkIdpTitle: "Povezava {0}",
   emailLinkIdp1:
     "Poslana vam je bila e-pošta z navodili za povezavo {0} računa {1} z vašim {2} računom.",
-  emailLinkIdp2: "Niste prejeli potrditvenega e-sporočila?",
-  emailLinkIdp3: "ponovno pošiljanje.",
-  emailLinkIdp4: "Če ste potrditev že opravili v drugem brskalniku",
-  emailLinkIdp5: "nadaljujte.",
+  emailLinkIdp2: "Niste prejeli potrditvenega e-sporočila? Kliknite",
+  emailLinkIdp3: "za ponovno pošiljanje.",
+  emailLinkIdp4: "Če ste potrditev že opravili v drugem brskalniku kliknite",
+  emailLinkIdp5: "da nadaljujete.",
   backToLogin: "Nazaj na prijavno stran",
   emailInstruction:
     "Vpišite svoje uporabniško ime ali e-naslov in poslali vam bomo navodila za ponastavitev gesla.",

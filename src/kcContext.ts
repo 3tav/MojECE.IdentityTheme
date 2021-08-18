@@ -20,6 +20,22 @@ export const { kcContext } = getKcContext<
         ): T | undefined
       }
     }
+  | {
+      pageId: "login-idp-link-email.ftl"
+      idpDisplayName?: string
+      brokerContext?: {
+        id?: string
+        legacyId?: string
+        username?: string
+        modelUsername?: string
+        email?: string
+        firstName?: string
+        lastName?: string
+        brokerSessionId?: string
+        brokerUserId?: string
+        token?: string
+      }
+    }
 >({
   // uncomment for develepment
   //

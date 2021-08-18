@@ -17,6 +17,7 @@ import { LoginResetPassword } from "./components/LoginResetPassword"
 import { LoginVerifyEmail } from "./components/LoginVerifyEmail"
 import type { KcContext } from "./kcContext"
 import { LoginUpdatePassword } from "components/LoginUpdatePassword"
+import { LoginIdpLinkEmail } from "components/LoginIdpLinkEmail"
 
 export const KcApp = memo(({ kcContext }: { kcContext: KcContext }) => {
   const kcProps = defaultKcProps
@@ -46,5 +47,7 @@ export const KcApp = memo(({ kcContext }: { kcContext: KcContext }) => {
       return <LoginIdpLinkConfirm {...{ kcContext, ...kcProps }} />
     case "login-update-password.ftl":
       return <LoginUpdatePassword {...{ kcContext, ...kcProps }} />
+    case "login-idp-link-email.ftl":
+      return <LoginIdpLinkEmail {...{ kcContext, ...kcProps }} />
   }
 })

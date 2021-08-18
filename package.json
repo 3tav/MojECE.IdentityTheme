@@ -63,7 +63,8 @@
     "typings": "./src/index.d.ts",
     "keycloakify": {
         "extraPages": [
-            "login-update-password.ftl"
+            "login-update-password.ftl",
+            "login-idp-link-email.ftl"
         ],
         "extraThemeProperties": [
             "locales=en,si"

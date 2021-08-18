@@ -63,7 +63,8 @@
     "typings": "./src/index.d.ts",
     "keycloakify": {
         "extraPages": [
-            "login-update-password.ftl"
+            "login-update-password.ftl",
+            "login-page-expired.ftl"
         ],
         "extraThemeProperties": [
             "locales=en,si"

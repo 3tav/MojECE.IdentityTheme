@@ -3,13 +3,12 @@ import { getKcContext } from "keycloakify"
 export const { kcContext } = getKcContext<
   | {
       pageId: "register.ftl"
-      /**
-       * Defined when you use the keycloak-mail-whitelisting keycloak plugin
-       * (https://github.com/micedre/keycloak-mail-whitelisting)
-       */
     }
   //NOTE: A 'keycloakify' field must be added
   //in the package.json to generate theses pages
+  | {
+      pageId: "login-page-expired.ftl"
+    }
   | {
       pageId: "login-update-password.ftl"
       username: string

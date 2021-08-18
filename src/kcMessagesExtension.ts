@@ -136,8 +136,8 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   copyCodeInstruction:
     "Prosimo skopirajte prikazano šifro in jo uporabite v vaši aplikaciji:",
   pageExpiredTitle: "Veljavnost prikazane strani je potekla",
-  pageExpiredMsg1: "Za ponovitev prijave",
-  pageExpiredMsg2: "Za nadaljevanje s prijavo",
+  pageExpiredMsg1: "Za ponovitev prijave kliknite",
+  pageExpiredMsg2: "Za nadaljevanje s prijavo kliknite",
   personalInfo: "Personal Info:",
   role_admin: "Admin",
   "role_realm-admin": "Realm Admin",
@@ -623,8 +623,8 @@ Object.assign(kcMessages["en"], {
   copyCodeInstruction:
     "Prosimo skopirajte prikazano šifro in jo uporabite v vaši aplikaciji:",
   pageExpiredTitle: "Veljavnost prikazane strani je potekla",
-  pageExpiredMsg1: "Za ponovitev prijave",
-  pageExpiredMsg2: "Za nadaljevanje s prijavo",
+  pageExpiredMsg1: "Za ponovitev prijave kliknite",
+  pageExpiredMsg2: "Za nadaljevanje s prijavo kliknite",
   personalInfo: "Personal Info:",
   role_admin: "Admin",
   "role_realm-admin": "Realm Admin",

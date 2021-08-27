@@ -1,3 +1,29 @@
+## **0.7.0** (2021-08-27)  
+  
+- Release v0.7.0 (expired, ldp, profile)  
+- Added option to show password  
+- Login Idp Link Email Template added  
+- LoginPageExpired Template added  
+- Login update profile template added  
+- workflow change  
+- type-check theme components  
+- Update GitHub jobs: setup-node: version: '16'  
+- node-sass bug  
+- Package update
+
+- lockfile fix  
+- #10 `node-sass` version fix
+
+Resolved an issue when
+- compilation runs on Node 10 (node-sass: 4.9+, <6.0)
+- development runs on Node 16 (node-sass: 6.0+)
+
+https://www.npmjs.com/package/node-sass  
+- #10 Language switch infinite redirect bugfix
+
+- getBestMatchAmongKcLanguageTag did not support custom lang "sl"
+- package modules update    
+  
 ### **0.6.5** (2021-08-17)  
   
 - Release v0.6.5  

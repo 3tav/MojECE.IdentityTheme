@@ -14,6 +14,8 @@ import {
   VStack,
   Alert,
   Tooltip,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react"
 import Label from "shared/Label"
 import PassLabel from "./TooltipLabel"
@@ -32,7 +34,8 @@ export const Register = memo(
     const [pass, setpass] = useState("")
     const [open, setopen] = useState(false)
     const [accaptable, setaccaptable] = useState(false)
-
+    const [showPass, setshowPass] = useState(false)
+    const [showPassConfirm, setshowPassConfirm] = useState(false)
     const handlePassChange = (event: any) => {
       setpass(event.target.value)
       setaccaptable(regex.test(event.target.value))
@@ -194,41 +197,65 @@ export const Register = memo(
                             offset={[0, 24]}
                             borderRadius="md"
                           >
-                            <Input
-                              isInvalid={
-                                messagesPerField.printIfExists(
-                                  "password",
-                                  "Napaka pri vnosu priimka"
-                                )
-                                  ? true
-                                  : false
-                              }
-                              id="password"
-                              name="password"
-                              type="password"
-                              autoComplete="new-password"
-                              onFocus={handleFocus}
-                              onChange={handlePassChange}
-                              onBlur={handleBlur}
-                            />
+                            <InputGroup>
+                              <Input
+                                isInvalid={
+                                  messagesPerField.printIfExists(
+                                    "password",
+                                    "Napaka pri vnosu priimka"
+                                  )
+                                    ? true
+                                    : false
+                                }
+                                id="password"
+                                name="password"
+                                type={showPass ? "text" : "password"}
+                                autoComplete="new-password"
+                                onFocus={handleFocus}
+                                onChange={handlePassChange}
+                                onBlur={handleBlur}
+                              />
+                              <InputRightElement
+                                onClick={() => setshowPass(!showPass)}
+                                pr="2"
+                              >
+                                <EceIcons
+                                  boxSize={showPass ? "35px" : "26px"}
+                                  name={showPass ? "show" : "hidePassword"}
+                                />
+                              </InputRightElement>
+                            </InputGroup>
                           </Tooltip>
                         </Box>
 
                         <Box>
                           <Label>{msg("passwordConfirm")}</Label>
-                          <Input
-                            isInvalid={
-                              messagesPerField.printIfExists(
-                                "password-confirm",
-                                "Napaka pri vnosu priimka"
-                              )
-                                ? true
-                                : false
-                            }
-                            id="password-confirm"
-                            name="password-confirm"
-                            type="password"
-                          />
+                          <InputGroup>
+                            <Input
+                              isInvalid={
+                                messagesPerField.printIfExists(
+                                  "password-confirm",
+                                  "Napaka pri vnosu priimka"
+                                )
+                                  ? true
+                                  : false
+                              }
+                              id="password-confirm"
+                              name="password-confirm"
+                              type={showPassConfirm ? "text" : "password"}
+                            />
+                            <InputRightElement
+                              onClick={() =>
+                                setshowPassConfirm(!showPassConfirm)
+                              }
+                              pr="2"
+                            >
+                              <EceIcons
+                                boxSize={showPassConfirm ? "35px" : "26px"}
+                                name={showPassConfirm ? "show" : "hidePassword"}
+                              />
+                            </InputRightElement>
+                          </InputGroup>
                         </Box>
                       </>
                     )}

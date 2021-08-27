@@ -19,12 +19,13 @@ import {
   VStack,
   HStack,
   Alert,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react"
 
 import { Template } from "components/Template"
 import Label from "shared/Label"
 import EceIcons, { Alert as AlertIcon, Check, Info } from "theme/parts/Icons"
-
 
 const VERTICAL_LINE =
   "linear-gradient(90deg, transparent 48%, #E0E0E0 49%, #E0E0E0 51%, transparent 52%, transparent 100%)"
@@ -47,6 +48,7 @@ export const Login = memo(
     } = kcContext
 
     const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(false)
+    const [showPass, setshowPass] = useState(false)
 
     const onSubmit = useConstCallback(() => {
       setIsLoginButtonDisabled(true)
@@ -155,14 +157,25 @@ export const Login = memo(
                     </Box>
                     <Box>
                       <Label>{msg("password")}</Label>
-                      <Input
-                        tabIndex={2}
-                        id="password"
-                        name="password"
-                        type="password"
-                        autoComplete="off"
-                        isRequired
-                      />
+                      <InputGroup>
+                        <Input
+                          tabIndex={2}
+                          id="password"
+                          name="password"
+                          type={showPass ? "text" : "password"}
+                          autoComplete="off"
+                          isRequired
+                        />
+                        <InputRightElement
+                          onClick={() => setshowPass(!showPass)}
+                          pr="2"
+                        >
+                          <EceIcons
+                            boxSize={showPass ? "35px" : "26px"}
+                            name={showPass ? "show" : "hidePassword"}
+                          />
+                        </InputRightElement>
+                      </InputGroup>
                     </Box>
                   </VStack>
 

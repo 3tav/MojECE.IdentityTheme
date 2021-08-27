@@ -8,6 +8,8 @@ import {
   Button,
   Flex,
   Input,
+  InputGroup,
+  InputRightElement,
   Text,
   Tooltip,
   VStack,
@@ -37,6 +39,8 @@ export const LoginUpdatePassword = memo(
     const [pass, setpass] = useState("")
     const [open, setopen] = useState(false)
     const [accaptable, setaccaptable] = useState(false)
+    const [showNewPass, setshowNewPass] = useState(false)
+    const [showNewPassConfirm, setshowNewPassConfirm] = useState(false)
 
     const handlePassChange = (event: any) => {
       setpass(event.target.value)
@@ -172,40 +176,64 @@ export const LoginUpdatePassword = memo(
                       offset={[0, 24]}
                       borderRadius="md"
                     >
-                      <Input
-                        type="password"
-                        id="password-new"
-                        name="password-new"
-                        autoComplete="new-password"
-                        isInvalid={
-                          messagesPerField &&
-                          messagesPerField.printIfExists("password", "error")
-                            ? true
-                            : false
-                        }
-                        onFocus={handleFocus}
-                        onChange={handlePassChange}
-                        onBlur={handleBlur}
-                      />
+                      <InputGroup>
+                        <Input
+                          type={showNewPass ? "text" : "password"}
+                          id="password-new"
+                          name="password-new"
+                          autoComplete="new-password"
+                          isInvalid={
+                            messagesPerField &&
+                            messagesPerField.printIfExists("password", "error")
+                              ? true
+                              : false
+                          }
+                          onFocus={handleFocus}
+                          onChange={handlePassChange}
+                          onBlur={handleBlur}
+                        />
+                        <InputRightElement
+                          onClick={() => setshowNewPass(!showNewPass)}
+                          pr="2"
+                        >
+                          <EceIcons
+                            boxSize={showNewPass ? "35px" : "26px"}
+                            name={showNewPass ? "show" : "hidePassword"}
+                          />
+                        </InputRightElement>
+                      </InputGroup>
                     </Tooltip>
                   </Box>
                   <Box>
                     <Label>{msg("passwordNewConfirm")}</Label>
-                    <Input
-                      type="password"
-                      id="password-confirm"
-                      name="password-confirm"
-                      autoComplete="new-password"
-                      isInvalid={
-                        messagesPerField &&
-                        messagesPerField.printIfExists(
-                          "password-confirm",
-                          "error"
-                        )
-                          ? true
-                          : false
-                      }
-                    />
+                    <InputGroup>
+                      <Input
+                        type={showNewPassConfirm ? "text" : "password"}
+                        id="password-confirm"
+                        name="password-confirm"
+                        autoComplete="new-password"
+                        isInvalid={
+                          messagesPerField &&
+                          messagesPerField.printIfExists(
+                            "password-confirm",
+                            "error"
+                          )
+                            ? true
+                            : false
+                        }
+                      />
+                      <InputRightElement
+                        onClick={() =>
+                          setshowNewPassConfirm(!showNewPassConfirm)
+                        }
+                        pr="2"
+                      >
+                        <EceIcons
+                          boxSize={showNewPassConfirm ? "35px" : "26px"}
+                          name={showNewPassConfirm ? "show" : "hidePassword"}
+                        />
+                      </InputRightElement>
+                    </InputGroup>
                   </Box>
                 </VStack>
                 <Flex flex="1" justifyContent="flex-end" mt="16">

@@ -64,7 +64,8 @@
     "keycloakify": {
         "extraPages": [
             "login-update-password.ftl",
-            "login-page-expired.ftl"
+            "login-page-expired.ftl",
+            "login-idp-link-email.ftl"
         ],
         "extraThemeProperties": [
             "locales=en,si"

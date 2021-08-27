@@ -41,8 +41,14 @@ const kcContext = kcContextMocks.kcLoginContext
 
 Se details in the [Demo app](https://github.com/garronej/keycloakify-demo-app) instructions.
 
-> To release don't create a tag manually, the CI do it for you. Just update the `package.json`'s version field and push.
-> The `.jar` files that bundle the Keycloak theme will be attached as an asset with every GitHub release.
+1. Update the version number `package.json` (use _semver_ rules for version numbering), don't create a tag manually
+2. Push to main branch
+3. GitHub CI will create a tag, release, and build the theme to the binary file `.jar`
+4. Downolad the `.jar` file attached to GitHub release
+
+### Post build changes
+
+To add features to the theme that are not supported by this project you need to modify the release binary in the post build process.
 
 To modify contents of a compiled theme unpack downloaded `jar` file and after modifications are done repack it back again. On *nix systems you can use `jar` command line tools, e.g.:
 

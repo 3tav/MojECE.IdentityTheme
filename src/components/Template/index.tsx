@@ -8,7 +8,7 @@ import { assert } from "tsafe/assert"
 import { cx } from "tss-react"
 import {
   getBestMatchAmongKcLanguageTag,
-  getKcLanguageTagLabel,
+  // getKcLanguageTagLabel, TODO: #38
   KcLanguageTag,
 } from "../../lib/i18n/KcLanguageTag"
 // import { useConstCallback } from "powerhooks"
@@ -35,7 +35,7 @@ import {
   CloseButton,
   Button,
   Link,
-  Select,
+  // Select, TODO: #38
 } from "@chakra-ui/react"
 import EceIcons from "theme/parts/Icons"
 import { KcContext } from "kcContext"
@@ -347,8 +347,8 @@ const { Page } = (() => {
         displayRequiredFields,
         headerNode,
         showUsernameNode,
-        kcLanguageTag,
-        handleLanguageChange,
+        // kcLanguageTag, TODO: #38
+        // handleLanguageChange, TODO: #38
         // ...kcProps
       } = props
 
@@ -382,7 +382,8 @@ const { Page } = (() => {
               {headerNode!}
             </Text>
 
-            {kcContext.realm.internationalizationEnabled &&
+            {/* TODO: #38 */}
+            {/* {kcContext.realm.internationalizationEnabled &&
               (assert(kcContext.locale !== undefined), true) &&
               kcContext.locale.supported.length > 1 && (
                 <Select
@@ -397,7 +398,7 @@ const { Page } = (() => {
                     </option>
                   ))}
                 </Select>
-              )}
+              )} */}
 
             {/* <Box /> */}
           </Flex>

@@ -15,7 +15,8 @@ In short:
 1. Run `yarn` to install dependancies
 2. [Run](https://github.com/InseeFrLab/keycloakify/issues/5#issuecomment-832296432) `yarn build` to create static files (required in local development)
 3. [Run](https://github.com/InseeFrLab/keycloakify#some-pages-still-have-the-default-theme-why) `yarn test`
-4. To start development, run `yarn start` and open [http://localhost:3000/](http://localhost:3000/)
+4. Set mock `kcContext` (Keycloak data object for the template)
+5. To start development, run `yarn start` and open [http://localhost:3000/](http://localhost:3000/)
 
 ## Major changes compared to the template app
 
@@ -29,11 +30,9 @@ In short:
 
 **Support for Terms and conditions**: [included](https://github.com/InseeFrLab/keycloakify#support-for-terms-and-conditions)
 
-**Moc-Context**: Development flow consists of setting up context-mock variable in the `App.tsx` file to whatever page you are currently working on.
+**Moc-Context**: Development flow consists of setting up context-mock variable in the `kcContext.ts` file to whatever page you are currently working on.
 
-```js
-const kcContext = kcContextMocks.kcLoginContext
-```
+Uncomment and set `mockPageId` to whatever sub-page you are working on.
 
 **Dark Mode**: You can implement your own mechanism to pass the states in the URL and restore it on the other side but we recommend using `powerhooks/useGlobalState` from the library [powerhooks](https://www.npmjs.com/package/powerhooks) that provide an elegant way to handle states such as `isDarkModeEnabled` or `selectedLanguage`.
 

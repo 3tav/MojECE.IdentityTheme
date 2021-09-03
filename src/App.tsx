@@ -11,11 +11,14 @@ import theme from "./theme/theme"
 import { kcContext } from "./kcContext"
 import { KcApp } from "./KcApp"
 
-//import tos_en_url from "./tos/tos_en.md"
-//import tos_fr_url from "./tos/tos_fr.md"
-import tos_slo_url from "./tos/tos_slo.md"
+//import TOS_EN_URL from "./tos/tos_en.md"
+import TOS_SLO_URL from "./tos/tos_slo.md"
 
 // kcLoginContext kcRegisterContext kcLoginResetPasswordContext kcTermsContext
+// const kcContext = process.env.NODE_ENV === "development"
+//   ? kcContextMocks.kcLoginContext
+//   : keycloakContext
+
 
 export const RESOURCES_PATH = kcContext
   ? kcContext.url?.resourcesPath + "/build/"
@@ -44,10 +47,10 @@ export default function App() {
     fetch(
       (() => {
         switch (kcLanguageTag) {
-          case "fr":
-            return tos_slo_url
+          // case "en":
+          //   return TOS_EN_URL
           default:
-            return tos_slo_url
+            return TOS_SLO_URL
         }
       })()
     )
@@ -56,7 +59,9 @@ export default function App() {
         (rawMarkdown) => (kcMessages[kcLanguageTag].termsText = rawMarkdown)
       )
   }, [kcLanguageTag])
-  console.debug((kcMessages as any)["si"])
+
+  // console.debug((kcMessages as any)["si"])
+
   return (
     <ChakraProvider theme={theme}>
       <Fonts />

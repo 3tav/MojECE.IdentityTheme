@@ -8,8 +8,16 @@ import { CompositionComponent } from "../types"
 
 import { RESOURCES_PATH } from "App"
 import Logo from "shared/Logo"
+import { getMessage } from "i18n/messages"
 
 export default function Paper({ children }: CompositionComponent) {
+
+  // TODO: https://github.com/3tav/MojECE.Identity/issues/38
+  // const { kcLanguageTag } = useKcLanguageTag()
+  // const lang = kcLanguageTag
+  const lang = "sl"
+  const welcomeMessage = getMessage(lang, "Welcome")
+
   return (
     <Flex
       minHeight="100vh"
@@ -44,7 +52,7 @@ export default function Paper({ children }: CompositionComponent) {
             fontWeight="light"
             sx={{ wordWrap: "initial" }}
           >
-            Dobrodošli v spletni portal moj ECE
+            {welcomeMessage}
           </Text>
         </Flex>
       </Flex>

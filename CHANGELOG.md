@@ -1,3 +1,11 @@
+### **0.7.1** (2021-09-03)  
+  
+- Release v0.7.1  
+- Paper: welcome design update  
+- #38 Lokalizacija: skrita izbira jezika  
+- Disabled logging  
+- Build instructions    
+  
 ## **0.7.0** (2021-08-27)  
   
 - Release v0.7.0 (expired, ldp, profile)  

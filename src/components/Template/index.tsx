@@ -75,7 +75,7 @@ export const Template = memo((props: TemplateProps) => {
         return
       }
 
-      console.log("Template: internationalizationEnabled")
+      console.debug("Template: internationalizationEnabled")
 
       assert(kcContext.locale !== undefined)
 
@@ -83,7 +83,7 @@ export const Template = memo((props: TemplateProps) => {
         kcContext.locale.current
       )
 
-      console.log("Template: bestMatchLanguageTag", bestMatchLanguageTag)
+      console.debug("Template: bestMatchLanguageTag", bestMatchLanguageTag)
 
       if (kcLanguageTag === bestMatchLanguageTag) {
         return
@@ -93,7 +93,7 @@ export const Template = memo((props: TemplateProps) => {
         ({ languageTag }) => languageTag === kcLanguageTag
       )!.url
 
-      console.log("Template: redirect", redirectUrl)
+      console.debug("Template: redirect", redirectUrl)
 
       // window.location.href = redirectUrl
     },

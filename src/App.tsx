@@ -22,7 +22,7 @@ export const RESOURCES_PATH = kcContext
   : "/"
 
 if (kcContext !== undefined) {
-  console.log(kcContext)
+  console.debug(kcContext)
 }
 
 export default function App() {
@@ -56,7 +56,7 @@ export default function App() {
         (rawMarkdown) => (kcMessages[kcLanguageTag].termsText = rawMarkdown)
       )
   }, [kcLanguageTag])
-  console.log((kcMessages as any)["si"])
+  console.debug((kcMessages as any)["si"])
   return (
     <ChakraProvider theme={theme}>
       <Fonts />

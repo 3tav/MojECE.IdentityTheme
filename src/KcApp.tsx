@@ -21,7 +21,7 @@ import { LoginUpdateProfile } from "components/LoginUpdateProfile"
 export const KcApp = memo(({ kcContext }: { kcContext: KcContext }) => {
   const kcProps = defaultKcProps
 
-  // console.log("KcApp kcContext.pageId", kcContext.pageId);
+  // console.debug("KcApp kcContext.pageId", kcContext.pageId);
 
   switch (kcContext.pageId) {
     case "login.ftl":

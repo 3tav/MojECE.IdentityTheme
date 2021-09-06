@@ -38,19 +38,12 @@ export const { kcContext } = getKcContext<
 >({
   // uncomment for develepment
   //
-  // mockPageId: "info.ftl",
+  // mockPageId: "login.ftl",
   // mockData: [
   //   {
-  //     pageId: "login-update-password.ftl",
-  //     username: "testni.user@3tav.si",
+  //     pageId: "login.ftl",
   //   },
   // ],
-  mockPageId: "login.ftl",
-  mockData: [
-    {
-      pageId: "login.ftl",
-    },
-  ],
 })
 
 export type KcContext = NonNullable<typeof kcContext>

@@ -225,6 +225,7 @@ export const Login = memo(
                           id="rememberMe"
                           name="rememberMe"
                           aria-describedby="rememberMe"
+                          value="on"
                         >
                           {msg("rememberMe")}
                         </Checkbox>

@@ -219,12 +219,12 @@ export const Login = memo(
                       <Box flex="1"></Box>
                       <Box flex="1">
                         <Checkbox
+                          defaultChecked={login.rememberMe}
                           size="sm"
                           tabIndex={3}
                           id="rememberMe"
                           name="rememberMe"
                           aria-describedby="rememberMe"
-                          isChecked={login.rememberMe ? true : false}
                         >
                           {msg("rememberMe")}
                         </Checkbox>

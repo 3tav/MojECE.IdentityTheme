@@ -1,3 +1,9 @@
+## **0.8.0** (2021-09-06)  
+  
+- Release v0.8.0  
+- Bug fix: remember me checkbox  
+- Paper: custom translation strings (unfinished)    
+  
 ### **0.7.1** (2021-09-03)  
   
 - Release v0.7.1  

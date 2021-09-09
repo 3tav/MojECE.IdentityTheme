@@ -374,9 +374,9 @@ const { Page } = (() => {
             </Button> */}
 
             {/* Title */}
-            {kcContext.realm.internationalizationEnabled &&
+            {/* {kcContext.realm.internationalizationEnabled &&
               (assert(kcContext.locale !== undefined), true) &&
-              kcContext.locale.supported.length > 1 && <Box w="32" />}
+              kcContext.locale.supported.length > 1 && <Box w="32" />} */}
 
             <Text fontSize="lg" flex="1" fontWeight="bold" textAlign="center">
               {headerNode!}

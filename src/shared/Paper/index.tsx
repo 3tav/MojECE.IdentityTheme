@@ -6,7 +6,7 @@
 import { Container, Box, Flex, Text } from "@chakra-ui/react"
 import { CompositionComponent } from "../types"
 
-import { RESOURCES_PATH } from "App"
+// import { RESOURCES_PATH } from "App"
 import Logo from "shared/Logo"
 import { getMessage } from "i18n/messages"
 
@@ -18,6 +18,9 @@ export default function Paper({ children }: CompositionComponent) {
   const lang = "sl"
   const welcomeMessage = getMessage(lang, "Welcome")
 
+  // const BG_IMAGE = RESOURCES_PATH + "login90.webp"
+  const BG_IMAGE = "https://login.ece.si/activations/images/intro90.webp"
+
   return (
     <Flex
       minHeight="100vh"
@@ -26,7 +29,7 @@ export default function Paper({ children }: CompositionComponent) {
     >
       <Flex
         flex="4"
-        bgImage={RESOURCES_PATH + "login90.webp"}
+        bgImage={BG_IMAGE}
         bgSize="cover"
         bgPosition="center"
         minH="50vh"

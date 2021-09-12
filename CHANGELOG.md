@@ -1,3 +1,21 @@
+# **1.0.0** (2021-09-12)  
+  
+- Release v1.0.0  
+- Novi dizajn, video link  
+- Merge pull request #12 from 3tav/sprememba-splosnih-pogojev
+
+popravek splošnih pogojev.  
+- popravek splošnih pogojev.
+
+- spremenjen naslov, ki upošteva da gre za pogoje vseh trenutnih aplikacij ki uporabljajo SSO
+- manjše vsebinske spremembe
+- popravljen datum
+
+- v markupu so kopirani odstavki direkno iz docx dokumenta, ni ročno vnašanih linebreakov. Odstranjena je tudi funckionalnost linkov za lažje urejanje v prihodnosti, če se bo spremembe kopiralo direktno iz Worda.  
+- Desing: intro image to external domain  
+- Design: nova naslovna fotografija  
+- #11 Fixed: page title align    
+  
 ### **0.8.1** (2021-09-06)  
   
 - Release v0.8.1  

@@ -1,9 +1,9 @@
 export const messages = {
   sl: {
-    Welcome: "Dobrodošli v spletni portal moj ECE",
+    Welcome: "Dobrodošli na vpisni strani v aplikaciji Moj ECE in ECE shop",
   },
   en: {
-    Welcome: "Dobrodošli v spletni portal moj ECE",
+    Welcome: "Dobrodošli na vpisni strani v aplikaciji Moj ECE in ECE shop",
   },
 }
 

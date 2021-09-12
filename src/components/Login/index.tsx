@@ -184,7 +184,7 @@ export const Login = memo(
                     <Box
                       flex="1"
                       textAlign="right"
-                      fontSize="x-small"
+                      fontSize="xs"
                       color="blue.500"
                     >
                       {realm.resetPasswordAllowed && (
@@ -306,29 +306,26 @@ export const Login = memo(
           realm.registrationAllowed &&
           !registrationDisabled && (
             <Flex
-              justifyContent={[
-                "flex-start",
-                "flex-start",
-                "flex-start",
-                "flex-end",
-              ]}
               my={[10, 10, 10, 2]}
               borderTopWidth={["1px", "1px", "1px", "0"]}
               borderTopColor="gray.50"
               pt={[10, 10, 10, 0]}
               flex="1"
+              textAlign="center"
+              flexDir="column"
+              alignItems="center"
             >
-              <Flex flexDir={["row", "row", "row", "column"]}>
-                <Text>{msg("noAccount")}</Text>
-                <Link
-                  ml="4"
-                  color="blue.500"
-                  tabIndex={6}
-                  href={url.registrationUrl}
-                >
-                  {msg("doRegister")}
-                </Link>
-              </Flex>
+              <Text>{msg("noAccount")}</Text>
+              <Button
+                onClick={() => window.open(url.registrationUrl, "_top")}
+                variant="ghost"
+                size="xs"
+              >
+                <Box mr="1" mb="0.5">
+                  <EceIcons name="add" boxSize="2" />
+                </Box>
+                <Text>{msg("doRegister")}</Text>
+              </Button>
             </Flex>
           )
         }

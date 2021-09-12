@@ -1,8 +1,8 @@
 {
     "name": "moj-ece-identity-theme",
-    "version": "0.8.1",
+    "version": "1.0.0",
     "prerelease": "true",
-    "description": "MojECE Keycloak Theme",
+    "description": "ECE Keycloak Theme",
     "repository": {
         "type": "git",
         "url": "git://github.com/3tav/MojECE.IdentityTheme.git"

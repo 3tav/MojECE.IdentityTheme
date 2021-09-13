@@ -1,3 +1,8 @@
+### **1.0.2** (2021-09-13)  
+  
+- Release v1.0.2  
+- manjši popravki pri formatiranju splošnih pogojev (odpravljeni warningi mardown toola). Odtranjen nepopoln stavek po potrditvi pravnice.    
+  
 ### **1.0.1** (2021-09-12)  
   
 - Bugfix    

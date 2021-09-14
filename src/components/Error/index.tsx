@@ -2,7 +2,7 @@ import { memo } from "react"
 import { Template } from "components/Template"
 import { KcProps, KcContextBase, assert } from "keycloakify"
 import { useKcMessage } from "keycloakify/lib/i18n/useKcMessage"
-import { Box, Link, Text } from "@chakra-ui/react"
+import { Box, Flex, Button, Text } from "@chakra-ui/react"
 import EceIcons from "theme/parts/Icons"
 
 export const Error = memo(
@@ -12,6 +12,7 @@ export const Error = memo(
     assert(kcContext.message !== undefined)
 
     const { message, client } = kcContext
+
     return (
       <Template
         {...{ kcContext, ...props }}
@@ -26,14 +27,23 @@ export const Error = memo(
                 : message.summary}
             </Text>
             {client !== undefined && client.baseUrl !== undefined && (
-              <Box flex="1" textAlign="right" mt="4">
-                <Link color="blue.500" href={client.baseUrl}>
-                  <Box as="span" mr="2">
-                    <EceIcons name="arrowLeft" boxSize="2" />
+              <Flex
+                justifyContent="center"
+                alignItems="center"
+                my="8"
+                flexDir="column"
+              >
+                <Button
+                  onClick={() => window.open(client.baseUrl)}
+                  variant="ghost"
+                  size="xs"
+                >
+                  <Box mr="1" mb="0.5">
+                    <EceIcons name="chevronRight" boxSize="2" />
                   </Box>
-                  {msg("backToApplication")}
-                </Link>
-              </Box>
+                  <Text>{msg("backToApplication")}</Text>
+                </Button>
+              </Flex>
             )}
           </Box>
         }

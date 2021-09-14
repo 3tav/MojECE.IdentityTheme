@@ -305,23 +305,39 @@ export const Register = memo(
                 </Flex>
 
                 {/* backToLogin */}
-                <Flex mt="16" flexDir={["column", "column", "column", "row"]}>
-                  <Box flex="1">
-                    <Link color="blue.500" href="https://www.ece.si/gdpr/">
-                      Politika varovanja
-                    </Link>
-                    <Text>osebnih podatkov ECE</Text>
-                  </Box>
+                <Flex
+                  justifyContent="center"
+                  alignItems="center"
+                  my="8"
+                  flexDir="column"
+                  textAlign="center"
+                >
+                  <Text>Digitalni profile ECE že imam.</Text>
+                  <Button
+                    onClick={() => window.open(url.loginUrl, "_top")}
+                    variant="ghost"
+                    size="xs"
+                  >
+                    <Box mr="1" mb="0.5">
+                      <EceIcons name="chevronRight" boxSize="2" />
+                    </Box>
+                    <Text>{msg("backToLogin")}</Text>
+                  </Button>
 
-                  <Box flex="1" textAlign="right">
-                    <Text>Digitalni profile ECE že imam.</Text>
-                    <Link color="blue.500" href={url.loginUrl}>
-                      <Box as="span" mr="2">
-                        <EceIcons name="arrowLeft" boxSize="2" />
-                      </Box>
-                      {msg("backToLogin")}
+                  <Text
+                    color="gray.500"
+                    mt="8"
+                    fontSize="sm"
+                    textAlign="center"
+                  >
+                    <Link
+                      color="gray.500"
+                      href="https://www.ece.si/gdpr/"
+                      target="_blank"
+                    >
+                      Politika varovanja osebnih podatkov ECE.
                     </Link>
-                  </Box>
+                  </Text>
                 </Flex>
               </form>
             </Box>

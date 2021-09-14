@@ -36,11 +36,28 @@ export const { kcContext } = getKcContext<
       }
     }
 >({
-  // uncomment for develepment  
+  /**
+   * uncomment for develepment
+   */
+
+  // mockPageId: "register.ftl",
+  // mockData: [
+  //   {
+  //     pageId: "register.ftl",
+  //   },
+  // ],
+
   // mockPageId: "login.ftl",
   // mockData: [
   //   {
   //     pageId: "login.ftl",
+  //   },
+  // ],
+
+  // mockPageId: "error.ftl",
+  // mockData: [
+  //   {
+  //     pageId: "error.ftl",
   //   },
   // ],
 })

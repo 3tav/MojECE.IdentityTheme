@@ -19,12 +19,11 @@ import TOS_SLO_URL from "./tos/tos_slo.md"
 //   ? kcContextMocks.kcLoginContext
 //   : keycloakContext
 
-
 export const RESOURCES_PATH = kcContext
   ? kcContext.url?.resourcesPath + "/build/"
   : "/"
 
-if (kcContext !== undefined) {
+if (process.env.NODE_ENV === "development" && kcContext !== undefined) {
   console.debug(kcContext)
 }
 

@@ -75,25 +75,23 @@ export const Template = memo((props: TemplateProps) => {
         return
       }
 
-      console.debug("Template: internationalizationEnabled")
-
       assert(kcContext.locale !== undefined)
 
       const bestMatchLanguageTag = getBestMatchAmongKcLanguageTag(
         kcContext.locale.current
       )
 
-      console.debug("Template: bestMatchLanguageTag", bestMatchLanguageTag)
+      // console.debug("Template: bestMatchLanguageTag", bestMatchLanguageTag)
 
       if (kcLanguageTag === bestMatchLanguageTag) {
         return
       }
 
-      const redirectUrl = kcContext.locale.supported.find(
-        ({ languageTag }) => languageTag === kcLanguageTag
-      )!.url
+      // const redirectUrl = kcContext.locale.supported.find(
+      //   ({ languageTag }) => languageTag === kcLanguageTag
+      // )!.url
 
-      console.debug("Template: redirect", redirectUrl)
+      // console.debug("Template: redirect", redirectUrl)
 
       // window.location.href = redirectUrl
     },

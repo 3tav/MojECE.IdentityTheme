@@ -1,3 +1,8 @@
+### **1.0.3** (2021-09-14)  
+  
+- Release v1.0.3  
+- Prevodi (login), Dizajn, cleanup    
+  
 ### **1.0.2** (2021-09-13)  
   
 - Release v1.0.2  

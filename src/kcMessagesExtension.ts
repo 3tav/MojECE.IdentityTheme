@@ -19,11 +19,11 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   doConfirmDelete: "Potrdi brisanje	",
   errorDeletingAccount: "Prišlo je do napake pri brisanju računa	",
   deletingAccountForbidden:
-    "Nimate pravic za brisanje lastnega računa, prosimo kontaktirajte skrbnika.",
+    "Nimate dovoljenja za brisanje lastnega računa, prosimo obrnite se na skrbnika sistema.",
   kerberosNotConfigured: "Kerberos ni nastavljen",
   kerberosNotConfiguredTitle: "Kerberos ni nastavljen",
   bypassKerberosDetail:
-    "Ali niste prijavljeni s Kerberos ali pa vaš brskalnik prijave s Kerberos ne omogoča.  Prosimo kliknite nadaljuj da se prijavite na drugačen način",
+    "Ali niste prijavljeni s Kerberos ali pa vaš brskalnik prijave s Kerberos ne omogoča. Prosimo nadaljujte na drugačen način prijave.",
   kerberosNotSetUp: "Kerberos ni omogočen. Prijava ni možna.",
   registerTitle: "Registracija",
   loginAccountTitle: "Prijavite se v svoj račun",
@@ -33,7 +33,7 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   impersonateTitleHtml: "<strong>{0}</strong> oponašaj sejo uporabnika",
   realmChoice: "Realm",
   unknownUser: "Neznani uporabnik",
-  loginTotpTitle: "Nastavitev naprave za autentikacijo",
+  loginTotpTitle: "Nastavitev naprave za avtentikacijo",
   loginProfileTitle: "Uredi podatke o računu",
   loginTimeout: "Čas za prijavo je potekel. Postopek se bo začel znova.",
   oauthGrantTitle: "Dovoli dostop {0}",
@@ -55,7 +55,7 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   consentDenied: "Privolitev je zavrnjena.",
   noAccount: "Še nimate svojega uporabniškega računa ECE?",
   username: "Uporabniško ime",
-  usernameOrEmail: "Uporabniško ime ali e-pošta",
+  usernameOrEmail: "Uporabniško ime ali elektronski naslov",
   firstName: "Ime",
   givenName: "Priimek",
   fullName: "Ime in priimek",
@@ -74,7 +74,7 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   region: "Regija ali pokrajina",
   postal_code: "Poštna številka",
   country: "Država",
-  emailVerified: "E-pošta je potrjena",
+  emailVerified: "Elektronski naslov je potrjen",
   website: "Spletna stran	",
   phoneNumber: "Telefonska številka	",
   phoneNumberVerified: "Potrjena telefonska številka	",
@@ -84,7 +84,7 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   gssDelegationCredential: "GSS poverilnica",
   logoutOtherSessions: "Odjava na preostalih napravah",
   profileScopeConsentText: "Uporabniški profil",
-  emailScopeConsentText: "E-pošta",
+  emailScopeConsentText: "Elektronski naslov",
   addressScopeConsentText: "Naslov",
   phoneScopeConsentText: "Telefon",
   offlineAccessScopeConsentText: "Dostop brez povezave",
@@ -95,7 +95,7 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
     "Nastaviti si morate generator enkratnih gesel za dostop do tega profila",
   loginTotpStep1:
     "Na svojo mobilno napravo namestite eno od naslednjih aplikacij:",
-  loginTotpStep2: "Odprite aplikacijo in z mobilno napravo odčitajte barcodo:",
+  loginTotpStep2: "Odprite aplikacijo in z mobilno napravo odčitajte barkodo:",
   loginTotpStep3:
     "Vpišite enkratno geslo, ki ga je ustvarila aplikacija in nato kliknite gumb za potrditev.",
   loginTotpStep3DeviceName:
@@ -135,7 +135,7 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   emailInstruction:
     "Vpišite svoje uporabniško ime ali e-naslov in poslali vam bomo navodila za ponastavitev gesla.",
   copyCodeInstruction:
-    "Prosimo skopirajte prikazano šifro in jo uporabite v vaši aplikaciji:",
+    "Prosimo skopirajte prikazano šifro in jo uporabite v svoji aplikaciji:",
   pageExpiredTitle: "Veljavnost prikazane strani je potekla",
   pageExpiredMsg1: "Za ponovitev prijave kliknite",
   pageExpiredMsg2: "Za nadaljevanje s prijavo kliknite",
@@ -170,13 +170,13 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   requiredFields: "Zahtevana polja",
   invalidUserMessage: "Neveljavno uporabniško ime ali geslo.",
   invalidUsernameMessage: "Neveljavno uporabniško ime.",
-  invalidUsernameOrEmailMessage: "Neveljavno uporabniško ime ali e-pošta.",
+  invalidUsernameOrEmailMessage: "Neveljavno uporabniško ime ali elektronski naslov.",
   invalidPasswordMessage: "Neveljavno geslo.",
-  invalidEmailMessage: "Neveljavna e-pošta.",
+  invalidEmailMessage: "Neveljaven elektronski naslov.",
   accountDisabledMessage:
-    "Uporabniški račun je onemogočen, za pomoč kontaktirajte skrbnike sistema.",
+    "Uporabniški račun je onemogočen, za pomoč se obrnite na skrbnike sistema.",
   accountTemporarilyDisabledMessage:
-    "Uporabniški račun je začasno onemogočen, za pomoč kontaktirajte skrbnike sistema ali pa poskusite kasneje.",
+    "Uporabniški račun je začasno onemogočen, za pomoč se obrnite na skrbnike sistema ali pa poskusite kasneje.",
   expiredCodeMessage: "Prijava je potekla. Prosimo, da se ponovno prijavite.",
   expiredActionMessage:
     "Čas za zahtevani postopek je potekel. Prosimo, da nadaljujete na prijavo.",
@@ -185,7 +185,7 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
     "Čas za zahtevani postopek je potekel. Poskusite znova.",
   missingFirstNameMessage: "Prosimo vpišite ime.",
   missingLastNameMessage: "Prosimo vpišite priimek. ",
-  missingEmailMessage: "Prosimo vpišite e-poštni naslov.",
+  missingEmailMessage: "Prosimo vpišite svoj elektronski naslov.",
   missingUsernameMessage: "Prosimo vpišite uporabniško ime.",
   missingPasswordMessage: "Prosimo vpišite geslo.",
   missingTotpMessage: "Prosimo vpišite enkratno geslo.",
@@ -198,7 +198,7 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   invalidTotpMessage: "Vpisano enkratno geslo ni veljavno.",
   usernameExistsMessage: "Uporabniško ime je že zasedeno.",
   emailExistsMessage:
-    "E-pošta je že uporabljena pri enem od obstoječih uporabniških računov.",
+    "Elektronski naslov je že uporabljen pri enem od obstoječih uporabniških računov.",
   federatedIdentityExistsMessage:
     "Uporabnik z {0} {1} že obstaja. Prosimo, da se prijavite v vmesnik za povezovanje sorodnih računov.",
   confirmLinkIdpTitle: "Uporabniški račun že obstaja",
@@ -211,14 +211,14 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   confirmLinkIdpReviewProfile: "Pregled podrobnosti obstoječega računa",
   confirmLinkIdpContinue: "Združi z obstoječim računom",
   configureTotpMessage:
-    "Prosimo, da na svoj mobilnik namestite aplikacijo za preverjanje v dveh korakih (npr. Authy).",
+    "Prosimo, da na svoj mobilni telefon namestite aplikacijo za preverjanje v dveh korakih (npr. Authy).",
   updateProfileMessage:
     "Prosimo, da dopolnite podatke svojega uporabniškega računa.",
   updatePasswordMessage:
     "Preden omogočimo vaš uporabniški račun, prosimo, da nastavite novo geslo.",
   resetPasswordMessage: "Prosimo nastavite novo geslo.",
   verifyEmailMessage:
-    "Preden omogočimo vaš uporabniški račun, prosimo da potrdite veljavnost vašega e-poštnega naslova.",
+    "Preden omogočimo vaš uporabniški račun, prosimo da potrdite veljavnost svojega elektronskega naslova naslova.",
   linkIdpMessage:
     "Prosimo potrdite veljavnost svojega e-naslova, da povežete svoj uporabniški račun in {0}.",
   emailSentMessage: "Poslali smo vam e-pošto z nadaljnjimi navodili.",
@@ -248,7 +248,7 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   invalidPasswordNotUsernameMessage:
     "Neustrezno geslo - uporabniško ime in geslo ne smeta biti enaka.",
   invalidPasswordNotEmailMessage:
-    "Neustrezno geslo - e-pošta in geslo ne smeta biti enaka.",
+    "Neustrezno geslo - elektronski naslov in geslo ne smeta biti enaka.",
   invalidPasswordRegexPatternMessage:
     "Neustrezno geslo - ne ustreza predpisanemu vzorcu.",
   invalidPasswordHistoryMessage:
@@ -277,16 +277,16 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   noRelayStateInResponseMessage:
     "V odgovoru ponudnika identitete manjka podatek za posredovanje.",
   insufficientPermissionMessage:
-    "Nezadostne pravice za povezovanje indentitete.",
+    "Nezadostne pravice za povezovanje identitete.",
   couldNotProceedWithAuthenticationRequestMessage:
-    "Neuspel poskus avtentikacije pri ponudniku indentitete.",
+    "Neuspel poskus avtentikacije pri ponudniku identitete.",
   couldNotObtainTokenMessage: "Prevzem avtorizacijskega žetona ni uspel.",
   unexpectedErrorRetrievingTokenMessage:
     "Nepričakovana napaka pri prevzemu avtorizacijskega žetona.",
   unexpectedErrorHandlingResponseMessage:
-    "Nepričakovana napaka pri obdelavi odogvora ponudnika indentitete.",
+    "Nepričakovana napaka pri obdelavi odogvora ponudnika identitete.",
   identityProviderAuthenticationFailedMessage:
-    "Avtentikacija pri ponudniku indentitete ni uspela.",
+    "Avtentikacija pri ponudniku identitete ni uspela.",
   couldNotSendAuthenticationRequestMessage:
     "Pošiljanje zahteve za avtentikacijo ni uspelo.",
   unexpectedErrorHandlingRequestMessage:
@@ -294,30 +294,30 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   invalidAccessCodeMessage: "Neveljavna dostopna šifra.",
   sessionNotActiveMessage: "Seja ni več veljavna",
   invalidCodeMessage:
-    "Prišlo je do napake, prosimo, da se ponovno prijavite preko vaše aplikacije.",
+    "Prišlo je do napake, prosimo, da se ponovno prijavite preko svoje aplikacije.",
   identityProviderUnexpectedErrorMessage:
-    "Nepričakovana napaka pri avtentikaciji s ponudnikom indentitete.",
+    "Nepričakovana napaka pri avtentikaciji s ponudnikom identitete.",
   identityProviderMissingStateMessage:
     "Manjkajoč podatek v odgovoru ponudnika identitete.",
   identityProviderNotFoundMessage:
     "Ponudnik identitete s tem nazivom ne obstaja.",
   identityProviderLinkSuccess:
-    "Uspešno ste potrdili veljavnost elektronskega naslova. Prosimo vrnite se v izhodiščno okno spletnega brskalnika in tam nadaljujte s postopkom prijave.",
+    "Uspešno ste potrdili veljavnost elektronskega naslova. Prosimo, vrnite se v izhodiščno okno spletnega brskalnika in tam nadaljujte postopek prijave.",
   staleCodeMessage:
     "Veljavnost te strani je potekla. Prosimo vrnite se v vašo aplikacijo in poskusite ponovno.",
   realmSupportsNoCredentialsMessage:
     "Izbrani uporabniški Realm ne podpira uporabe nobene vrste poverilnic.",
   credentialSetupRequired:
-    "Prijava ni mogoča, potrebno je nastaviti sistem poverilnice.",
+    "Prijava ni mogoča, treba je nastaviti sistem poverilnice.",
   identityProviderNotUniqueMessage:
-    "Izbrani uporabniški Realm podpira več ponudnikov indentitete, ni pa bilo možno ugotoviti, s katerim ponudnikom identitete se naj izvede avtentikacija.",
+    "Izbrani uporabniški Realm podpira več ponudnikov identitete, ni pa bilo možno ugotoviti, s katerim ponudnikom identitete naj se izvede avtentikacija.",
   emailVerifiedMessage: "Vaš elektronski naslov je potrjen.",
   staleEmailVerificationLink:
     "Veljavnost povezave, ki ste jo obiskali, je potekla. Možno tudi, da ste jo v preteklosti že obiskali in da je vaš elektronski naslov že potrjen.",
   identityProviderAlreadyLinkedMessage:
     "Identiteta zunanjega ponudnika {0} je že povezana z nekim drugim uporabnikom.",
   confirmAccountLinking:
-    "Potrdite povezovanje z računom {0} ponudnika {1} z vašim uporabniškim računom.",
+    "Potrdite povezovanje z računom {0} ponudnika {1} s svojim uporabniškim računom.",
   confirmEmailAddressVerification:
     "Potrdite veljavnost elektronskega naslova {0}.",
   confirmExecutionOfActions: "Izvedite naslednja opravila",
@@ -348,7 +348,7 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   invalidParameterMessage: "Neustrezen podatek - {0}",
   alreadyLoggedIn: "Ste že vpisani",
   differentUserAuthenticated:
-    "Trenutno ste že prijavljeni kot uporabnik {0}. Za nadaljevanje kot drug uporabnik, se prosimo najprej odjavite iz trenutne seje.",
+    "Trenutno ste že prijavljeni kot uporabnik {0}. Za nadaljevanje kot drug uporabnik se odjavite iz trenutne seje.",
   brokerLinkingSessionExpired:
     "Prišlo je do napake pri povezovanju računov - veljavnost trenutne seje je potekla.",
   proceedWithAction: "Za nadaljevanje kliknite tu",
@@ -367,11 +367,11 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   "console-otp": "Enkratno geslo:",
   "console-new-password": "Novo geslo:",
   "console-confirm-password": "Potrdite geslo:",
-  "console-update-password": "Geslo je potrebno posodobiti.",
+  "console-update-password": "Geslo je treba posodobiti.",
   "console-verify-email":
-    "Vaš e-mail naslov je potrebno potrditi.  Na {0} smo vam poslali e-pošto, ki vsebuje potrditveno kodo. Potrditveno kodo, ki ste jo prejeli vnesite spodaj.",
-  "console-email-code": "E-mail koda:",
-  "console-accept-terms": "Sprjemate pogoje? [d/n]:",
+    "Vaš elektronski naslov je treba potrditi.  Na {0} smo vam poslali e-pošto, ki vsebuje potrditveno kodo. Potrditveno kodo, ki ste jo prejeli, vnesite spodaj.",
+  "console-email-code": "Koda iz elektronskega sporočila:",
+  "console-accept-terms": "Ali sprejemate pogoje? [d/n]:",
   "console-accept": "d",
   termsTitle: "Pogoji uporabe",
   termsText: "<p>Pogoji uporabe bodo še definirani.</p>",
@@ -381,9 +381,9 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   "openshift.scope.user_full": "Popni dostop",
   "openshift.scope.list-projects": "Seznam projektov",
   "saml.post-form.title": "Preusmeritev avtentikacije",
-  "saml.post-form.message": "Presumerjanje v teku, prosimo počakajte.",
+  "saml.post-form.message": "Preusmerjanje je v teku, prosimo počakajte.",
   "saml.post-form.js-disabled":
-    "Izvajanje JavaScript-a je onemogočeno. Zelo priporočamo, da to nastavitev v svojem klientu spremenite. Za nadaljevanje izberite sledečo povezavo.",
+    "Izvajanje JavaScript-a je onemogočeno. Zelo priporočamo, da to nastavitev v svojem klientu spremenite. Za nadaljevanje izberite naslednjo povezavo.",
   "otp-display-name": "Aplikacija za avtentikacijo",
   "otp-help-text": "Vpišite kontrolno geslo iz aplikacije za avtentikacijo.",
   "password-display-name": "Geslo",
@@ -403,16 +403,16 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   "webauthn-registration-title": "Registracija varnostnega ključa",
   "webauthn-available-authenticators": "Razpoložljivi načini avtentikacije",
   "webauthn-unsupported-browser-text":
-    "Način WebAuthn ni podprt v tem brskalniku. Poskusite uporabiti drug brskalnik ali pa poiščite pomoč pri vašem administratorju.",
+    "Način WebAuthn ni podprt v tem brskalniku. Poskusite uporabiti drug brskalnik ali pa poiščite pomoč pri svojem skrbniku sistema.",
   "webauthn-error-title": "Napaka varnostnega ključa.",
   "webauthn-error-registration":
     "Napaka pri registraciji varnostnega ključa.<br/> {0}",
   "webauthn-error-api-get":
-    "Nuspela avtentikacija z varnostnim ključem.<br/> {0}",
+    "Spodletela avtentikacija z varnostnim ključem.<br/> {0}",
   "webauthn-error-different-user":
     "Prvi prijavljeni uporabnik ne ustreza prijavi opravljeni z varnostnim ključem.",
   "webauthn-error-auth-verification":
-    "Preverjanje avntentikacije z varnostnim ključem je spodletelo.<br/> {0}",
+    "Preverjanje avtentikacije z varnostnim ključem je spodletelo.<br/> {0}",
   "webauthn-error-register-verification":
     "Registracija z varnostnim ključem je spodletela.<br/> {0}",
   "webauthn-error-user-not-found":
@@ -511,7 +511,7 @@ Object.assign(kcMessages["en"], {
   doConfirmDelete: "Potrdi brisanje	",
   errorDeletingAccount: "Prišlo je do napake pri brisanju računa	",
   deletingAccountForbidden:
-    "Nimate pravic za brisanje lastnega računa, prosimo kontaktirajte skrbnika.",
+    "Nimate pravic za brisanje lastnega računa, prosimo obrnite se na skrbnika sistema.",
   kerberosNotConfigured: "Kerberos ni nastavljen",
   kerberosNotConfiguredTitle: "Kerberos ni nastavljen",
   bypassKerberosDetail:
@@ -525,7 +525,7 @@ Object.assign(kcMessages["en"], {
   impersonateTitleHtml: "<strong>{0}</strong> oponašaj sejo uporabnika",
   realmChoice: "Realm",
   unknownUser: "Neznani uporabnik",
-  loginTotpTitle: "Nastavitev naprave za autentikacijo",
+  loginTotpTitle: "Nastavitev naprave za avtentikacijo",
   loginProfileTitle: "Uredi podatke o računu",
   loginTimeout: "Čas za prijavo je potekel. Postopek se bo začel znova.",
   oauthGrantTitle: "Dovoli dostop {0}",
@@ -547,7 +547,7 @@ Object.assign(kcMessages["en"], {
   consentDenied: "Privolitev je zavrnjena.",
   noAccount: "Še nimate svojega uporabniškega računa ECE?",
   username: "Uporabniško ime",
-  usernameOrEmail: "Uporabniško ime ali e-pošta",
+  usernameOrEmail: "Uporabniško ime ali elektronski naslov",
   firstName: "Ime",
   givenName: "Priimek",
   fullName: "Ime in priimek",
@@ -566,7 +566,7 @@ Object.assign(kcMessages["en"], {
   region: "Regija ali pokrajina",
   postal_code: "Poštna številka",
   country: "Država",
-  emailVerified: "E-pošta je potrjena",
+  emailVerified: "Elektronski naslov je potrjen",
   website: "Spletna stran	",
   phoneNumber: "Telefonska številka	",
   phoneNumberVerified: "Potrjena telefonska številka	",
@@ -576,7 +576,7 @@ Object.assign(kcMessages["en"], {
   gssDelegationCredential: "GSS poverilnica",
   logoutOtherSessions: "Odjava na preostalih napravah",
   profileScopeConsentText: "Uporabniški profil",
-  emailScopeConsentText: "E-pošta",
+  emailScopeConsentText: "Elektronski naslov",
   addressScopeConsentText: "Naslov",
   phoneScopeConsentText: "Telefon",
   offlineAccessScopeConsentText: "Dostop brez povezave",
@@ -587,7 +587,7 @@ Object.assign(kcMessages["en"], {
     "Nastaviti si morate generator enkratnih gesel za dostop do tega profila",
   loginTotpStep1:
     "Na svojo mobilno napravo namestite eno od naslednjih aplikacij:",
-  loginTotpStep2: "Odprite aplikacijo in z mobilno napravo odčitajte barcodo:",
+  loginTotpStep2: "Odprite aplikacijo in z mobilno napravo odčitajte barkodo:",
   loginTotpStep3:
     "Vpišite enkratno geslo, ki ga je ustvarila aplikacija in nato kliknite gumb za potrditev.",
   loginTotpStep3DeviceName:
@@ -627,7 +627,7 @@ Object.assign(kcMessages["en"], {
   emailInstruction:
     "Vpišite svoje uporabniško ime ali e-naslov in poslali vam bomo navodila za ponastavitev gesla.",
   copyCodeInstruction:
-    "Prosimo skopirajte prikazano šifro in jo uporabite v vaši aplikaciji:",
+    "Prosimo skopirajte prikazano šifro in jo uporabite v svoji aplikaciji:",
   pageExpiredTitle: "Veljavnost prikazane strani je potekla",
   pageExpiredMsg1: "Za ponovitev prijave kliknite",
   pageExpiredMsg2: "Za nadaljevanje s prijavo kliknite",
@@ -662,13 +662,13 @@ Object.assign(kcMessages["en"], {
   requiredFields: "Zahtevana polja",
   invalidUserMessage: "Neveljavno uporabniško ime ali geslo.",
   invalidUsernameMessage: "Neveljavno uporabniško ime.",
-  invalidUsernameOrEmailMessage: "Neveljavno uporabniško ime ali e-pošta.",
+  invalidUsernameOrEmailMessage: "Neveljavno uporabniško ime ali elektronski naslov.",
   invalidPasswordMessage: "Neveljavno geslo.",
-  invalidEmailMessage: "Neveljavna e-pošta.",
+  invalidEmailMessage: "Neveljaven elektronski naslov.",
   accountDisabledMessage:
-    "Uporabniški račun je onemogočen, za pomoč kontaktirajte skrbnike sistema.",
+    "Uporabniški račun je onemogočen, za pomoč se obrnite na skrbnike sistema.",
   accountTemporarilyDisabledMessage:
-    "Uporabniški račun je začasno onemogočen, za pomoč kontaktirajte skrbnike sistema ali pa poskusite kasneje.",
+    "Uporabniški račun je začasno onemogočen, za pomoč se obrnite na skrbnike sistema ali pa poskusite kasneje.",
   expiredCodeMessage: "Prijava je potekla. Prosimo, da se ponovno prijavite.",
   expiredActionMessage:
     "Čas za zahtevani postopek je potekel. Prosimo, da nadaljujete na prijavo.",
@@ -677,7 +677,7 @@ Object.assign(kcMessages["en"], {
     "Čas za zahtevani postopek je potekel. Poskusite znova.",
   missingFirstNameMessage: "Prosimo vpišite ime.",
   missingLastNameMessage: "Prosimo vpišite priimek. ",
-  missingEmailMessage: "Prosimo vpišite e-poštni naslov.",
+  missingEmailMessage: "Prosimo vpišite svoj elektronski naslov.",
   missingUsernameMessage: "Prosimo vpišite uporabniško ime.",
   missingPasswordMessage: "Prosimo vpišite geslo.",
   missingTotpMessage: "Prosimo vpišite enkratno geslo.",
@@ -690,7 +690,7 @@ Object.assign(kcMessages["en"], {
   invalidTotpMessage: "Vpisano enkratno geslo ni veljavno.",
   usernameExistsMessage: "Uporabniško ime je že zasedeno.",
   emailExistsMessage:
-    "E-pošta je že uporabljena pri enem od obstoječih uporabniških računov.",
+    "Elektronski naslov je že uporabljen pri enem od obstoječih uporabniških računov.",
   federatedIdentityExistsMessage:
     "Uporabnik z {0} {1} že obstaja. Prosimo, da se prijavite v vmesnik za povezovanje sorodnih računov.",
   confirmLinkIdpTitle: "Uporabniški račun že obstaja",
@@ -703,14 +703,14 @@ Object.assign(kcMessages["en"], {
   confirmLinkIdpReviewProfile: "Pregled podrobnosti obstoječega računa",
   confirmLinkIdpContinue: "Združi z obstoječim računom",
   configureTotpMessage:
-    "Prosimo, da na svoj mobilnik namestite aplikacijo za preverjanje v dveh korakih (npr. Authy).",
+    "Prosimo, da na svoj mobilni telefon namestite aplikacijo za preverjanje v dveh korakih (npr. Authy).",
   updateProfileMessage:
     "Prosimo, da dopolnite podatke svojega uporabniškega računa.",
   updatePasswordMessage:
     "Preden omogočimo vaš uporabniški račun, prosimo, da nastavite novo geslo.",
   resetPasswordMessage: "Prosimo nastavite novo geslo.",
   verifyEmailMessage:
-    "Preden omogočimo vaš uporabniški račun, prosimo da potrdite veljavnost vašega e-poštnega naslova.",
+    "Preden omogočimo vaš uporabniški račun, prosimo da potrdite veljavnost svojega elektronskega naslova naslova.",
   linkIdpMessage:
     "Prosimo potrdite veljavnost svojega e-naslova, da povežete svoj uporabniški račun in {0}.",
   emailSentMessage: "Poslali smo vam e-pošto z nadaljnjimi navodili.",
@@ -740,7 +740,7 @@ Object.assign(kcMessages["en"], {
   invalidPasswordNotUsernameMessage:
     "Neustrezno geslo - uporabniško ime in geslo ne smeta biti enaka.",
   invalidPasswordNotEmailMessage:
-    "Neustrezno geslo - e-pošta in geslo ne smeta biti enaka.",
+    "Neustrezno geslo - elektronski naslov in geslo ne smeta biti enaka.",
   invalidPasswordRegexPatternMessage:
     "Neustrezno geslo - ne ustreza predpisanemu vzorcu.",
   invalidPasswordHistoryMessage:
@@ -769,16 +769,16 @@ Object.assign(kcMessages["en"], {
   noRelayStateInResponseMessage:
     "V odgovoru ponudnika identitete manjka podatek za posredovanje.",
   insufficientPermissionMessage:
-    "Nezadostne pravice za povezovanje indentitete.",
+    "Nezadostne pravice za povezovanje identitete.",
   couldNotProceedWithAuthenticationRequestMessage:
-    "Neuspel poskus avtentikacije pri ponudniku indentitete.",
+    "Neuspel poskus avtentikacije pri ponudniku identitete.",
   couldNotObtainTokenMessage: "Prevzem avtorizacijskega žetona ni uspel.",
   unexpectedErrorRetrievingTokenMessage:
     "Nepričakovana napaka pri prevzemu avtorizacijskega žetona.",
   unexpectedErrorHandlingResponseMessage:
-    "Nepričakovana napaka pri obdelavi odogvora ponudnika indentitete.",
+    "Nepričakovana napaka pri obdelavi odogvora ponudnika identitete.",
   identityProviderAuthenticationFailedMessage:
-    "Avtentikacija pri ponudniku indentitete ni uspela.",
+    "Avtentikacija pri ponudniku identitete ni uspela.",
   couldNotSendAuthenticationRequestMessage:
     "Pošiljanje zahteve za avtentikacijo ni uspelo.",
   unexpectedErrorHandlingRequestMessage:
@@ -786,30 +786,30 @@ Object.assign(kcMessages["en"], {
   invalidAccessCodeMessage: "Neveljavna dostopna šifra.",
   sessionNotActiveMessage: "Seja ni več veljavna",
   invalidCodeMessage:
-    "Prišlo je do napake, prosimo, da se ponovno prijavite preko vaše aplikacije.",
+    "Prišlo je do napake, prosimo, da se ponovno prijavite preko svoje aplikacije.",
   identityProviderUnexpectedErrorMessage:
-    "Nepričakovana napaka pri avtentikaciji s ponudnikom indentitete.",
+    "Nepričakovana napaka pri avtentikaciji s ponudnikom identitete.",
   identityProviderMissingStateMessage:
     "Manjkajoč podatek v odgovoru ponudnika identitete.",
   identityProviderNotFoundMessage:
     "Ponudnik identitete s tem nazivom ne obstaja.",
   identityProviderLinkSuccess:
-    "Uspešno ste potrdili veljavnost elektronskega naslova. Prosimo vrnite se v izhodiščno okno spletnega brskalnika in tam nadaljujte s postopkom prijave.",
+    "Uspešno ste potrdili veljavnost elektronskega naslova. Prosimo, vrnite se v izhodiščno okno spletnega brskalnika in tam nadaljujte postopek prijave.",
   staleCodeMessage:
     "Veljavnost te strani je potekla. Prosimo vrnite se v vašo aplikacijo in poskusite ponovno.",
   realmSupportsNoCredentialsMessage:
     "Izbrani uporabniški Realm ne podpira uporabe nobene vrste poverilnic.",
   credentialSetupRequired:
-    "Prijava ni mogoča, potrebno je nastaviti sistem poverilnice.",
+    "Prijava ni mogoča, treba je nastaviti sistem poverilnice.",
   identityProviderNotUniqueMessage:
-    "Izbrani uporabniški Realm podpira več ponudnikov indentitete, ni pa bilo možno ugotoviti, s katerim ponudnikom identitete se naj izvede avtentikacija.",
+    "Izbrani uporabniški Realm podpira več ponudnikov identitete, ni pa bilo možno ugotoviti, s katerim ponudnikom identitete naj se izvede avtentikacija.",
   emailVerifiedMessage: "Vaš elektronski naslov je potrjen.",
   staleEmailVerificationLink:
     "Veljavnost povezave, ki ste jo obiskali, je potekla. Možno tudi, da ste jo v preteklosti že obiskali in da je vaš elektronski naslov že potrjen.",
   identityProviderAlreadyLinkedMessage:
     "Identiteta zunanjega ponudnika {0} je že povezana z nekim drugim uporabnikom.",
   confirmAccountLinking:
-    "Potrdite povezovanje z računom {0} ponudnika {1} z vašim uporabniškim računom.",
+    "Potrdite povezovanje z računom {0} ponudnika {1} s svojim uporabniškim računom.",
   confirmEmailAddressVerification:
     "Potrdite veljavnost elektronskega naslova {0}.",
   confirmExecutionOfActions: "Izvedite naslednja opravila",
@@ -840,7 +840,7 @@ Object.assign(kcMessages["en"], {
   invalidParameterMessage: "Neustrezen podatek - {0}",
   alreadyLoggedIn: "Ste že vpisani",
   differentUserAuthenticated:
-    "Trenutno ste že prijavljeni kot uporabnik {0}. Za nadaljevanje kot drug uporabnik, se prosimo najprej odjavite iz trenutne seje.",
+    "Trenutno ste že prijavljeni kot uporabnik {0}. Za nadaljevanje kot drug uporabnik se odjavite iz trenutne seje.",
   brokerLinkingSessionExpired:
     "Prišlo je do napake pri povezovanju računov - veljavnost trenutne seje je potekla.",
   proceedWithAction: "Za nadaljevanje kliknite tu",
@@ -859,11 +859,11 @@ Object.assign(kcMessages["en"], {
   "console-otp": "Enkratno geslo:",
   "console-new-password": "Novo geslo:",
   "console-confirm-password": "Potrdite geslo:",
-  "console-update-password": "Geslo je potrebno posodobiti.",
+  "console-update-password": "Geslo je treba posodobiti.",
   "console-verify-email":
-    "Vaš e-mail naslov je potrebno potrditi.  Na {0} smo vam poslali e-pošto, ki vsebuje potrditveno kodo. Potrditveno kodo, ki ste jo prejeli vnesite spodaj.",
-  "console-email-code": "E-mail koda:",
-  "console-accept-terms": "Sprjemate pogoje? [d/n]:",
+    "Vaš elektronski naslov je treba potrditi.  Na {0} smo vam poslali e-pošto, ki vsebuje potrditveno kodo. Potrditveno kodo, ki ste jo prejeli, vnesite spodaj.",
+  "console-email-code": "Koda iz elektronskega sporočila:",
+  "console-accept-terms": "Ali sprejemate pogoje? [d/n]:",
   "console-accept": "d",
   termsTitle: "Pogoji uporabe",
   termsText: "<p>Pogoji uporabe bodo še definirani.</p>",
@@ -873,9 +873,9 @@ Object.assign(kcMessages["en"], {
   "openshift.scope.user_full": "Popni dostop",
   "openshift.scope.list-projects": "Seznam projektov",
   "saml.post-form.title": "Preusmeritev avtentikacije",
-  "saml.post-form.message": "Presumerjanje v teku, prosimo počakajte.",
+  "saml.post-form.message": "Preusmerjanje je v teku, prosimo počakajte.",
   "saml.post-form.js-disabled":
-    "Izvajanje JavaScript-a je onemogočeno. Zelo priporočamo, da to nastavitev v svojem klientu spremenite. Za nadaljevanje izberite sledečo povezavo.",
+    "Izvajanje JavaScript-a je onemogočeno. Zelo priporočamo, da to nastavitev v svojem klientu spremenite. Za nadaljevanje izberite naslednjo povezavo.",
   "otp-display-name": "Aplikacija za avtentikacijo",
   "otp-help-text": "Vpišite kontrolno geslo iz aplikacije za avtentikacijo.",
   "password-display-name": "Geslo",
@@ -895,16 +895,16 @@ Object.assign(kcMessages["en"], {
   "webauthn-registration-title": "Registracija varnostnega ključa",
   "webauthn-available-authenticators": "Razpoložljivi načini avtentikacije",
   "webauthn-unsupported-browser-text":
-    "Način WebAuthn ni podprt v tem brskalniku. Poskusite uporabiti drug brskalnik ali pa poiščite pomoč pri vašem administratorju.",
+    "Način WebAuthn ni podprt v tem brskalniku. Poskusite uporabiti drug brskalnik ali pa poiščite pomoč pri svojem skrbniku sistema.",
   "webauthn-error-title": "Napaka varnostnega ključa.",
   "webauthn-error-registration":
     "Napaka pri registraciji varnostnega ključa.<br/> {0}",
   "webauthn-error-api-get":
-    "Nuspela avtentikacija z varnostnim ključem.<br/> {0}",
+    "Spodletela avtentikacija z varnostnim ključem.<br/> {0}",
   "webauthn-error-different-user":
     "Prvi prijavljeni uporabnik ne ustreza prijavi opravljeni z varnostnim ključem.",
   "webauthn-error-auth-verification":
-    "Preverjanje avntentikacije z varnostnim ključem je spodletelo.<br/> {0}",
+    "Preverjanje avtentikacije z varnostnim ključem je spodletelo.<br/> {0}",
   "webauthn-error-register-verification":
     "Registracija z varnostnim ključem je spodletela.<br/> {0}",
   "webauthn-error-user-not-found":

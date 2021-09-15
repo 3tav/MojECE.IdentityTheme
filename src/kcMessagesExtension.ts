@@ -119,7 +119,7 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
   oauthGrantRequest: "Dovolite uporabo teh dostopnih pravic?",
   inResource: "v",
   emailVerifyInstruction1:
-    "Na vaš eletronski naslov smo vam poslali elektronsko sporočilo z navodili in kodo za potrditev elektronskega naslova.",
+    "Na vaš elektronski naslov smo vam poslali elektronsko sporočilo z navodili in kodo za potrditev elektronskega naslova.",
   emailVerifyInstruction2:
     "Če sporočila niste prejeli, preverite tudi mapo za neželeno pošto, nato pa kliknite",
   emailVerifyInstruction3:
@@ -611,7 +611,7 @@ Object.assign(kcMessages["en"], {
   oauthGrantRequest: "Dovolite uporabo teh dostopnih pravic?",
   inResource: "v",
   emailVerifyInstruction1:
-    "Na vaš eletronski naslov smo vam poslali elektronsko sporočilo z navodili in kodo za potrditev elektronskega naslova.",
+    "Na vaš elektronski naslov smo poslali navodila in kodo za potrditev veljavnosti vašega elektronskega naslova.",
   emailVerifyInstruction2:
     "Če sporočila niste prejeli, preverite tudi mapo za neželeno pošto, nato pa kliknite",
   emailVerifyInstruction3:

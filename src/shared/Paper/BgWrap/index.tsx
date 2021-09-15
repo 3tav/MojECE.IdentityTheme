@@ -2,8 +2,7 @@ import { Flex } from "@chakra-ui/react"
 import React from "react"
 
 const BgWrap = ({ children }: { children: React.ReactNode }) => {
-  // const BG_IMAGE = "https://login.ece.si/activations/images/intro90.webp"
-  const BG_IMAGE = "https://login.3tav.si/activations/images/intro90.webp"
+  const BG_IMAGE = "https://login.ece.si/activations/images/intro90.webp"
 
   return (
     <Flex

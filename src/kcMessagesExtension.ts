@@ -122,7 +122,8 @@ import { kcMessages } from "keycloakify/lib/i18n/generated_kcMessages/login"
     "Na vaš eletronski naslov smo vam poslali elektronsko sporočilo z navodili in kodo za potrditev elektronskega naslova.",
   emailVerifyInstruction2:
     "Če sporočila niste prejeli, preverite tudi mapo za neželeno pošto, nato pa kliknite",
-  emailVerifyInstruction3: "za ponovno pošiljanje sporočila.",
+  emailVerifyInstruction3:
+    "za ponovno pošiljanje sporočila. Preverite tudi, da ste pravilno vpisali svoj elektronski naslov.",
   emailLinkIdpTitle: "Povezava {0}",
   emailLinkIdp1:
     "Poslana vam je bila e-pošta z navodili za povezavo {0} računa {1} z vašim {2} računom.",
@@ -613,7 +614,8 @@ Object.assign(kcMessages["en"], {
     "Na vaš eletronski naslov smo vam poslali elektronsko sporočilo z navodili in kodo za potrditev elektronskega naslova.",
   emailVerifyInstruction2:
     "Če sporočila niste prejeli, preverite tudi mapo za neželeno pošto, nato pa kliknite",
-  emailVerifyInstruction3: "za ponovno pošiljanje sporočila.",
+  emailVerifyInstruction3:
+    "za ponovno pošiljanje sporočila. Preverite tudi, da ste pravilno vpisali svoj elektronski naslov.",
   emailLinkIdpTitle: "Povezava {0}",
   emailLinkIdp1:
     "Poslana vam je bila e-pošta z navodili za povezavo {0} računa {1} z vašim {2} računom.",

@@ -1,3 +1,9 @@
+### **1.0.5** (2021-09-27)  
+  
+- Popravljen URL slik v manifest  
+- Lektoriranje  
+- Lektoriranje prevodov    
+  
 ### **1.0.4** (2021-09-15)  
   
 - Release v1.0.4  

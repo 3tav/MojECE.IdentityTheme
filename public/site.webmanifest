@@ -1,14 +1,14 @@
 {
-    "name": "MojECE",
-    "short_name": "MojECE",
+    "name": "ECE - prijava / login",
+    "short_name": "ECE - prijava / login",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png",
+            "src": "/activations/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png",
+            "src": "/activations/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }

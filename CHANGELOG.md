@@ -1,3 +1,7 @@
+### **1.0.6** (2021-12-14)  
+  
+- Version bump    
+  
 ### **1.0.5** (2021-09-27)  
   
 - Popravljen URL slik v manifest  

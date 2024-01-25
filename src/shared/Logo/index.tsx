@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Icon, Link } from "@chakra-ui/react"
-import { LayoutProps } from "@chakra-ui/styled-system/dist/types/config/layout"
+import { LayoutProps } from "@chakra-ui/styled-system"
 
 type LogoComponent = {
   boxSize?: LayoutProps["boxSize"]

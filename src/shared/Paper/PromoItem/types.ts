@@ -4,6 +4,7 @@ export type Promo = {
   icon: IconName
   title1: string
   title2: string
+  url: string
   body: string
 }
 

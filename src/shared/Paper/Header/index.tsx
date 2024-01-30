@@ -1,9 +1,17 @@
-import React from "react"
-import { Box, Flex, Text } from "@chakra-ui/react"
+import React from "react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
-import Logo from "shared/Logo"
+import Logo from "shared/Logo";
 
-const Header = () => {
+const Header = ({
+  title,
+  icon,
+  url,
+}: {
+  title: string;
+  icon: string | null;
+  url: string | null;
+}) => {
   return (
     <Flex
       py={{ base: 10, md: 16, "3xl": 20 }}
@@ -12,7 +20,12 @@ const Header = () => {
       alignItems="center"
     >
       <Box>
-        <Logo theme="dark" url={null} boxSize={[24, 24, 28, 28, 28]} />
+        <Logo
+          theme="dark"
+          url={url}
+          boxSize={[32, 32, 48, 48, 48]}
+          icon={icon}
+        />
       </Box>
 
       <Text
@@ -23,10 +36,10 @@ const Header = () => {
         fontWeight="light"
         sx={{ wordWrap: "initial" }}
       >
-        Dobrodošli na vpisni strani v aplikaciji Moj&nbsp;ECE in ECE&nbsp;shop
+        {title}
       </Text>
     </Flex>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

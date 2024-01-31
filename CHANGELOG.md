@@ -1,3 +1,15 @@
+## **1.1.0** (2024-01-31)  
+  
+- Release 1.1.0  
+- Razlikovanje dizajna glede na vstop iz ECE in Shop #15
+
+- nove ikone za zaslon EceShop
+- animacija ikone
+- link na ikone
+- parameterizacija Intro komponent  
+- Package version freeze  
+- minor update    
+  
 ### **1.0.6** (2021-12-14)  
   
 - Version bump    
